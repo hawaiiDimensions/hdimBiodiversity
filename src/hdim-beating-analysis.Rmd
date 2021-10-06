@@ -1,0 +1,1154 @@
+---
+title: "niclassify_results"
+author: "Natalie Graham"
+date: "2/11/2021"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r, message=FALSE, warning=FALSE}
+# data management
+library(tidyverse)
+library(readr)
+library(ggplot2); theme_set(theme_bw())
+
+# to calculate bootstrap richness
+library(rich)
+
+# to calculate beta diversity
+library("vegan")
+
+# to calculate the geographic distance between plots
+library("sf")
+
+# to calculate phylogenetic diversity
+library(seqinr)
+library(picante)
+library(ggtree)
+library(treeio)
+library(tidytree)
+
+# to produce simulations of rank abundance distributions
+library(meteR)
+
+# color palettes
+library(colorspace)
+library(RColorBrewer)
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+# read in beating data and niclassify results
+beating <- read_csv("data/beatingRedone.csv")
+predict <- read_csv("data/niclassify-predictions_replacedfalseendemics.csv")
+
+# read in phylogeny
+tree <- read.tree("data/postcutoff.tre")
+
+# Note I read in ptp results as "species" file -- reading in each file by order and joining them together
+```
+
+```{r, message=FALSE, warning=FALSE}
+beating <- beating %>%
+  left_join(predict) %>% 
+  left_join(species) 
+ # select(-species_name)
+
+wo_beating <- beating %>%
+    filter(!site == "kohalaYng" & 
+         !site == "LSAG" &
+         !site == "hippnet") %>%
+    # filter out the plots with more than one sd from mean of sampling time
+  filter(!sitePlot == "flow1973_110" & 
+         !sitePlot == "flow1973_107" &
+         !sitePlot == "kohalaOld_05a" &
+         !sitePlot == "waikamoi_06" &
+         !sitePlot == "kamakou_15" &
+         !sitePlot == "kokee_21a") %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  mutate(sitePlot = factor(sitePlot, unique(sitePlot)))
+
+endemic <- wo_beating %>%
+  filter(predict == "endemic")
+```
+
+
+```{r}
+
+# create a vector of colors for the volcanos
+volColor <- c("#543005", "#BF812D", "bisque4", "#80CDC1", "#35978F", "#01665E", "#003C30") 
+
+```
+
+## Calculate richness at each site for every order using the package 'rich' https://cran.r-project.org/web/packages/rich/vignettes/rich_introduction.pdf -- The function rich computes the species richness on the basis of bootstrap estimation.
+ 
+ [1] flow1973     treePlanting escape       kaiholenaYng thurston     olaa        
+ [7] alili        kohalaOld    waikamoi     kamakou      kokee      
+
+```{r}
+# Make a function to run the bootstrap richness calculation for every order and send it to a text file
+
+richCalc <- function(o) {
+  # filter the data set and convert to a matrix
+  abun.Matrix <- endemic %>% 
+    filter(orderGrp == "Araneae") %>%
+    filter(site == "kaiholenaYng") %>% 
+    # use species abundance "spp_abun" which is the mean of the abundance
+    # from every OTU so that each putative species is represented by it's 
+    # mean abundance in the site
+    # select(smplUnit, spp, spp_abun) %>% 
+    # distinct() %>%
+    # pivot_wider(id_cols = smplUnit, names_from = spp, values_from = spp_abun)
+    select(smplUnit, otu, abundance) %>% 
+    distinct() %>%
+    pivot_wider(id_cols = smplUnit, names_from = otu, values_from = abundance)
+  abun.Matrix <- abun.Matrix %>%
+    mutate_if(is.numeric, replace_na, replace = 0)
+  abun.Matrix <- abun.Matrix[,-1]
+  abun.Matrix <- as.matrix(as.data.frame(abun.Matrix))
+
+    # calculate richness per arthropod order
+  
+  richness <- rich(abun.Matrix, nrandom=999)
+  richness <- c(o, richness[[5]])
+  richness
+}
+
+
+```
+
+Run the function on the appropriately full orders -- see following code chunk, some sites have insufficient richness for some orders to allow for bootstrapping.
+```{r}
+rich <- lapply(end_orders, richCalc)  
+
+sink("figures/AFTER-NICLASSIFY/Richness/withOTUs/richCalc-results-kokee.txt") # Rename by site each time
+print(rich)
+sink()
+
+```
+
+Create a list of endemic orders with sufficient taxa per site for bootstrapping -- this may differ site by site but will never include Blattodea bc that order is entirely introduced on the island.
+```{r}
+# all sites
+#unique(endemic$site)
+# find which sites are missing orders
+bug <- endemic %>%
+  group_by(site, orderGrp) %>%
+  summarise(n_species = n_distinct(otu)) %>%
+  filter(site == "kokee")
+
+setdiff(unique(endemic$orderGrp), unique(bug$orderGrp))
+
+# find which sites have orders with only 1 individual (can't bootstrap)
+endemic %>%
+  group_by(site, orderGrp) %>%
+  summarise(n_species = n_distinct(otu)) %>%
+  filter(n_species <= 1)
+
+#richCalc("Malacostraca")
+```
+
+
+```{r}
+# make a vector of orders for each site
+# just comment out the orders that are not represented at the site
+end_orders <-c( "Collembola",
+                "Orthoptera",
+                "Psocoptera",
+                "non-spider Arachnida",
+                "Diptera",
+                "Hemiptera",
+                "Coleoptera",
+                "Lepidoptera",
+                "Araneae",
+                "Hymenoptera",
+                "Myriapoda",
+                "Neuroptera",
+                "Malacostraca"
+                )
+end_orders
+```
+
+Plot the results. Note that text files have been combined into a single CSV in excel.
+```{r, message=FALSE}
+
+# read in richness data
+richResults <- read_csv("figures/AFTER-NICLASSIFY/Richness/withOTUs/richness-otus-final-bootstrap.csv")
+
+# read in site info
+site <- read_csv("data/DimensionsSites.csv")
+volcano <- read_csv("data/volcano.csv")
+
+# combine site info with richness results 
+richResults <- richResults %>%
+  left_join(site) %>%
+  left_join(volcano) %>%
+  mutate(flowAge = (flowAgeMin + flowAgeMax)/2) %>%
+  arrange(flowAge) %>%                           # sort dataframe by age
+  mutate(site = factor(site, unique(site))) %>%  # reset factor-columns based on age
+  mutate(volcano = factor(volcano, unique(volcano))) 
+richResults
+
+# calculate mean richness for each order across sites
+richResults %>% 
+  drop_na(mr.boot) %>%
+  group_by(orderGrp, site) %>%
+  summarise(mean = mean(mr.boot), 
+            meanobs = mean(mr.obs))
+
+```
+
+Plot the bootstrap richness and standard error for each order over time
+```{r, warning=FALSE, message=FALSE}
+
+
+richResults %>%  
+  drop_na(orderGrp) %>%
+  ggplot(aes(x = log(flowAge), y = mr.boot, group= orderGrp)) + 
+  geom_errorbar(aes(ymin=mr.boot-mr.se, ymax=mr.boot+mr.se), width=.1) +
+  geom_point(aes(colour=volcano), cex=3) + 
+  scale_color_manual(values = volColor) +
+  stat_smooth(method = "lm",  size = 1, se = FALSE, colour = "orange") +
+  #formula = y ~ poly(x, 2),
+  facet_wrap(~orderGrp, scale = "free", ncol = 5) + 
+  theme(legend.position = "bottom")+
+  xlab("Log Substrate Age (yrs)") +
+  ylab("Bootstrap Estimated Mean Richness Zotus") +
+  labs(title = "Richness of Native & Endemic Taxa Over Time")
+
+  
+#ggsave("figures/AFTER-NICLASSIFY/Richness/endemic-Richness-bootstrap-otu.pdf", width = 8, height = 5, units = "in")  
+
+```
+
+# Plot the simple richness (number of zOTUs) at each site
+
+```{r}
+endemic %>%
+  group_by(orderGrp, site, flowAge, volcano) %>% #
+    # use otu
+  summarise(n_species = n_distinct(otu)) %>%
+    # use species 
+  # summarise(n_species = n_distinct(spp)) %>%
+
+  ggplot(aes(x = log(flowAge), y = n_species, group= orderGrp)) +
+  geom_point(aes(colour=volcano), cex=3) + 
+  scale_color_manual(values = volColor) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, colour = "orange") +
+  # formula = y ~ poly(x, 2),
+  facet_wrap(~orderGrp, scale = "free", ncol = 5) + 
+  theme(legend.position = "bottom")+
+  xlab("Log Substrate Age (yrs)") +
+  ylab("Number of ZOTUs") +
+  labs(title = "Richness of Native and Endemic Taxa Over Time")
+
+#ggsave("figures/AFTER-NICLASSIFY/Richness/withOTUs/endemic-richness-simple-otu-wide.png", width = 8, height = 5, units = "in") 
+```
+
+# Regress the results of richness by substrate age for each order. Send results to txt file and manually add to figure of "number of zotus by log substrate age".
+
+```{r}
+lmRichOrder <- function(o) {
+order <- endemic %>%
+  group_by(site, flowAge, volcano, orderGrp) %>%
+  summarise(n_species = n_distinct(spp)) %>%
+  filter(orderGrp == o) 
+
+mod <- lm(order$n_species ~ log(order$flowAge))
+summary(mod)
+}
+#lmRichOrder("Araneae")  
+orderModList <- lapply(unique(endemic$orderGrp), lmRichOrder)
+sink("figures/AFTER-NICLASSIFY/Richness/withSPP/models.txt") 
+print(orderModList)
+sink()
+```
+
+# calculate Chao to estimate unseen species and inverse Simpson for diversity
+
+```{r, message=FALSE}
+# packages
+#library(tidyverse)
+#library(vegan)
+#library(readr)
+
+# read in data of hdim that is posted on github (same as wo_beating data set but without a few superfluous columns)
+beating_abun <- read_csv("data/github/hdimbeat_abund.csv")
+
+######### sum by abundances at smplUnit and pool by site #####
+# note that abundances are "per otu per sampling unit" (how much of each otu was found on a plant genus within a plot)
+
+# make simple df
+# change to wider format and save as pool data 
+# for pool data point to pool$site
+pool <- beating_abun %>% 
+  select(otu, abundance, site, sitePlot, smplUnit) %>%
+  pivot_wider(names_from = otu, values_from = abundance) 
+
+# trim pool to matrix format to supply species data
+x <- pool %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+x <- x %>%
+  select(-c(site, sitePlot, smplUnit))
+x <- as.matrix(as.data.frame(x))
+
+# chao calculated from sample unit abundances summed
+chao_fromSmplsum <- specpool(x, pool = pool$site, smallsample = TRUE)
+chao_fromSmplsum
+
+# note when abundacnes are grouped by smplUnit can also calculate by plot
+#chaoPlot <- specpool(x, pool = pool$sitePlot, smallsample = TRUE)
+#chaoPlot
+
+######### sum by abundances at plot and pool by site #####
+# pool by site abundances
+# point to poolSite$site for pool
+poolSite <- beating_abun %>% 
+    select(otu, abundance, site, sitePlot, smplUnit) %>%
+    group_by(site, sitePlot, otu) %>%
+    summarise(abundance = sum(abundance)) %>%
+    ungroup() %>%
+    pivot_wider(names_from = otu, values_from = abundance)
+
+xSitesum <- poolSite %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+xSitesum <- xSitesum %>%
+  select(-c(site, sitePlot))
+xSitesum <- as.matrix(as.data.frame(xSitesum))
+
+# chao calculated from site abundances summed
+chao_fromSiteSum <- specpool(xSitesum, pool = poolSite$site, smallsample = TRUE)
+chao_fromSiteSum
+
+#write_csv(chao_fromSmplsum, "data/github/chao_fromSmplUnitSum.csv")
+#write_csv(chao_fromSiteSum, "data/github/chao_fromSiteSum.csv")
+
+#### compare to no of distinct otus #######
+chaoSitesum_forbind <- rownames_to_column(chao_fromSiteSum, var = "site") %>%
+  rename(chaoSitesum = chao, chaoSitesum.se =  chao.se) %>%
+  select(site, Species, chaoSitesum, chaoSitesum.se)
+
+chao_fromSmplsum_forbind <- rownames_to_column(chao_fromSmplsum, var = "site") %>%
+  rename(chaoSmplsum = chao, chaoSmplsum.se =  chao.se) %>%
+  select(site, Species, chaoSmplsum, chaoSmplsum.se)
+
+chaoPlotdf <- beating_abun %>%
+  group_by(site, flowAge, volcano) %>% #
+    # use otu
+  summarise(n_species = n_distinct(otu)) %>% 
+  left_join(chaoSitesum_forbind) %>%
+  left_join(chao_fromSmplsum_forbind)
+  
+chaoPlotdf %>%
+  ggplot() +
+  geom_point(aes(x = log(flowAge), y = n_species), colour = "red") + 
+  stat_smooth(aes(x = log(flowAge), y = n_species), method = "lm", size = 1, se = FALSE, colour = "red") +
+  geom_text(aes(x = 9, y = 500), label = "N zOTUs", color = "red") +
+  geom_point(aes(x = log(flowAge), y = chaoSitesum), colour = "green") + 
+  stat_smooth(aes(x = log(flowAge), y = chaoSitesum), method = "lm", size = 1, se = FALSE, colour = "green") +
+  geom_text(aes(x = 5, y = 1300), label = "Sitesum Chao", color = "green") +
+  geom_point(aes(x = log(flowAge), y = chaoSmplsum), colour = "blue") + 
+  stat_smooth(aes(x = log(flowAge), y = chaoSmplsum), method = "lm", size = 1, se = FALSE, colour = "blue")+
+  geom_text(aes(x = 6, y = 1700), label = "Smplsum Chao", color = "blue") +
+  xlab("Log Substrate Age (yrs)") +
+  ylab("Richness") 
+  
+#write_csv(chaoPlotdf, "data/github/chaoPlotdf.csv")
+ggsave("data/github/choaCompareN.png")
+
+############# calculate inverse Simpson ##########
+# first need matrix at site level
+SiteAbun <- beating_abun %>% 
+    select(otu, abundance, site, sitePlot, smplUnit) %>%
+    group_by(site, otu) %>%
+    summarise(abundance = sum(abundance)) %>%
+    ungroup() %>%
+    pivot_wider(names_from = otu, values_from = abundance)
+
+SiteAbunMatrx <- SiteAbun %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+SiteAbunMatrx <- SiteAbunMatrx %>%
+  select(-site)
+SiteAbunMatrx <- as.matrix(as.data.frame(SiteAbunMatrx))
+
+# Calculate inverse simpson based on abun of each otu at each site
+invSimpSite <- diversity(SiteAbunMatrx, "inv")
+divMetrics <- cbind(chaoPlotdf, invSimpSite)
+colnames(divMetrics)[10] <- "invSimp"
+
+divMetrics %>%
+  rename(n_zotu = n_species) %>%
+  pivot_longer(c(chaoSitesum, n_zotu, invSimp), names_to = "metric") %>%
+  ggplot() +
+  geom_point(aes(x = log(flowAge), y = value, group = metric, colour = metric)) +
+  geom_smooth(aes(x = log(flowAge), y = value, group = metric, colour = metric),
+                  method = "lm", se = TRUE) +
+  xlab("Log Substrate Age (yrs)") +
+  ylab("Richness") 
+#save plot
+#ggsave("data/github/compare_numzotu_chao_invS.png")
+
+divMetrics %>%
+  rename(n_zotu = n_species) %>%
+  pivot_longer(c(chaoSitesum, n_zotu, invSimp), names_to = "metric") %>%
+  filter(metric == "invSimp") %>%
+  ggplot() +
+  geom_point(aes(x = log(flowAge), y = value, group = metric, colour = metric)) +
+  geom_smooth(aes(x = log(flowAge), y = value, group = metric, colour = metric),
+                  method = "lm", se = FALSE) +
+  xlab("Log Substrate Age (yrs)") +
+  ylab("Richness") 
+#save plot
+#ggsave("data/github/invS.png")
+
+# summarise num plants per site and join to divMetric table
+uniquePlant <- beating_abun %>%
+  group_by(volcano, site, plant) %>%
+  summarise(n_plant_sampled = n_distinct(smplUnit)) 
+uniquePlant
+
+divMetrics <- uniquePlant %>%
+  group_by(site) %>%
+  summarise(n_plant = n_distinct(plant)) %>%
+  right_join(divMetrics) %>%
+  select(-Species) %>%
+  rename(n_plot = n) %>% 
+  select(site, volcano, n_plot, flowAge, n_zotus, chao, chao.se, invSimp) 
+divMetrics
+
+#write_csv(divMetrics, "data/github/divMetrics.csv")
+```
+
+# Stacked bargraph of abundances over time (all taxa incl non-natives)
+```{r}
+values = beating %>%
+  arrange(orderGrp)
+colors = unique(values$color)
+wo_beating %>%
+  select(site, smplUnit, abundance, otu, orderGrp) %>%
+  distinct() %>%
+  group_by(site, orderGrp) %>%
+  summarise(abundance = sum(abundance)) %>%
+  ggplot() + 
+  geom_bar(aes(x=site, y=abundance, fill = orderGrp), 
+           stat = "identity", 
+           position = "stack") + 
+  labs(title = "OTU Abundance Composition Over Time") +
+  xlab("Community site in order of increasing substrate age") + 
+  ylab("Sequence abundance") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)) +
+  scale_fill_manual(values = colors) +
+  theme(legend.title = element_blank())
+
+#ggsave("figures/AFTER-NICLASSIFY/Abundances/Abun-stackedBar-raw.png", width = 7, height = 5, units = "in")   
+
+```
+
+Boxplots of abundance over time
+```{r}
+
+endemic %>%
+  group_by(orderGrp, site, smplUnit) %>%
+  summarise(abundance = sum(abundance)) %>%
+  ggplot(aes(x=site, y=log(abundance), fill=orderGrp)) +
+  geom_boxplot(outlier.colour="red", outlier.shape=8,
+                outlier.size=1.1) +
+ # geom_jitter(shape=16, position=position_jitter(0.2)) +
+  facet_wrap(facets = "orderGrp", scales = "free_y", ncol = 5) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.3)) +
+  scale_fill_manual(values = unique(beating$color)) +
+  xlab("Community site in order of increasing substrate age") +
+  ylab("Log sequence abundance") +
+  labs(title = "Variation of OTU abundance in each community") +
+  theme(legend.position = "none") 
+  
+
+#ggsave("figures/AFTER-NICLASSIFY/Abundances/Abun-boxplots.png", width = 7, height = 5, units = "in")
+
+```
+## Phylogentic diversity
+
+One way of thinking about the phylogenetic relatedness of species in a community is to ask 'how closely related are the average pair of species or individuals in a community?', and relate the patterns we observe to what we'd expect under various null models of evolution and community assembly. These types of questions are addressed by the measures of community phylogenetic structure such as MPD, MNTD, NRI and NTI described by Webb et al. (2002) and implemented in Phylocom (Webb et al. 2008). I used the Picante package in R.
+
+The function mpd will calculate the mean pairwise distance (MPD) between all species in each community. Similarly, the mntd function calculates the mean nearest taxon distance (MNTD), the mean distance separating each species in the community from its closest relative.
+
+- We can calculate: 
+MPD = mean pairwise distance separating between all species in each community AND 
+NRI = Net Relatedness Index -- against a null community
+
+- then also calculate:
+MNTD = (mean nearest taxon distance) mean distance separating each species in the community
+from its closest relative AND 
+NTI = Nearest Taxon Index -- against a null community
+
+- MPD (& NRI) is generally thought to be more sensitive to tree-wide patterns of phylogenetic clustering and evenness, while MNTD (& NTI) is more sensitive to patterns of evenness and clustering closer to the tips of the phylogeny.
+```{r, warning=FALSE, message=FALSE}
+# convert data into wide format gathering by otu abundance per site 
+commhdim.all <- endemic %>%
+  group_by(volcano, site, flowAge, otu) %>%
+  summarise(abundance = sum(abundance)) %>%
+  unite(siteInfo, 
+        c("volcano", "site", "flowAge"), 
+        sep = "_", remove = FALSE) %>%
+  pivot_wider(id_cols = siteInfo, 
+              names_from = otu, 
+              values_from = abundance)
+
+# replace nas with 0
+commhdim.all <- commhdim.all %>%
+    mutate_if(is.numeric, replace_na, replace = 0)
+
+# keep the row information as a row name not a column
+commhdim.all <- column_to_rownames(commhdim.all, var = "siteInfo")
+
+# convert to to a matrix
+commhdim.all <- as.matrix(as.data.frame(commhdim.all))
+
+# prune the tree based on the subsampled community
+prunedphy.all <- prune.sample(commhdim.all, tree)
+
+############# CALC NRI (MDP) AND  NTI (MNTD) ##############
+
+# Make a phylogenetic distance matrix.
+phydist <- cophenetic(prunedphy.all)
+
+# NRI and MPD 
+nri <- ses.mpd(commhdim.all, phydist, null.model="phylogeny.pool", runs = 1000)  
+nri <- nri %>%
+  rownames_to_column("siteInfo")
+nri
+
+# NTI and MTND
+nti <- ses.mntd(commhdim.all, phydist, null.model="phylogeny.pool", runs = 1000)
+nti <- nti %>% rownames_to_column("siteInfo")
+nti
+#######################################################
+
+```
+
+
+```{r}
+# Prepare data for plotting 
+
+########### mean nearest taxon distance #########
+# separate site information
+nti <- nti %>%
+    separate(siteInfo, c("volcano", "site", "flowAge"), sep = "_") 
+
+# change to numeric class
+nti$flowAge <- as.numeric(nti$flowAge)
+
+############ mean pairwise distance ###########
+# separate site information
+nri <- nri %>%
+    separate(siteInfo, c("volcano", "site", "flowAge"), sep = "_") 
+
+# change to numeric class
+nri$flowAge <- as.numeric(nti$flowAge)
+
+```
+
+Plot observed mean nearest taxon distance and compare with null communities
+```{r}
+# plot mean nearest taxon/neighbor distance
+nti %>% 
+  ggplot(aes(x = log(flowAge), y = mntd.obs, label = site)) +
+  geom_point(aes(size = ntaxa, fill=volcano), shape = 21) +
+  scale_fill_manual(values = volColor) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, colour = "darkslategrey") +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  ylab("Mean nearest neighbor distance") +
+  xlab("Log Substrate Age (yrs)") +
+  labs(title = "Genetic relatedness over time")
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/mntd-endemic_20may.png", width = 6, height = 5, units = "in", dpi = 300)
+
+# plot NTI - standardized effect size  of mean nearest neighbor distance
+nti %>%
+  ggplot(aes(x=log(flowAge), y=mntd.obs.z, col = mntd.obs.p, label = site)) +
+  geom_point(cex = 3) +
+  geom_hline(yintercept=0, linetype="dashed", color = "darkslategray") +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  labs(title = "Nearest taxon index", 
+       subtitle = "Significant negative values suggest evenly dispersed communities \nacross all sites")
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/NTI-evenlydispersed.png", width = 7, height = 5, units = "in", dpi = 300)
+```
+
+Plot observed mean pairwise distance and compare with null communities
+```{r}
+ # plot mean pairwise distance
+nri %>% 
+  ggplot(aes(x = log(flowAge), y = mpd.obs, label = site, fill = volcano)) +
+  geom_point(aes(size = ntaxa, fill = volcano), shape = 21) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, color = "darkslategrey") +
+  scale_fill_manual(values = volColor) +
+  guides(colour=FALSE, fill = FALSE) +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  labs(title = "Mean pairwise distance")
+
+#formula = y ~ poly(x, 2),
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/mpd-notlog.png", width = 5, height = 5.5, units = "in", dpi = 300)
+
+# plot NRI - standardize effect size of mean pairwise distance
+nri %>%
+  ggplot(aes(x=log(flowAge), y=mpd.obs.z, col = mpd.obs.p, label = site)) +
+  geom_point(cex = 3) +
+  geom_hline(yintercept=0, linetype="dashed", color = "darkslategray") +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  labs(title = "Net relatedness index",
+       subtitle = "Statistically significant positive values suggest phylogenetic clustering \nat Tree Planting & Kaiholena")
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/nri.png", width = 7, height = 5, units = "in", dpi = 300)
+```
+Comparing the observed to null communities 
+Positive SES values (mpd.obs.z > 0) and high quantiles (mpd.obs.p > 0.95) indicate *phylogenetic clustering*, or a smaller phylogenetic distance among co-occurring species than expected.
+
+Negative SES values and low quantiles (mpd.obs.p < 0.05) indicate *phylogenetic overdispersion*, or greater phylogenetic distances among co-occurring species than expected.
+
+Thus, significantly negative values suggest phylogenetic evenness and significantly positive values suggest phylogenetic clustering.
+
+Under the competition-relatedness hypothesis [41], species that
+are closely related are expected to compete more strongly if traits
+mediating competition are highly conserved, thus causing local
+communities to be evenly dispersed to limit trait and phylogenetic
+similarity. Alternatively, for species that are highly mobile and can
+mediate competition quickly we might expect local communities to
+be randomly assembled.
+
+# Can I adjust for the size of the community by dividing by number of taxa?
+```{r}
+nti %>%
+  ggplot(aes(x = log(flowAge), y = mntd.obs/ntaxa, label = site)) +
+  geom_point() +
+  stat_smooth(method = "lm", formula = y ~ poly(x, 2), size = 1, se = FALSE, colour = "red") +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  labs(title = "Mean nearest neighbor distance \nnormalized by community size")
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/mnnd_by_ntaxa.png", width = 4.5, height = 5.5, units = "in", dpi = 300)  
+
+nri %>%
+  ggplot(aes(x = log(flowAge), y = mpd.obs/ntaxa, label = site)) +
+  geom_point() +
+  stat_smooth(method = "lm", formula = y ~ poly(x, 2), size = 1, se = FALSE, colour = "red") +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.2, nudge_y = 0, angle = 20) +
+  labs(title = "Mean pairwise distance \nnormalized by community size")
+
+#ggsave("figures/AFTER-NICLASSIFY/PhylogeneticDiversity/mpd_by_ntaxa.png", width = 4.5, height = 5.5, units = "in", dpi = 300)
+```
+```{r}
+
+# change site and volcano into factors
+nri <- nri %>%  
+  arrange(flowAge) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  mutate(volcano = factor(volcano, unique(volcano)))
+nri
+
+nti <- nti %>%  
+  arrange(flowAge) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  mutate(volcano = factor(volcano, unique(volcano)))
+nti
+```
+# regress genetic diversity by substrate age
+
+```{r}
+ # regress genetic diversity by substrate age
+glm_nri <- glm(nri$mpd.obs ~ log(nri$flowAge) + nri$volcano, family = "Gamma")
+#glm_nri
+
+summary(glm_nri)
+
+
+glm_nti <- glm(nti$mntd.obs ~ log(nti$flowAge), family = "Gamma") #* nti$ntaxa
+glm_nti
+
+summary(glm_nti) #AIC: -76.555
+
+mod <- lm(nti$mntd.obs ~ log(nti$flowAge))
+summary(mod)
+```
+
+What is the relationship bw substrate age and number of taxa? Should include in model.
+```{r}
+plot(nti$ntaxa, nti$mntd.obs)
+plot(nri$ntaxa, nri$mpd.obs)
+```
+
+```{r}
+glm_nti <- glm(nti$mntd.obs ~ log(nti$flowAge) + nti$ntaxa
+               + log(nti$flowAge)*nti$ntaxa, family = "Gamma") #AIC: -88.136
+# + log(nti$flowAge)*nti$ntaxa,AIC: -91.685
+
+summary(glm_nti)
+
+glm_nri <- glm(nri$mpd.obs ~ log(nri$flowAge) + nri$ntaxa + log(nri$flowAge)*nri$ntaxa, family = "Gamma")
+#glm_nri
+
+summary(glm_nri)
+```
+
+```{r}
+# regress mean nearest neighbor distance by site (fixed factor) with number of taxa as a covariate
+glm_nti <- glm(nti$mntd.obs ~ log(nti$flowAge) + nti$ntaxa + nti$site, family = "Gamma") #+ nti$site*nti$ntaxa,
+glm_nti
+
+summary(glm_nti)
+```
+
+# Beta diversity
+
+```{r}
+# beta diversity by plot
+abun.Matrix <- 
+    wo_beating %>%
+  # filter by the site of interest
+    filter(site == "flow1973") %>% 
+      group_by(sitePlot, otu) %>%
+      summarise(abundance = sum(abundance)) %>%
+    pivot_wider(id_cols = sitePlot, names_from = otu, values_from = abundance)
+    
+  abun.Matrix <- abun.Matrix %>%
+    mutate_if(is.numeric, replace_na, replace = 0)
+  abun.Matrix <- abun.Matrix[,-1]
+  abun.Matrix <- as.matrix(as.data.frame(abun.Matrix))
+
+# Calculate beta diversity as the ratio of total # spp in a collection of sites by the avg richness per one site
+# ncol/mean(rowsums > 0)
+
+ncol(abun.Matrix)/mean(specnumber(abun.Matrix)) - 1
+  
+# Calculate Sorensen index 
+beta <- vegdist(abun.Matrix, binary=TRUE)
+mean(beta)
+```
+
+```{r}
+
+# beta diversity by site
+abun.Matrix <- 
+    wo_beating %>%
+      group_by(site, otu) %>%
+      summarise(abundance = sum(abundance)) %>%
+    pivot_wider(id_cols = site, names_from = otu, values_from = abundance)
+    
+  abun.Matrix <- abun.Matrix %>%
+    mutate_if(is.numeric, replace_na, replace = 0)
+  abun.Matrix <- abun.Matrix[,-1]
+  abun.Matrix <- as.matrix(as.data.frame(abun.Matrix))
+
+# Calculate beta diversity as the ratio of total # spp in a collection of sites by the avg richness per one site
+# ncol/mean(rowsums > 0)
+
+ncol(abun.Matrix)/mean(specnumber(abun.Matrix)) - 1
+  
+# Calculate Sorensen index 
+beta <- vegdist(abun.Matrix, binary=TRUE)
+mean(beta)
+```
+
+```{r}
+
+# beta diversity by volcano
+abun.Matrix <- 
+    wo_beating %>% 
+      group_by(volcano, otu) %>%
+      summarise(abundance = sum(abundance)) %>%
+    pivot_wider(id_cols = volcano, names_from = otu, values_from = abundance)
+    
+  abun.Matrix <- abun.Matrix %>%
+    mutate_if(is.numeric, replace_na, replace = 0)
+  abun.Matrix <- abun.Matrix[,-1]
+  abun.Matrix <- as.matrix(as.data.frame(abun.Matrix))
+  
+# Calculate beta diversity as the ratio of total # spp in a collection of sites by the avg richness per one site
+# ncol/mean(rowsums > 0)
+
+ncol(abun.Matrix)/mean(specnumber(abun.Matrix)) - 1
+  
+# Calculate Sorensen index 
+beta <- vegdist(abun.Matrix, binary=TRUE)
+mean(beta)
+```
+
+```{r}
+beta <- read_csv("figures/AFTER-NICLASSIFY/BetaDiversity/betadiverresults.csv")
+
+beta <- beta %>%
+  arrange(flowAge) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  pivot_longer(c(beta, sorensen, sorensen_af), names_to = "measure", values_to = "value")
+```
+
+
+```{r}
+# In a similarity index, a value of 1 means that the two communities you are comparing share all their species, while a value of 0 means they share none.
+
+beta %>%
+  filter(measure == "sorensen_af") %>%
+  mutate(similarity = 1 - value) %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  ggplot(aes(x = log(flowAge), y = similarity)) +
+  geom_point(aes(fill = volcano), shape = 21, cex = 3) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, color = "darkslategrey") +
+  scale_fill_manual(values = volColor) +
+ # guides(fill = FALSE) +
+  labs(title = "Site homogeneity") +
+  ylab("Sørensen similarity index") +
+  xlab("Log Substrate Age (yrs)") +
+  geom_hline(data = subset(beta, measure == "sorensen"), 
+             aes(yintercept = (1 - 0.6793261)), # add line of site = blue
+             color = "darkblue",
+             linetype = "dotted", 
+             size = 1.5) 
+
+#ggsave("figures/AFTER-NICLASSIFY/BetaDiversity/siteHomo-nositevalue.png", width = 5, height = 3, units = "in")
+  
+```
+# Treatment of beta diversity along with geographic distance
+
+```{r, message=FALSE, warning=FALSE}
+# create a function to calculate the mean geographic distance between plots at each site
+geoDist <- function(s){ 
+sf_object <- wo_beating %>%
+  filter(site == s) %>%
+  select(sitePlot, Lat1, Long1) %>%
+  distinct()
+
+sf_object <- st_as_sf(sf_object, coords = c("Lat1", "Long1"), crs = 4269) # horizontal datum NAD83 crs code
+
+sf_object <- st_distance(sf_object)
+
+mean(sf_object)
+
+}
+
+geoList <- lapply(unique(wo_beating$site), geoDist)
+geoList <- as.numeric(unlist(geoList))
+
+geoList <- cbind(site = levels(wo_beating$site), geoDist = geoList)
+
+geoList <- as.data.frame(geoList)
+geoList
+```
+
+```{r}
+beta <- beta %>%
+  left_join(geoList, by = "site")
+
+# plot geographic distance within sites for all sites
+beta %>%
+  filter(measure == "sorensen_af") %>%
+  mutate(similarity = 1 - value) %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  ggplot(aes(x = site, y = geoDist)) +
+    geom_point(aes(fill = volcano), shape = 21, cex = 3) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, color = "darkslategrey") +
+  scale_fill_manual(values = volColor) +
+ # guides(fill = FALSE) 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+  ylab("Mean geographic distance within a site") +
+  xlab("Site in order of increasing substrate age")
+
+#ggsave("figures/AFTER-NICLASSIFY/BetaDiversity/geoDist_bySite.png", width = 6, height = 4, units = "in")
+
+# regress sorensens by geoDist
+beta %>%
+  filter(measure == "sorensen_af") %>%
+  mutate(similarity = 1 - value) %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  ggplot(aes(x = geoDist, y = similarity)) +
+  geom_point(aes(fill = volcano), shape = 21, cex = 3) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, color = "darkslategrey") +
+  scale_fill_manual(values = volColor) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+  labs(title = "Site homogeneity") +
+  ylab("Sørensen similarity index") +
+  xlab("Mean geographic distance within a site")
+
+#ggsave("figures/AFTER-NICLASSIFY/BetaDiversity/geoDist_bySorensen.png", width = 6, height = 4, units = "in")
+
+# regress sorensen against log age
+beta %>%
+  filter(measure == "sorensen_af") %>%
+  mutate(similarity = 1 - value) %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  ggplot(aes(x = log(flowAge), y = similarity)) +
+  geom_point(aes(fill = volcano), shape = 21, cex = 3) +
+  stat_smooth(method = "lm", size = 1, se = FALSE, color = "darkslategrey") +
+  scale_fill_manual(values = volColor) +
+ # guides(fill = FALSE) +
+  labs(title = "Site homogeneity") +
+  ylab("Sørensen similarity index") +
+  xlab("Log Substrate Age (yrs)")
+
+#ggsave("figures/AFTER-NICLASSIFY/BetaDiversity/Sorensen_byFlowAge.png", width = 6, height = 4, units = "in")
+
+```
+
+# regress beta by time
+```{r}
+mod <- beta %>%
+  filter(measure == "sorensen_af")
+mod <- lm(mod$value ~log(mod$flowAge)) 
+summary(mod)
+```
+```{r}
+mod <- beta %>%
+  filter(measure == "sorensen_af")
+mod <- lm(as.numeric(mod$geoDist)~log(mod$flowAge)) 
+summary(mod)
+```
+```{r}
+mod <- beta %>%
+  filter(measure == "sorensen_af")
+mod <- lm(mod$value ~ as.numeric(mod$geoDist)) 
+summary(mod)
+
+```
+
+```{r}
+mod <- beta %>%
+  filter(measure == "sorensen_af")
+mod <- lm(mod$value ~ log(mod$flowAge) * as.numeric(mod$geoDist)) 
+summary(mod)
+```
+
+# check on the sampling effort in each plot
+```{r}
+
+plot_numbs <- beating %>%
+  select(sitePlot, otu, abundance) %>%
+  distinct() %>%
+  group_by(sitePlot) %>%
+  summarise(n_otu = n_distinct(otu), 
+            abun = sum(abundance))
+
+#write_csv(plot_numbs, "figures/AFTER-NICLASSIFY/BetaDiversity/plot_numbers_raw.csv")
+
+sumTime <- beating %>%
+  select(sitePlot, flowAge, time.SmplUnit) %>%
+  distinct() %>%
+  arrange(flowAge) %>%
+  mutate(sitePlot = factor(sitePlot, unique(sitePlot))) %>%
+  group_by(sitePlot) %>%
+  summarise(sumTime = sum(time.SmplUnit)) 
+
+summary(sumTime$sumTime)
+
+sumTime %>%
+  ggplot(aes(sumTime)) +
+  geom_histogram() +
+  geom_vline(aes(xintercept = mean(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "red") +
+  geom_vline(aes(xintercept = mean(sumTime)+ sd(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "blue") +
+  geom_vline(aes(xintercept = mean(sumTime) - sd(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "green")
+sumTime %>%  
+  ggplot(aes(x = sitePlot, y = sumTime)) +
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+  theme(legend.position = "none") +
+  geom_hline(aes(yintercept = mean(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "red") +
+  geom_hline(aes(yintercept = mean(sumTime) + sd(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "blue") +
+  geom_hline(aes(yintercept = mean(sumTime) - sd(sumTime)),
+             linetype="dashed",
+             size = 1.6, 
+             color = "green")
+
+
+#ggsave("figures/AFTER-NICLASSIFY/BetaDiversity/plotSampling-sd-all.png", width = 8, height = 5, units = "in")
+``` 
+
+# Is abundance increasing or decreasing over time?
+
+```{r}
+# Define the number of colors you want
+nb.cols <- 12
+mycolors <- colorRampPalette(brewer.pal(8, "Set2"))(nb.cols)
+# Create a ggplot with 12 colors 
+# Use scale_fill_manual
+
+```
+
+```{r, warning=FALSE, message=FALSE}
+
+endemic %>%
+  ggplot(aes(x = site, y = abundance, fill = site)) +
+  geom_col() +
+  scale_fill_manual(values = mycolors) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  ylab("Sequence Abundance") +
+  xlab("Site in Order of Increasing Substrate Age")
+
+wo_beating %>%
+  group_by(site, flowAge, orderGrp) %>%
+  summarise(abundance = sum(abundance)) %>%
+  ggplot(aes(x = site, y = log(abundance))) +
+  geom_boxplot(color = "blue4") +
+  geom_jitter(shape=16, position=position_jitter(0.2)) +
+ # scale_y_continuous(trans = "log10") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  ylab("Sequence Abundance") +
+  xlab("Site in Order of Increasing Substrate Age")
+
+#ggsave("figures/AFTER-NICLASSIFY/Abundances/Abun-boxplotall_e.png", width = 7, height = 5, units = "in")  
+
+wo_beating %>%
+  #group_by(site, flowAge, orderGrp) %>%
+  #summarise(abundance = sum(abundance)) %>%
+  ggplot(aes(x = log(flowAge), y = log(abundance))) +
+  geom_point(color = "green3") +
+  #scale_y_continuous(trans = "log10") +
+  # scale_x_continuous(trans = "log10") +
+  stat_smooth(method = "lm", size = 1, se = FALSE, colour = "darkgrey") +
+  ylab("Log Sequence Abundance") +
+  xlab("Log Substrate Age")
+
+#ggsave("figures/AFTER-NICLASSIFY/Abundances/Abun-logloglm-beatingabunraw-.png", width = 7, height = 4, units = "in")
+
+model <- wo_beating
+ # group_by(site, flowAge, orderGrp) %>%
+ # summarise(abundance = sum(abundance))
+
+mod <- lm(log(model$abundance) ~ log(model$flowAge))
+summary(mod)
+
+```
+
+```{r}
+
+# analysis of variance bw site abudnances 
+mod <- aov(wo_beating$abundance ~ wo_beating$site)
+summary(mod)
+
+# pairwise comparison of difference among sites
+tukeySite <- TukeyHSD(mod)
+
+# extract relevant information
+tukeySite <- tukeySite$`wo_beating$site` #removes headers
+tukeySite <- as.data.frame(tukeySite)
+tukeySite <- tukeySite %>%
+  rownames_to_column() %>%
+  filter(`p adj` < 0.05) %>%
+  arrange(rowname)
+tukeySite
+
+#write_csv(tukeySite, "figures/AFTER-NICLASSIFY/Abundances/tukeysite.csv")
+
+mod <- lm(wo_beating$abundance ~ wo_beating$flowAge) #4.72e-11 ***
+summary(mod)
+
+plot(log(wo_beating$flowAge), log(wo_beating$abundance))
+```
+
+# number of native and non native
+```{r}
+table_of_otus <- endemic %>%
+  group_by(orderGrp) %>%
+  summarise(n = n_distinct(otu)) %>%
+  arrange(desc(n))
+
+#write_csv(table_of_otus, "figures/AFTER-NICLASSIFY/tableofotus.csv")
+
+length(unique(endemic$otu))
+length(unique(wo_beating$otu)) 
+length(unique(wo_beating$otu)) - length(unique(endemic$otu))
+```
+
+# Plot the number of natives and non-natives at each site over time.
+
+```{r}
+sum_zotus_site<-wo_beating %>%
+  group_by(site) %>%
+  summarise(sum = n_distinct(otu))
+sum_zotus_predict<-wo_beating %>%
+  group_by(site, flowAge, predict) %>%
+  summarise(zotus = n_distinct(otu)) %>%
+  left_join(sum_zotus_site)
+sum_zotus_predict
+
+# rename
+sum_zotus_predict$predict[sum_zotus_predict$predict=="endemic"] <- "native"
+sum_zotus_predict$predict[sum_zotus_predict$predict=="introduced"] <- "non-native"
+
+# change order of categories
+sum_zotus_predict$predict <- factor(sum_zotus_predict$predict, levels = c("native", "non-native"))
+
+sum_zotus_predict %>%
+  mutate(proportion = zotus/sum) %>%
+  ggplot(aes(x = site, y = proportion, fill = predict)) +
+  geom_col() +
+    theme(axis.text.x = element_text(angle = 45, 
+                                   hjust = 1, 
+                                   vjust = 1)) +
+  scale_fill_manual(values = c("#E69F00", "#56B4E9")) +
+  theme(legend.title = element_blank()) +
+  ylab("") +
+  xlab("Community in order of increasing substrate age") +
+  labs(title = "Proportion of endemic and introduced taxa")
+
+#ggsave("figures/AFTER-NICLASSIFY/METE/byPlot/propor_nat-non.png", width = 5, height = 3, units = "in")
+```
+
+# Number of plant genera
+```{r}
+wo_beating %>%
+  group_by(volcano, site, plant) %>%
+  summarise(sampled = n_distinct(smplUnit)) %>%
+  ggplot(aes("", sampled, fill = plant)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  facet_wrap(~site) +
+  xlab("") +
+  ylab("")
+ggsave("figures/AFTER-NICLASSIFY/Plants.png", width = 6, height = 8, units = "in")
+
+uniquePlant <- wo_beating %>%
+  group_by(volcano, site, plant) %>%
+  summarise(n_plant_sampled = n_distinct(smplUnit)) 
+uniquePlant
+
+uniquePlant %>%
+  group_by(site) %>%
+  summarise(num_plant = n_distinct(plant)) %>%
+  ggplot(aes(site, num_plant)) +
+  geom_col(fill = "lightblue", color = "black") +
+  theme(axis.text.x = element_text(angle = 90, 
+                                   hjust = 1, 
+                                   vjust = 1)) +
+  ylab("Number of plant genera sampled") +
+  xlab("Community in order of increasing substrate age")
+ggsave("figures/AFTER-NICLASSIFY/Plants_number.png", width = 6, height = 4, units = "in")
+
+#write_csv(uniquePlant, "figures/AFTER-NICLASSIFY/plantsSmpl.csv")
+
+wo_beating <-  wo_beating %>%
+  left_join(uniquePlant)
+
+#write_csv(wo_beating, "data/github/hdimbeat_abund.geo.csv")
+```
+

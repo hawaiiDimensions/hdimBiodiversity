@@ -1,0 +1,3786 @@
+otu,species_name,final_status,predict
+OTU1,,,introduced
+OTU2,Tomocerus minor,introduced,introduced
+OTU3,Tomocerus minor,introduced,introduced
+OTU4,Homidia laha,introduced,introduced
+OTU5,,,endemic
+OTU6,Tomocerus minor,introduced,introduced
+OTU7,Tomocerus minor,introduced,introduced
+OTU8,,,introduced
+OTU9,Porcellio scaber,introduced,introduced
+OTU10,Porcellio scaber,introduced,introduced
+OTU12,,,endemic
+OTU13,,,endemic
+OTU14,,,introduced
+OTU15,,,introduced
+OTU16,,,endemic
+OTU17,Siphanta acuta,introduced,introduced
+OTU18,,,endemic
+OTU20,,,endemic
+OTU22,Proteroiulus fuscus,introduced,introduced
+OTU23,,,endemic
+OTU24,,,endemic
+OTU25,Hyperlasion magnisensoria,endemic,endemic
+OTU26,Porcellio scaber,introduced,introduced
+OTU27,Tetragnatha pilosa,endemic,endemic
+OTU28,,,introduced
+OTU29,,,introduced
+OTU30,,,endemic
+OTU31,Monalocoris americanus,introduced,introduced
+OTU32,,,endemic
+OTU33,,,endemic
+OTU34,,,endemic
+OTU35,Cedusa sp.,introduced,introduced
+OTU36,Oxidus gracilis,introduced,introduced
+OTU37,Trioza sp.,endemic,endemic
+OTU38,Tetragnatha GoldenDome,endemic,endemic
+OTU39,,,introduced
+OTU40,,,endemic
+OTU41,,,introduced
+OTU42,,,endemic
+OTU43,Tomocerus minor,introduced,introduced
+OTU44,,,endemic
+OTU45,Tetragnatha GoldenDome,endemic,endemic
+OTU46,,,endemic
+OTU47,,,endemic
+OTU48,,,endemic
+OTU49,,,endemic
+OTU50,,,introduced
+OTU51,Tetragnatha GoldenDome,endemic,endemic
+OTU52,Cheiracanthium sp.,introduced,introduced
+OTU54,,,introduced
+OTU55,,,endemic
+OTU56,,,introduced
+OTU57,,,endemic
+OTU58,,,endemic
+OTU59,,,endemic
+OTU60,,,endemic
+OTU61,Orsonwelles graphica,endemic,endemic
+OTU62,,,endemic
+OTU63,,,endemic
+OTU64,Tetragnatha kauaiensis,endemic,endemic
+OTU65,Tetragnatha quasimodo,endemic,endemic
+OTU66,,,introduced
+OTU67,Balta similis,introduced,introduced
+OTU68,,,endemic
+OTU69,Acizzia uncatoides,introduced,introduced
+OTU70,,,introduced
+OTU71,Tetragnatha quasimodo,endemic,endemic
+OTU72,,,endemic
+OTU73,,,endemic
+OTU74,,,introduced
+OTU75,,,endemic
+OTU76,,,introduced
+OTU77,,,endemic
+OTU78,Cardiocondyla mauritanica,introduced,introduced
+OTU79,,,endemic
+OTU80,Pterogramma brevivenosum,endemic,endemic
+OTU81,,,endemic
+OTU82,,,endemic
+OTU83,,,introduced
+OTU84,Trioza sp.,endemic,endemic
+OTU85,Halmus chalybeus,introduced,introduced
+OTU86,,,endemic
+OTU87,Pterogramma brevivenosum,endemic,endemic
+OTU88,,,endemic
+OTU89,,,endemic
+OTU90,Tetragnatha Stardust,endemic,endemic
+OTU91,,,endemic
+OTU92,Tetragnatha quasimodo,endemic,endemic
+OTU93,,,endemic
+OTU94,,,introduced
+OTU95,,,endemic
+OTU96,,,introduced
+OTU97,,,endemic
+OTU98,,,introduced
+OTU99,Tetragnatha GoldenDome,endemic,endemic
+OTU100,Homidia socia,introduced,introduced
+OTU101,,,endemic
+OTU102,,,endemic
+OTU104,,,endemic
+OTU105,,,endemic
+OTU106,,,endemic
+OTU108,,,endemic
+OTU109,,,endemic
+OTU110,Balta similis,introduced,introduced
+OTU111,Opogona omoscopa,introduced,introduced
+OTU112,,,endemic
+OTU113,Porcellio scaber,introduced,introduced
+OTU114,,,endemic
+OTU115,,,endemic
+OTU116,,,introduced
+OTU117,,,endemic
+OTU118,,,endemic
+OTU119,Nylanderia bourbonica,introduced,introduced
+OTU120,,,endemic
+OTU121,Tetragnatha pilosa,endemic,endemic
+OTU122,,,endemic
+OTU123,,,introduced
+OTU124,,,introduced
+OTU125,,,endemic
+OTU126,,,endemic
+OTU127,Haplophallus sp.,introduced,introduced
+OTU129,Cheiracanthium sp.,introduced,introduced
+OTU130,,,endemic
+OTU131,Homidia sinensis,introduced,introduced
+OTU132,,,endemic
+OTU133,,,endemic
+OTU134,Tetragnatha hawaiensis,endemic,endemic
+OTU135,,,endemic
+OTU136,,,endemic
+OTU137,,,endemic
+OTU138,Tetragnatha maka,endemic,endemic
+OTU139,,,introduced
+OTU140,,,endemic
+OTU141,,,endemic
+OTU142,,,endemic
+OTU143,,,endemic
+OTU144,,,endemic
+OTU146,Tetragnatha pilosa,endemic,endemic
+OTU147,Trioza sp.,endemic,endemic
+OTU148,,,introduced
+OTU149,Tetragnatha hawaiensis,endemic,endemic
+OTU150,,,endemic
+OTU151,,,introduced
+OTU152,,,endemic
+OTU153,,,endemic
+OTU154,,,endemic
+OTU156,,,endemic
+OTU157,,,endemic
+OTU158,,,introduced
+OTU159,Pagiopalus nigriventris,endemic,endemic
+OTU160,Tetragnatha kamakou,endemic,endemic
+OTU161,,,endemic
+OTU162,,,endemic
+OTU163,,,endemic
+OTU164,,,endemic
+OTU165,,,endemic
+OTU166,,,endemic
+OTU167,,,endemic
+OTU168,,,introduced
+OTU169,,,endemic
+OTU170,,,endemic
+OTU171,,,endemic
+OTU172,,,endemic
+OTU173,Trioza sp.,endemic,endemic
+OTU174,Tetragnatha quasimodo,endemic,endemic
+OTU175,Tomocerus minor,introduced,introduced
+OTU177,,,endemic
+OTU178,,,endemic
+OTU179,,,endemic
+OTU180,,,endemic
+OTU182,,,endemic
+OTU184,Nesophrosyne montium,endemic,endemic
+OTU185,Porcellio scaber,introduced,introduced
+OTU186,,,endemic
+OTU187,,,endemic
+OTU188,Porcellio scaber,introduced,introduced
+OTU189,Choneiulus palmatus,introduced,introduced
+OTU191,,,endemic
+OTU192,,,endemic
+OTU193,,,endemic
+OTU194,,,endemic
+OTU195,Cryptachaea veruculata,introduced,introduced
+OTU196,,,endemic
+OTU197,Eupithecia orichloris,endemic,endemic
+OTU198,Homidia socia,introduced,introduced
+OTU199,Balta similis,introduced,introduced
+OTU200,,,endemic
+OTU202,,,endemic
+OTU203,,,introduced
+OTU204,,,introduced
+OTU205,,,introduced
+OTU206,,,introduced
+OTU207,Theridion grallator,endemic,endemic
+OTU208,,,endemic
+OTU209,,,endemic
+OTU210,Tetragnatha obscura,endemic,endemic
+OTU211,Tetragnatha hawaiensis,endemic,endemic
+OTU212,,,introduced
+OTU213,,,introduced
+OTU214,,,introduced
+OTU215,,,endemic
+OTU216,,,introduced
+OTU217,Tetragnatha GoldenDome,endemic,endemic
+OTU218,Willowsia japonica,introduced,introduced
+OTU219,,,endemic
+OTU220,,,endemic
+OTU221,,,endemic
+OTU222,,,endemic
+OTU223,,,endemic
+OTU224,,,endemic
+OTU225,,,endemic
+OTU226,,,endemic
+OTU227,,,endemic
+OTU228,Tetragnatha GoldenDome,endemic,endemic
+OTU229,,,introduced
+OTU230,,,introduced
+OTU231,,,introduced
+OTU232,Homidia socia,introduced,introduced
+OTU233,,,endemic
+OTU234,,,endemic
+OTU235,,,endemic
+OTU236,,,endemic
+OTU237,,,endemic
+OTU238,,,endemic
+OTU239,Pariaconus pyramidalis,endemic,endemic
+OTU240,,,introduced
+OTU241,,,endemic
+OTU242,,,endemic
+OTU243,,,endemic
+OTU244,,,endemic
+OTU246,,,endemic
+OTU247,,,endemic
+OTU248,Tetragnatha quasimodo,endemic,endemic
+OTU249,,,introduced
+OTU250,,,introduced
+OTU251,,,endemic
+OTU252,,,endemic
+OTU253,Cyclosa simplicauda,endemic,endemic
+OTU254,,,endemic
+OTU255,,,endemic
+OTU256,,,endemic
+OTU257,Pariaconus pele,endemic,endemic
+OTU258,,,endemic
+OTU259,Pagiopalus nigriventris,endemic,endemic
+OTU260,,,endemic
+OTU261,,,endemic
+OTU262,Balta similis,introduced,introduced
+OTU263,Cyclosa simplicauda,endemic,endemic
+OTU264,,,endemic
+OTU265,,,introduced
+OTU266,,,introduced
+OTU267,,,endemic
+OTU268,Blackburnia constricta,endemic,endemic
+OTU269,,,endemic
+OTU270,Havaika sp.,endemic,endemic
+OTU271,,,endemic
+OTU272,,,endemic
+OTU274,Tetragnatha hawaiensis,endemic,endemic
+OTU275,Cyclosa simplicauda,endemic,endemic
+OTU276,,,endemic
+OTU277,,,endemic
+OTU278,,,endemic
+OTU279,,,introduced
+OTU280,Tetragnatha quasimodo,endemic,endemic
+OTU281,,,introduced
+OTU282,,,endemic
+OTU283,,,endemic
+OTU284,Tomocerus minor,introduced,introduced
+OTU285,,,endemic
+OTU286,,,endemic
+OTU289,,,endemic
+OTU290,,,endemic
+OTU291,,,endemic
+OTU292,Porcellio scaber,introduced,introduced
+OTU293,,,endemic
+OTU294,,,endemic
+OTU295,,,endemic
+OTU296,,,endemic
+OTU297,,,endemic
+OTU298,,,endemic
+OTU299,Tenuiphantes tenuis,introduced,introduced
+OTU300,,,endemic
+OTU301,,,endemic
+OTU302,,,endemic
+OTU303,,,introduced
+OTU304,Tetragnatha brevignatha,endemic,endemic
+OTU305,,,introduced
+OTU306,Tomocerus minor,introduced,introduced
+OTU307,,,endemic
+OTU308,,,endemic
+OTU309,,,endemic
+OTU310,,,endemic
+OTU311,,,introduced
+OTU312,,,endemic
+OTU313,Tomocerus minor,introduced,introduced
+OTU314,,,endemic
+OTU315,Dryadaula terpsichorella,introduced,introduced
+OTU316,,,introduced
+OTU317,,,endemic
+OTU318,,,introduced
+OTU319,,,introduced
+OTU320,,,endemic
+OTU321,,,endemic
+OTU322,Trioza sp.,endemic,endemic
+OTU323,,,endemic
+OTU324,Tetragnatha kamakou,endemic,endemic
+OTU325,,,endemic
+OTU326,,,endemic
+OTU327,,,endemic
+OTU328,,,endemic
+OTU329,,,endemic
+OTU330,,,endemic
+OTU331,,,endemic
+OTU332,Scaptomyza cyrtandrae,endemic,endemic
+OTU333,,,endemic
+OTU334,,,endemic
+OTU335,,,endemic
+OTU336,Tetragnatha cf.,endemic,endemic
+OTU337,,,endemic
+OTU338,,,introduced
+OTU339,,,endemic
+OTU340,,,endemic
+OTU341,Bradysia nitidicollis,introduced,introduced
+OTU342,,,endemic
+OTU343,,,endemic
+OTU344,Ariamnes melekalikimaka,endemic,endemic
+OTU345,,,endemic
+OTU346,Hyposmocoma sp.,endemic,endemic
+OTU347,,,endemic
+OTU348,Tetragnatha ElongateForest,endemic,endemic
+OTU349,,,endemic
+OTU350,,,endemic
+OTU351,,,endemic
+OTU352,Tetragnatha quasimodo,endemic,endemic
+OTU353,Cryptachaea blattea,introduced,introduced
+OTU354,Tetragnatha kauaiensis,endemic,endemic
+OTU355,,,endemic
+OTU356,,,endemic
+OTU357,,,endemic
+OTU358,Tetragnatha cf.,endemic,endemic
+OTU359,,,endemic
+OTU360,,,introduced
+OTU361,,,endemic
+OTU362,,,endemic
+OTU363,,,endemic
+OTU364,,,endemic
+OTU365,,,endemic
+OTU366,,,endemic
+OTU367,,,endemic
+OTU368,,,endemic
+OTU369,,,endemic
+OTU371,Pariaconus minutus,endemic,endemic
+OTU372,Balta similis,introduced,introduced
+OTU373,,,endemic
+OTU374,,,endemic
+OTU375,Tomocerus minor,introduced,introduced
+OTU376,,,introduced
+OTU377,,,endemic
+OTU379,Pariaconus hawaiiensis,endemic,endemic
+OTU380,,,endemic
+OTU381,,,endemic
+OTU382,,,endemic
+OTU383,,,endemic
+OTU385,,,endemic
+OTU386,,,endemic
+OTU387,,,endemic
+OTU388,,,endemic
+OTU389,,,endemic
+OTU390,,,endemic
+OTU391,Ectopsocus californicus,introduced,introduced
+OTU392,,,endemic
+OTU393,Pariaconus pele,endemic,endemic
+OTU394,,,endemic
+OTU395,Ochetellus glaber,introduced,introduced
+OTU397,,,endemic
+OTU399,Nesophrosyne sp.,endemic,endemic
+OTU400,,,introduced
+OTU401,Pariaconus pele,endemic,endemic
+OTU402,,,introduced
+OTU403,Cyclosa simplicauda,endemic,endemic
+OTU404,Ectopsocus californicus,introduced,introduced
+OTU405,,,endemic
+OTU406,,,endemic
+OTU407,,,endemic
+OTU408,,,endemic
+OTU409,,,endemic
+OTU410,,,endemic
+OTU411,,,introduced
+OTU412,,,endemic
+OTU413,,,introduced
+OTU414,,,endemic
+OTU415,Nesophrosyne sp.,endemic,endemic
+OTU416,,,endemic
+OTU417,,,endemic
+OTU418,,,endemic
+OTU419,,,endemic
+OTU420,,,endemic
+OTU421,Havaika cruciata,endemic,endemic
+OTU422,,,introduced
+OTU423,,,endemic
+OTU424,,,endemic
+OTU425,,,endemic
+OTU426,,,endemic
+OTU427,,,endemic
+OTU429,,,endemic
+OTU430,,,endemic
+OTU431,,,endemic
+OTU433,,,endemic
+OTU434,,,endemic
+OTU435,,,endemic
+OTU436,,,endemic
+OTU437,,,introduced
+OTU438,,,endemic
+OTU439,,,endemic
+OTU440,,,endemic
+OTU441,,,endemic
+OTU443,,,endemic
+OTU444,,,introduced
+OTU445,,,endemic
+OTU446,,,endemic
+OTU447,,,endemic
+OTU448,,,endemic
+OTU449,,,endemic
+OTU450,,,endemic
+OTU452,,,endemic
+OTU453,,,endemic
+OTU454,,,introduced
+OTU455,,,endemic
+OTU456,,,endemic
+OTU457,Pterogramma brevivenosum,endemic,endemic
+OTU458,,,endemic
+OTU460,,,endemic
+OTU461,,,endemic
+OTU462,,,endemic
+OTU463,,,endemic
+OTU465,,,endemic
+OTU466,,,endemic
+OTU467,,,endemic
+OTU468,Havaika sp.,endemic,endemic
+OTU469,,,endemic
+OTU470,,,introduced
+OTU471,,,endemic
+OTU472,,,endemic
+OTU473,Udea pyranthes,endemic,endemic
+OTU474,,,endemic
+OTU475,,,endemic
+OTU476,,,endemic
+OTU477,,,endemic
+OTU478,,,endemic
+OTU480,,,endemic
+OTU481,Pariaconus hawaiiensis,endemic,endemic
+OTU482,,,endemic
+OTU483,,,endemic
+OTU484,Balta similis,introduced,introduced
+OTU485,,,endemic
+OTU486,,,endemic
+OTU487,Trioza sp.,endemic,endemic
+OTU488,,,endemic
+OTU489,,,endemic
+OTU490,,,endemic
+OTU491,,,introduced
+OTU492,,,endemic
+OTU493,,,endemic
+OTU496,,,endemic
+OTU497,,,endemic
+OTU498,,,endemic
+OTU499,,,introduced
+OTU500,,,endemic
+OTU501,Tetragnatha GoldenDome,endemic,endemic
+OTU502,,,endemic
+OTU503,,,endemic
+OTU505,,,introduced
+OTU506,,,endemic
+OTU508,,,endemic
+OTU509,,,endemic
+OTU510,,,endemic
+OTU511,,,endemic
+OTU512,,,endemic
+OTU513,Proernus stigmaticus,endemic,endemic
+OTU514,,,endemic
+OTU516,,,endemic
+OTU517,Nesophrosyne furculata,endemic,endemic
+OTU518,,,endemic
+OTU519,,,endemic
+OTU520,,,endemic
+OTU521,Havaika sp.,endemic,endemic
+OTU523,,,endemic
+OTU524,,,endemic
+OTU525,,,endemic
+OTU526,,,endemic
+OTU527,,,endemic
+OTU528,,,endemic
+OTU529,,,endemic
+OTU531,,,endemic
+OTU532,Theridion posticatum,endemic,endemic
+OTU533,,,endemic
+OTU534,,,endemic
+OTU536,,,introduced
+OTU537,,,endemic
+OTU538,,,endemic
+OTU539,,,endemic
+OTU540,,,endemic
+OTU541,,,endemic
+OTU542,,,endemic
+OTU543,,,endemic
+OTU545,Tetragnatha GoldenDome,endemic,endemic
+OTU546,,,endemic
+OTU549,,,endemic
+OTU550,,,endemic
+OTU552,Homidia socia,introduced,introduced
+OTU553,,,endemic
+OTU554,,,endemic
+OTU555,,,endemic
+OTU556,,,endemic
+OTU557,,,endemic
+OTU558,Cryptachaea veruculata,introduced,introduced
+OTU559,,,endemic
+OTU560,,,endemic
+OTU561,,,endemic
+OTU562,,,endemic
+OTU563,,,endemic
+OTU564,,,endemic
+OTU565,,,endemic
+OTU566,,,endemic
+OTU567,Trioza sp.,endemic,endemic
+OTU568,,,endemic
+OTU569,Hyposmocoma sp.,endemic,endemic
+OTU570,,,introduced
+OTU571,,,introduced
+OTU572,Tetragnatha GoldenDome,endemic,endemic
+OTU573,,,endemic
+OTU575,Mecaphesa discreta,endemic,endemic
+OTU576,,,endemic
+OTU577,,,endemic
+OTU578,,,endemic
+OTU579,,,endemic
+OTU580,,,endemic
+OTU581,,,endemic
+OTU582,,,endemic
+OTU583,Tetragnatha Redstar,endemic,endemic
+OTU584,,,endemic
+OTU585,,,endemic
+OTU586,Nesophrosyne sp.,endemic,endemic
+OTU587,,,endemic
+OTU588,Ectopsocus californicus,introduced,introduced
+OTU589,,,endemic
+OTU590,,,endemic
+OTU591,,,endemic
+OTU592,,,endemic
+OTU593,,,introduced
+OTU594,,,endemic
+OTU595,,,endemic
+OTU596,,,endemic
+OTU597,,,endemic
+OTU598,,,endemic
+OTU599,,,endemic
+OTU600,Entomobrya albocincta,introduced,introduced
+OTU601,,,endemic
+OTU602,,,introduced
+OTU603,,,endemic
+OTU605,,,endemic
+OTU606,,,endemic
+OTU607,,,introduced
+OTU608,,,endemic
+OTU609,,,introduced
+OTU610,,,introduced
+OTU611,,,endemic
+OTU612,,,endemic
+OTU613,,,endemic
+OTU615,,,endemic
+OTU616,,,introduced
+OTU617,,,introduced
+OTU618,,,introduced
+OTU619,Pariaconus dorsostriatus,endemic,endemic
+OTU620,,,endemic
+OTU621,,,introduced
+OTU622,,,endemic
+OTU623,Dyscritomyia fasciata,endemic,endemic
+OTU624,,,endemic
+OTU625,Halmus chalybeus,introduced,introduced
+OTU626,,,introduced
+OTU627,,,endemic
+OTU628,Pariaconus iolani,endemic,endemic
+OTU629,,,endemic
+OTU630,Hyposmocoma sp.,endemic,endemic
+OTU631,Tomocerus minor,introduced,introduced
+OTU632,,,endemic
+OTU633,,,endemic
+OTU634,,,endemic
+OTU635,,,endemic
+OTU636,Cyclosa simplicauda,endemic,endemic
+OTU637,,,endemic
+OTU638,,,endemic
+OTU639,,,endemic
+OTU640,Havaika sp.,endemic,endemic
+OTU641,,,endemic
+OTU642,,,endemic
+OTU643,Balta similis,introduced,introduced
+OTU644,Tetragnatha quasimodo,endemic,endemic
+OTU645,Tetragnatha Waves,endemic,endemic
+OTU646,,,endemic
+OTU647,Micromus angustipennis,endemic,endemic
+OTU648,,,endemic
+OTU649,,,endemic
+OTU650,,,endemic
+OTU651,Tetragnatha acuta,endemic,endemic
+OTU652,Pariaconus hiiaka,endemic,endemic
+OTU653,,,endemic
+OTU654,,,endemic
+OTU655,,,endemic
+OTU657,,,endemic
+OTU658,Tetragnatha perkinsi,endemic,endemic
+OTU659,,,endemic
+OTU660,Nesophrosyne sp.,endemic,endemic
+OTU661,,,endemic
+OTU662,,,endemic
+OTU663,,,endemic
+OTU664,,,endemic
+OTU665,,,endemic
+OTU666,,,endemic
+OTU667,,,endemic
+OTU668,,,endemic
+OTU669,,,introduced
+OTU670,,,endemic
+OTU671,,,introduced
+OTU672,,,endemic
+OTU673,,,endemic
+OTU674,Pariaconus poliahu,endemic,endemic
+OTU676,,,endemic
+OTU677,,,endemic
+OTU679,,,endemic
+OTU680,,,endemic
+OTU681,,,endemic
+OTU682,Mecaphesa facunda,endemic,endemic
+OTU683,Tetragnatha maka,endemic,endemic
+OTU684,Cryptachaea veruculata,introduced,introduced
+OTU686,,,endemic
+OTU687,Tetragnatha Stardust,endemic,endemic
+OTU688,,,introduced
+OTU689,,,endemic
+OTU690,,,endemic
+OTU692,,,endemic
+OTU693,Homidia laha,introduced,introduced
+OTU694,,,endemic
+OTU695,,,endemic
+OTU696,,,endemic
+OTU697,Pariaconus pele,endemic,endemic
+OTU698,,,endemic
+OTU699,,,endemic
+OTU700,,,endemic
+OTU702,,,introduced
+OTU703,,,endemic
+OTU704,,,endemic
+OTU705,,,endemic
+OTU706,,,introduced
+OTU707,,,endemic
+OTU708,,,endemic
+OTU709,,,endemic
+OTU710,,,endemic
+OTU711,,,endemic
+OTU712,,,endemic
+OTU713,Pseudolycoriella cavatica,introduced,introduced
+OTU714,,,endemic
+OTU715,,,endemic
+OTU716,,,endemic
+OTU717,,,endemic
+OTU718,Tetragnatha anuenue,endemic,endemic
+OTU720,,,endemic
+OTU721,,,endemic
+OTU722,,,endemic
+OTU723,Nesophrosyne furculata,endemic,endemic
+OTU724,,,endemic
+OTU725,Tetragnatha kamakou,endemic,endemic
+OTU726,,,endemic
+OTU727,,,endemic
+OTU728,,,endemic
+OTU729,,,endemic
+OTU730,,,endemic
+OTU731,,,introduced
+OTU732,,,introduced
+OTU733,,,endemic
+OTU734,,,endemic
+OTU735,Caecilius quercus,introduced,introduced
+OTU736,,,endemic
+OTU737,,,endemic
+OTU738,,,endemic
+OTU739,,,endemic
+OTU740,,,endemic
+OTU741,,,endemic
+OTU742,,,endemic
+OTU743,,,endemic
+OTU744,Tetragnatha kamakou,endemic,endemic
+OTU746,,,endemic
+OTU747,,,endemic
+OTU749,,,endemic
+OTU750,,,endemic
+OTU751,,,endemic
+OTU752,,,endemic
+OTU753,,,endemic
+OTU754,Thyrocopa alterna,endemic,endemic
+OTU755,,,endemic
+OTU756,,,endemic
+OTU757,,,endemic
+OTU758,,,introduced
+OTU759,,,endemic
+OTU760,Banza kauaiensis,endemic,endemic
+OTU761,,,endemic
+OTU762,Tetragnatha Stardust,endemic,endemic
+OTU763,,,introduced
+OTU764,,,endemic
+OTU765,,,endemic
+OTU766,,,endemic
+OTU767,,,endemic
+OTU768,,,introduced
+OTU769,,,endemic
+OTU770,,,endemic
+OTU771,,,endemic
+OTU772,Pariaconus hina,endemic,endemic
+OTU773,,,endemic
+OTU774,Empicoris rubromaculatus,introduced,introduced
+OTU775,Drosophila percnosoma,endemic,endemic
+OTU776,,,endemic
+OTU777,Ctenosciara hawaiiensis,endemic,endemic
+OTU778,Cyclosa simplicauda,endemic,endemic
+OTU779,,,introduced
+OTU780,,,endemic
+OTU782,Cryptamorpha desjardinsii,introduced,introduced
+OTU783,,,introduced
+OTU784,,,endemic
+OTU785,,,introduced
+OTU786,Tetragnatha Stardust,endemic,endemic
+OTU787,,,endemic
+OTU788,,,endemic
+OTU789,Cryptachaea blattea,introduced,introduced
+OTU790,,,endemic
+OTU791,Mecaphesa facunda,endemic,endemic
+OTU792,,,introduced
+OTU793,,,endemic
+OTU794,Limnophyes minimus,introduced,introduced
+OTU795,,,introduced
+OTU796,,,endemic
+OTU797,,,introduced
+OTU798,,,endemic
+OTU799,,,endemic
+OTU800,,,endemic
+OTU801,,,endemic
+OTU802,Hyposmocoma sp.,endemic,endemic
+OTU803,Platynothrus peltifer,introduced,introduced
+OTU804,,,introduced
+OTU805,Pariaconus minutus,endemic,endemic
+OTU806,Pagiopalus nigriventris,endemic,endemic
+OTU807,,,introduced
+OTU809,,,endemic
+OTU810,,,endemic
+OTU811,Tomocerus minor,introduced,introduced
+OTU812,,,introduced
+OTU813,,,endemic
+OTU814,,,endemic
+OTU815,,,introduced
+OTU816,,,endemic
+OTU817,,,endemic
+OTU818,,,endemic
+OTU819,,,endemic
+OTU821,,,endemic
+OTU822,,,endemic
+OTU823,,,endemic
+OTU824,,,endemic
+OTU825,,,endemic
+OTU826,,,endemic
+OTU827,,,endemic
+OTU828,,,endemic
+OTU829,,,endemic
+OTU830,,,endemic
+OTU832,,,introduced
+OTU833,,,endemic
+OTU834,,,endemic
+OTU835,,,endemic
+OTU836,,,endemic
+OTU837,,,introduced
+OTU838,,,endemic
+OTU839,,,endemic
+OTU840,Aphis spiraecola,introduced,introduced
+OTU841,,,endemic
+OTU842,,,endemic
+OTU843,,,endemic
+OTU844,,,endemic
+OTU845,,,endemic
+OTU846,,,endemic
+OTU848,,,endemic
+OTU849,,,endemic
+OTU850,,,endemic
+OTU851,,,endemic
+OTU852,,,endemic
+OTU853,,,endemic
+OTU854,,,endemic
+OTU855,,,endemic
+OTU856,Tetragnatha cf.,endemic,endemic
+OTU857,,,endemic
+OTU858,,,endemic
+OTU859,,,introduced
+OTU860,,,endemic
+OTU861,,,endemic
+OTU862,,,endemic
+OTU863,,,introduced
+OTU864,Tomocerus minor,introduced,introduced
+OTU865,,,introduced
+OTU866,,,endemic
+OTU867,,,endemic
+OTU868,,,endemic
+OTU869,,,endemic
+OTU870,,,introduced
+OTU871,,,endemic
+OTU872,,,endemic
+OTU873,,,endemic
+OTU874,,,endemic
+OTU875,,,endemic
+OTU876,,,endemic
+OTU877,,,endemic
+OTU878,,,endemic
+OTU879,,,endemic
+OTU880,Tetragnatha maka,endemic,endemic
+OTU882,,,endemic
+OTU884,,,endemic
+OTU885,,,introduced
+OTU886,,,endemic
+OTU887,,,endemic
+OTU888,,,endemic
+OTU889,,,endemic
+OTU890,,,endemic
+OTU892,,,endemic
+OTU893,,,introduced
+OTU894,,,endemic
+OTU896,,,introduced
+OTU897,Scaptomyza cyrtandrae,endemic,endemic
+OTU898,Tetragnatha anuenue,endemic,endemic
+OTU899,Trioza sp.,endemic,endemic
+OTU900,,,introduced
+OTU901,,,endemic
+OTU902,,,endemic
+OTU903,,,introduced
+OTU904,,,endemic
+OTU905,,,endemic
+OTU906,,,endemic
+OTU907,,,endemic
+OTU908,,,introduced
+OTU909,,,endemic
+OTU910,,,endemic
+OTU911,,,introduced
+OTU912,,,introduced
+OTU913,,,endemic
+OTU914,,,endemic
+OTU915,,,introduced
+OTU916,Micromus angustipennis,endemic,endemic
+OTU918,,,introduced
+OTU919,,,introduced
+OTU920,,,introduced
+OTU921,,,endemic
+OTU922,Tomocerus minor,introduced,introduced
+OTU923,,,endemic
+OTU924,,,introduced
+OTU925,,,endemic
+OTU927,,,endemic
+OTU928,,,endemic
+OTU929,,,endemic
+OTU930,,,endemic
+OTU931,,,endemic
+OTU932,Pariaconus pele,endemic,endemic
+OTU933,,,endemic
+OTU934,,,endemic
+OTU935,,,endemic
+OTU936,,,endemic
+OTU937,,,endemic
+OTU938,,,introduced
+OTU939,,,introduced
+OTU940,,,endemic
+OTU942,,,endemic
+OTU943,,,introduced
+OTU944,Tetragnatha pilosa,endemic,endemic
+OTU945,,,endemic
+OTU946,Ariamnes melekalikimaka,endemic,endemic
+OTU947,,,endemic
+OTU948,,,introduced
+OTU949,,,endemic
+OTU951,Homidia laha,introduced,introduced
+OTU952,Tetragnatha quasimodo,endemic,endemic
+OTU953,,,introduced
+OTU954,,,endemic
+OTU955,,,endemic
+OTU956,,,endemic
+OTU957,,,endemic
+OTU958,,,endemic
+OTU959,,,endemic
+OTU960,Drosophila ochropleura,endemic,endemic
+OTU961,,,endemic
+OTU963,,,endemic
+OTU964,,,endemic
+OTU966,,,endemic
+OTU967,,,endemic
+OTU968,Pterogramma brevivenosum,endemic,endemic
+OTU969,,,endemic
+OTU970,,,endemic
+OTU971,Cyclosa cf.,endemic,endemic
+OTU972,,,endemic
+OTU973,Trioza sp.,endemic,endemic
+OTU975,,,endemic
+OTU976,Tetragnatha quasimodo,endemic,endemic
+OTU977,,,endemic
+OTU978,,,endemic
+OTU979,,,introduced
+OTU980,,,endemic
+OTU981,Tomocerus minor,introduced,introduced
+OTU982,,,endemic
+OTU983,Drosophila conformis,endemic,endemic
+OTU984,,,introduced
+OTU985,,,introduced
+OTU986,,,endemic
+OTU987,,,endemic
+OTU988,,,endemic
+OTU990,,,endemic
+OTU991,Trigonidium sjostedti,endemic,endemic
+OTU992,,,endemic
+OTU993,,,endemic
+OTU994,Havaika sp.,endemic,endemic
+OTU995,,,endemic
+OTU996,,,endemic
+OTU997,,,endemic
+OTU998,Banza molokaiensis,endemic,endemic
+OTU1000,,,endemic
+OTU1001,,,introduced
+OTU1002,,,endemic
+OTU1003,,,introduced
+OTU1004,,,endemic
+OTU1005,,,endemic
+OTU1006,,,introduced
+OTU1007,,,endemic
+OTU1008,,,endemic
+OTU1009,,,endemic
+OTU1010,,,introduced
+OTU1011,,,endemic
+OTU1012,Tetragnatha kamakou,endemic,endemic
+OTU1013,,,endemic
+OTU1014,,,endemic
+OTU1015,,,endemic
+OTU1016,Balta similis,introduced,introduced
+OTU1017,,,endemic
+OTU1018,Tetragnatha quasimodo,endemic,endemic
+OTU1019,Tetragnatha obscura,endemic,endemic
+OTU1020,,,endemic
+OTU1021,,,endemic
+OTU1022,,,endemic
+OTU1023,,,endemic
+OTU1024,,,endemic
+OTU1025,,,endemic
+OTU1026,,,introduced
+OTU1027,,,introduced
+OTU1028,,,endemic
+OTU1029,,,endemic
+OTU1030,,,introduced
+OTU1031,Tetragnatha kauaiensis,endemic,endemic
+OTU1032,,,endemic
+OTU1033,Hyposmocoma sp.,endemic,endemic
+OTU1034,,,endemic
+OTU1035,,,endemic
+OTU1036,,,endemic
+OTU1037,,,endemic
+OTU1038,,,endemic
+OTU1039,,,endemic
+OTU1040,,,endemic
+OTU1041,,,endemic
+OTU1042,,,endemic
+OTU1043,,,endemic
+OTU1044,,,endemic
+OTU1045,Blackburnia constricta,endemic,endemic
+OTU1046,Drosophila waddingtoni,endemic,endemic
+OTU1047,,,endemic
+OTU1049,,,endemic
+OTU1050,,,endemic
+OTU1051,,,endemic
+OTU1052,,,introduced
+OTU1053,,,endemic
+OTU1054,,,endemic
+OTU1055,,,introduced
+OTU1057,,,introduced
+OTU1058,Pariaconus poliahu,endemic,endemic
+OTU1059,,,endemic
+OTU1060,Tetragnatha quasimodo,endemic,endemic
+OTU1062,,,endemic
+OTU1063,,,endemic
+OTU1065,,,endemic
+OTU1066,Tetragnatha GoldenDome,endemic,endemic
+OTU1067,,,introduced
+OTU1069,,,endemic
+OTU1070,,,introduced
+OTU1071,Bradysia radicum,introduced,introduced
+OTU1072,,,introduced
+OTU1073,,,endemic
+OTU1074,,,introduced
+OTU1075,Tetragnatha hawaiensis,endemic,endemic
+OTU1076,,,introduced
+OTU1077,,,endemic
+OTU1078,,,endemic
+OTU1079,,,endemic
+OTU1080,Mecaphesa facunda,endemic,endemic
+OTU1081,,,endemic
+OTU1082,Solenopsis saevissima,introduced,introduced
+OTU1083,,,endemic
+OTU1084,,,endemic
+OTU1085,,,endemic
+OTU1086,,,endemic
+OTU1089,,,introduced
+OTU1090,,,introduced
+OTU1091,,,introduced
+OTU1092,Cyclosa Tree,endemic,endemic
+OTU1093,,,endemic
+OTU1094,,,endemic
+OTU1095,,,endemic
+OTU1097,,,introduced
+OTU1098,,,endemic
+OTU1099,,,introduced
+OTU1100,,,endemic
+OTU1101,,,endemic
+OTU1102,,,introduced
+OTU1103,,,endemic
+OTU1104,,,endemic
+OTU1105,Mecaphesa facunda,endemic,endemic
+OTU1106,,,endemic
+OTU1107,,,endemic
+OTU1108,,,introduced
+OTU1110,,,endemic
+OTU1111,,,introduced
+OTU1112,Tetragnatha filiciphilia,endemic,endemic
+OTU1113,,,endemic
+OTU1114,Homidia laha,introduced,introduced
+OTU1115,Sophonia orientalis,introduced,introduced
+OTU1116,,,endemic
+OTU1118,,,endemic
+OTU1119,,,endemic
+OTU1120,,,endemic
+OTU1121,,,endemic
+OTU1122,Nesophrosyne sp.,endemic,endemic
+OTU1123,,,introduced
+OTU1124,,,introduced
+OTU1125,,,endemic
+OTU1126,,,endemic
+OTU1127,,,endemic
+OTU1128,,,endemic
+OTU1131,,,endemic
+OTU1132,Ariamnes waikula,endemic,endemic
+OTU1133,,,endemic
+OTU1134,,,endemic
+OTU1135,,,endemic
+OTU1136,,,endemic
+OTU1137,Mecaphesa facunda,endemic,endemic
+OTU1138,Pariaconus pele,endemic,endemic
+OTU1139,,,endemic
+OTU1140,,,endemic
+OTU1141,,,endemic
+OTU1142,Trioza sp.,endemic,endemic
+OTU1143,Ariamnes waikula,endemic,endemic
+OTU1144,,,endemic
+OTU1145,Pariaconus pele,endemic,endemic
+OTU1146,,,endemic
+OTU1147,Tetragnatha obscura,endemic,endemic
+OTU1149,,,endemic
+OTU1150,Tetragnatha quasimodo,endemic,endemic
+OTU1151,,,endemic
+OTU1152,,,endemic
+OTU1153,Mecaphesa anguliventris,endemic,endemic
+OTU1154,,,endemic
+OTU1155,,,endemic
+OTU1156,,,endemic
+OTU1157,,,endemic
+OTU1158,,,endemic
+OTU1159,,,endemic
+OTU1160,,,introduced
+OTU1161,,,endemic
+OTU1162,,,endemic
+OTU1163,,,endemic
+OTU1164,,,endemic
+OTU1165,,,endemic
+OTU1166,,,endemic
+OTU1167,,,endemic
+OTU1168,,,endemic
+OTU1169,,,introduced
+OTU1171,,,endemic
+OTU1172,,,endemic
+OTU1173,,,endemic
+OTU1174,,,endemic
+OTU1175,,,endemic
+OTU1176,,,introduced
+OTU1177,,,endemic
+OTU1178,,,endemic
+OTU1181,,,endemic
+OTU1182,,,introduced
+OTU1183,,,endemic
+OTU1184,,,endemic
+OTU1186,Tetragnatha filiciphilia,endemic,endemic
+OTU1187,Tetragnatha obscura,endemic,endemic
+OTU1188,,,endemic
+OTU1189,,,endemic
+OTU1190,,,endemic
+OTU1191,,,endemic
+OTU1192,,,endemic
+OTU1193,,,endemic
+OTU1194,,,endemic
+OTU1195,,,endemic
+OTU1196,,,endemic
+OTU1197,,,endemic
+OTU1198,,,endemic
+OTU1199,Tomocerus minor,introduced,introduced
+OTU1200,Nesophrosyne furculata,endemic,endemic
+OTU1201,,,endemic
+OTU1202,,,endemic
+OTU1203,Pariaconus pele,endemic,endemic
+OTU1204,,,endemic
+OTU1205,,,endemic
+OTU1206,,,endemic
+OTU1207,,,endemic
+OTU1210,,,endemic
+OTU1211,,,endemic
+OTU1212,,,endemic
+OTU1213,,,endemic
+OTU1214,,,endemic
+OTU1215,,,endemic
+OTU1216,Tetragnatha quasimodo,endemic,endemic
+OTU1217,,,endemic
+OTU1218,,,endemic
+OTU1219,,,endemic
+OTU1220,,,endemic
+OTU1221,,,introduced
+OTU1222,,,endemic
+OTU1223,,,introduced
+OTU1224,,,endemic
+OTU1225,,,endemic
+OTU1226,Ariamnes melekalikimaka,endemic,endemic
+OTU1227,,,introduced
+OTU1228,Pterogramma brevivenosum,endemic,endemic
+OTU1229,,,endemic
+OTU1230,Mecaphesa discreta,endemic,endemic
+OTU1231,,,endemic
+OTU1232,,,introduced
+OTU1233,,,endemic
+OTU1234,,,endemic
+OTU1235,,,endemic
+OTU1236,,,endemic
+OTU1238,Curinus coeruleus,introduced,introduced
+OTU1239,,,endemic
+OTU1240,,,endemic
+OTU1242,,,endemic
+OTU1243,,,endemic
+OTU1244,,,endemic
+OTU1245,,,endemic
+OTU1246,,,endemic
+OTU1247,,,endemic
+OTU1248,,,introduced
+OTU1249,,,introduced
+OTU1250,,,endemic
+OTU1251,,,introduced
+OTU1252,Tetragnatha Stardust,endemic,endemic
+OTU1253,Tetragnatha Redstar,endemic,endemic
+OTU1254,Tetragnatha kauaiensis,endemic,endemic
+OTU1255,Schreckensteinia festaliella,introduced,introduced
+OTU1256,,,endemic
+OTU1257,,,introduced
+OTU1258,,,introduced
+OTU1259,,,endemic
+OTU1260,,,introduced
+OTU1261,Lobopterella dimidiatipes,introduced,introduced
+OTU1262,,,introduced
+OTU1263,,,endemic
+OTU1264,Tetragnatha cf.,endemic,endemic
+OTU1265,,,endemic
+OTU1266,Banza sp.,endemic,endemic
+OTU1267,,,endemic
+OTU1268,,,endemic
+OTU1269,,,introduced
+OTU1271,,,endemic
+OTU1272,Hyposmocoma sp.,endemic,endemic
+OTU1273,,,endemic
+OTU1274,,,introduced
+OTU1275,,,endemic
+OTU1276,,,endemic
+OTU1277,Drosophila ochropleura,endemic,endemic
+OTU1278,,,endemic
+OTU1279,Mecyclothorax palikea,endemic,endemic
+OTU1280,Parasteatoda tepidariorum,introduced,introduced
+OTU1281,,,introduced
+OTU1283,,,introduced
+OTU1285,,,endemic
+OTU1287,,,introduced
+OTU1289,,,endemic
+OTU1290,,,endemic
+OTU1291,,,endemic
+OTU1292,,,endemic
+OTU1293,,,endemic
+OTU1294,,,endemic
+OTU1295,,,endemic
+OTU1297,,,introduced
+OTU1298,Cyclosa simplicauda,endemic,endemic
+OTU1299,,,endemic
+OTU1300,Tetragnatha kamakou,endemic,endemic
+OTU1301,,,endemic
+OTU1302,,,endemic
+OTU1303,Homidia socia,introduced,introduced
+OTU1304,,,introduced
+OTU1305,,,endemic
+OTU1307,,,endemic
+OTU1308,,,endemic
+OTU1310,,,endemic
+OTU1311,,,endemic
+OTU1312,,,endemic
+OTU1313,,,endemic
+OTU1314,,,introduced
+OTU1315,,,endemic
+OTU1317,,,endemic
+OTU1318,,,endemic
+OTU1319,,,endemic
+OTU1320,,,endemic
+OTU1321,Cyclosa cf.,endemic,endemic
+OTU1322,,,endemic
+OTU1323,,,endemic
+OTU1324,,,endemic
+OTU1325,,,endemic
+OTU1326,,,introduced
+OTU1328,,,introduced
+OTU1331,Tetragnatha hawaiensis,endemic,endemic
+OTU1332,,,introduced
+OTU1334,,,introduced
+OTU1335,Nesophrosyne sp.,endemic,endemic
+OTU1336,,,introduced
+OTU1337,,,endemic
+OTU1338,Trioza sp.,endemic,endemic
+OTU1339,,,introduced
+OTU1340,,,endemic
+OTU1341,,,endemic
+OTU1342,,,endemic
+OTU1343,,,endemic
+OTU1344,,,endemic
+OTU1345,,,introduced
+OTU1346,,,introduced
+OTU1347,Pariaconus pele,endemic,endemic
+OTU1348,,,introduced
+OTU1349,,,endemic
+OTU1353,,,endemic
+OTU1354,,,endemic
+OTU1355,,,endemic
+OTU1356,,,introduced
+OTU1357,,,endemic
+OTU1358,,,endemic
+OTU1359,Tetragnatha GoldenDome,endemic,endemic
+OTU1360,Trioza sp.,endemic,endemic
+OTU1361,,,endemic
+OTU1362,Entomobrya atrocincta,introduced,introduced
+OTU1363,,,endemic
+OTU1364,,,endemic
+OTU1365,Tetragnatha mohihi,endemic,endemic
+OTU1366,,,endemic
+OTU1367,,,endemic
+OTU1368,,,endemic
+OTU1369,,,endemic
+OTU1372,,,endemic
+OTU1373,,,introduced
+OTU1374,,,endemic
+OTU1375,Tetragnatha acuta,endemic,endemic
+OTU1376,,,endemic
+OTU1378,,,introduced
+OTU1379,Limonia perkinsi,introduced,introduced
+OTU1380,,,introduced
+OTU1381,Tetragnatha mohihi,endemic,endemic
+OTU1382,Steatoda capensis,introduced,introduced
+OTU1383,,,introduced
+OTU1384,,,endemic
+OTU1385,,,endemic
+OTU1386,,,endemic
+OTU1387,,,endemic
+OTU1389,,,introduced
+OTU1390,,,endemic
+OTU1392,,,introduced
+OTU1393,,,introduced
+OTU1394,,,endemic
+OTU1395,,,endemic
+OTU1396,,,endemic
+OTU1397,,,endemic
+OTU1398,Homidia sinensis,introduced,introduced
+OTU1399,,,endemic
+OTU1400,,,endemic
+OTU1401,,,introduced
+OTU1402,Pariaconus hiiaka,endemic,endemic
+OTU1403,Drosophila variabilis,endemic,endemic
+OTU1404,Mecaphesa anguliventris,endemic,endemic
+OTU1406,,,endemic
+OTU1407,,,introduced
+OTU1408,,,endemic
+OTU1409,,,endemic
+OTU1410,,,endemic
+OTU1411,Nesophrosyne heopoko,endemic,endemic
+OTU1412,,,endemic
+OTU1413,Tetragnatha Stardust,endemic,endemic
+OTU1414,,,endemic
+OTU1415,Homidia sinensis,introduced,introduced
+OTU1416,,,endemic
+OTU1417,Mecaphesa facunda,endemic,endemic
+OTU1418,,,endemic
+OTU1419,,,endemic
+OTU1420,,,endemic
+OTU1421,,,endemic
+OTU1422,,,endemic
+OTU1423,Opogona sacchari,introduced,introduced
+OTU1424,,,endemic
+OTU1426,,,endemic
+OTU1428,,,endemic
+OTU1429,Thyrocopa usitata,endemic,endemic
+OTU1430,Tetragnatha perkinsi,endemic,endemic
+OTU1433,,,endemic
+OTU1434,,,endemic
+OTU1435,Pariaconus molokaiensis,endemic,endemic
+OTU1436,,,endemic
+OTU1437,Tetragnatha perkinsi,endemic,endemic
+OTU1439,,,endemic
+OTU1440,,,endemic
+OTU1441,Homidia socia,introduced,introduced
+OTU1442,,,introduced
+OTU1443,,,endemic
+OTU1445,Mecyclothorax sp.,endemic,endemic
+OTU1446,Serangium maculigerum,introduced,introduced
+OTU1447,,,endemic
+OTU1448,,,endemic
+OTU1449,,,endemic
+OTU1450,,,endemic
+OTU1451,,,endemic
+OTU1452,,,endemic
+OTU1453,,,endemic
+OTU1454,,,introduced
+OTU1455,,,endemic
+OTU1456,,,endemic
+OTU1457,,,endemic
+OTU1458,,,introduced
+OTU1460,Tetragnatha Redstar,endemic,endemic
+OTU1461,,,endemic
+OTU1462,,,endemic
+OTU1463,,,endemic
+OTU1464,,,endemic
+OTU1465,Havaika sp.,endemic,endemic
+OTU1466,,,endemic
+OTU1467,,,endemic
+OTU1468,,,endemic
+OTU1469,,,endemic
+OTU1470,Havaika sp.,endemic,endemic
+OTU1471,,,introduced
+OTU1472,,,endemic
+OTU1473,Havaika cruciata,endemic,endemic
+OTU1474,,,endemic
+OTU1475,,,endemic
+OTU1476,,,endemic
+OTU1477,Tetragnatha Stardust,endemic,endemic
+OTU1478,,,endemic
+OTU1479,,,endemic
+OTU1480,,,endemic
+OTU1481,,,endemic
+OTU1482,,,endemic
+OTU1483,,,introduced
+OTU1484,,,endemic
+OTU1485,Nesophrosyne magnaccai,endemic,endemic
+OTU1486,,,introduced
+OTU1487,,,endemic
+OTU1489,,,endemic
+OTU1490,,,endemic
+OTU1491,,,endemic
+OTU1492,,,introduced
+OTU1493,,,endemic
+OTU1494,,,endemic
+OTU1496,,,endemic
+OTU1497,Tetragnatha maka,endemic,endemic
+OTU1498,Orsonwelles falstaffius,endemic,endemic
+OTU1499,,,endemic
+OTU1500,,,endemic
+OTU1501,Trioza sp.,endemic,endemic
+OTU1502,,,endemic
+OTU1503,,,endemic
+OTU1504,Tetragnatha Waves,endemic,endemic
+OTU1505,,,endemic
+OTU1506,,,endemic
+OTU1509,Havaika sp.,endemic,endemic
+OTU1510,,,endemic
+OTU1511,,,introduced
+OTU1512,,,endemic
+OTU1513,,,endemic
+OTU1514,,,endemic
+OTU1515,,,introduced
+OTU1516,,,endemic
+OTU1517,,,endemic
+OTU1518,,,endemic
+OTU1519,Xyleborinus saxesenii,introduced,introduced
+OTU1520,,,endemic
+OTU1521,,,introduced
+OTU1523,,,endemic
+OTU1524,,,endemic
+OTU1525,,,endemic
+OTU1526,,,endemic
+OTU1527,,,endemic
+OTU1528,,,endemic
+OTU1529,Theridion grallator,endemic,endemic
+OTU1530,,,endemic
+OTU1531,,,endemic
+OTU1533,,,endemic
+OTU1535,,,endemic
+OTU1536,Hyposmocoma metrosiderella,endemic,endemic
+OTU1537,,,endemic
+OTU1538,Thyrocopa subahenea,endemic,endemic
+OTU1539,Mecaphesa facunda,endemic,endemic
+OTU1541,,,endemic
+OTU1542,Drosophila percnosoma,endemic,endemic
+OTU1543,Drosophila percnosoma,endemic,endemic
+OTU1544,,,endemic
+OTU1545,,,endemic
+OTU1546,,,endemic
+OTU1547,,,endemic
+OTU1549,,,endemic
+OTU1552,,,endemic
+OTU1554,,,endemic
+OTU1556,,,endemic
+OTU1557,,,introduced
+OTU1558,,,endemic
+OTU1559,,,endemic
+OTU1560,Xyleborus affinis,introduced,introduced
+OTU1561,,,endemic
+OTU1562,,,endemic
+OTU1564,,,endemic
+OTU1565,Nesophrosyne furculata,endemic,endemic
+OTU1567,,,endemic
+OTU1568,,,endemic
+OTU1569,,,endemic
+OTU1572,,,endemic
+OTU1573,,,endemic
+OTU1574,Cyclosa simplicauda,endemic,endemic
+OTU1575,,,endemic
+OTU1576,,,endemic
+OTU1578,,,endemic
+OTU1579,,,endemic
+OTU1580,,,endemic
+OTU1583,Cyclosa cf.,endemic,endemic
+OTU1584,,,endemic
+OTU1585,,,endemic
+OTU1586,,,endemic
+OTU1587,,,introduced
+OTU1588,,,endemic
+OTU1589,,,endemic
+OTU1590,,,endemic
+OTU1591,Tetragnatha eurychasma,endemic,endemic
+OTU1592,,,introduced
+OTU1593,,,endemic
+OTU1595,Pariaconus minutus,endemic,endemic
+OTU1596,,,endemic
+OTU1597,,,endemic
+OTU1598,,,introduced
+OTU1599,,,endemic
+OTU1600,Tetragnatha kauaiensis,endemic,endemic
+OTU1601,,,endemic
+OTU1602,Tetragnatha mohihi,endemic,endemic
+OTU1603,,,introduced
+OTU1605,,,endemic
+OTU1606,,,endemic
+OTU1607,,,endemic
+OTU1608,,,endemic
+OTU1609,,,endemic
+OTU1610,Siphanta acuta,introduced,introduced
+OTU1611,Greenidea psidii,introduced,introduced
+OTU1612,,,endemic
+OTU1613,,,endemic
+OTU1614,,,introduced
+OTU1615,,,endemic
+OTU1616,Micromus angustipennis,endemic,endemic
+OTU1618,,,endemic
+OTU1619,Tetragnatha Stardust,endemic,endemic
+OTU1620,,,endemic
+OTU1621,,,introduced
+OTU1622,,,endemic
+OTU1623,,,endemic
+OTU1624,,,introduced
+OTU1625,Sierola sp.,endemic,endemic
+OTU1626,,,endemic
+OTU1627,,,endemic
+OTU1629,,,endemic
+OTU1630,,,introduced
+OTU1632,Pariaconus mauiensis,endemic,endemic
+OTU1633,,,endemic
+OTU1634,,,endemic
+OTU1635,,,introduced
+OTU1636,,,endemic
+OTU1637,,,endemic
+OTU1638,,,endemic
+OTU1639,,,endemic
+OTU1640,,,endemic
+OTU1641,,,endemic
+OTU1642,,,endemic
+OTU1643,,,endemic
+OTU1644,,,introduced
+OTU1646,,,endemic
+OTU1647,,,endemic
+OTU1649,Xyleborus kauaiensis,endemic,endemic
+OTU1650,,,endemic
+OTU1651,,,introduced
+OTU1652,,,endemic
+OTU1653,,,introduced
+OTU1654,,,endemic
+OTU1656,Tetragnatha filiciphilia,endemic,endemic
+OTU1657,,,endemic
+OTU1658,,,introduced
+OTU1659,,,introduced
+OTU1660,,,endemic
+OTU1661,,,introduced
+OTU1662,,,introduced
+OTU1663,,,endemic
+OTU1667,,,endemic
+OTU1668,,,endemic
+OTU1670,,,introduced
+OTU1671,,,endemic
+OTU1672,,,endemic
+OTU1673,,,introduced
+OTU1675,,,endemic
+OTU1676,,,endemic
+OTU1677,Tomocerus minor,introduced,introduced
+OTU1679,Theridion melanostictum,endemic,endemic
+OTU1681,,,introduced
+OTU1682,,,introduced
+OTU1683,,,endemic
+OTU1684,,,endemic
+OTU1687,,,introduced
+OTU1688,,,endemic
+OTU1689,,,introduced
+OTU1690,,,endemic
+OTU1691,Tetragnatha maka,endemic,endemic
+OTU1692,,,endemic
+OTU1693,,,endemic
+OTU1694,,,endemic
+OTU1695,Homidia sinensis,introduced,introduced
+OTU1696,,,endemic
+OTU1697,,,introduced
+OTU1699,,,endemic
+OTU1700,,,endemic
+OTU1701,,,endemic
+OTU1702,,,endemic
+OTU1703,,,endemic
+OTU1705,,,endemic
+OTU1706,,,endemic
+OTU1707,,,endemic
+OTU1708,,,endemic
+OTU1709,,,endemic
+OTU1710,,,introduced
+OTU1711,,,endemic
+OTU1712,,,endemic
+OTU1713,,,endemic
+OTU1714,,,endemic
+OTU1715,,,endemic
+OTU1716,,,endemic
+OTU1717,,,endemic
+OTU1718,,,endemic
+OTU1719,,,endemic
+OTU1721,Drosophila variabilis,endemic,endemic
+OTU1723,Sophonia rufofascia,introduced,introduced
+OTU1724,Sophonia rufofascia,introduced,introduced
+OTU1725,,,endemic
+OTU1727,,,endemic
+OTU1728,,,endemic
+OTU1729,,,endemic
+OTU1730,Havaika sp.,endemic,endemic
+OTU1731,,,introduced
+OTU1732,,,introduced
+OTU1733,,,endemic
+OTU1734,,,endemic
+OTU1735,,,endemic
+OTU1736,,,endemic
+OTU1737,,,introduced
+OTU1738,,,endemic
+OTU1739,,,endemic
+OTU1740,,,endemic
+OTU1741,,,endemic
+OTU1742,,,endemic
+OTU1743,,,endemic
+OTU1744,,,introduced
+OTU1745,,,endemic
+OTU1746,,,endemic
+OTU1747,Pariaconus kupua,endemic,endemic
+OTU1748,,,introduced
+OTU1749,,,endemic
+OTU1750,,,endemic
+OTU1751,,,endemic
+OTU1753,,,endemic
+OTU1754,Tetragnatha eurychasma,endemic,endemic
+OTU1755,,,endemic
+OTU1756,,,endemic
+OTU1757,,,endemic
+OTU1759,,,endemic
+OTU1761,,,introduced
+OTU1762,,,endemic
+OTU1763,,,endemic
+OTU1764,Tetragnatha filiciphilia,endemic,endemic
+OTU1765,,,introduced
+OTU1766,,,endemic
+OTU1767,,,endemic
+OTU1768,,,introduced
+OTU1769,Tetragnatha Stardust,endemic,endemic
+OTU1770,,,endemic
+OTU1771,,,endemic
+OTU1772,Mecaphesa anguliventris,endemic,endemic
+OTU1773,,,endemic
+OTU1774,,,endemic
+OTU1775,,,introduced
+OTU1776,,,introduced
+OTU1778,Proernus stigmaticus,endemic,endemic
+OTU1779,,,introduced
+OTU1780,,,endemic
+OTU1781,Trioza sp.,endemic,endemic
+OTU1782,,,endemic
+OTU1783,,,endemic
+OTU1784,,,endemic
+OTU1785,,,endemic
+OTU1786,Nesophrosyne myrsines,endemic,endemic
+OTU1787,,,endemic
+OTU1788,,,endemic
+OTU1789,,,endemic
+OTU1790,,,endemic
+OTU1792,Drosophila comatifemora,endemic,endemic
+OTU1793,,,endemic
+OTU1794,,,endemic
+OTU1795,,,introduced
+OTU1796,,,endemic
+OTU1797,Cardiocondyla emeryi,introduced,introduced
+OTU1798,,,introduced
+OTU1799,,,introduced
+OTU1800,,,endemic
+OTU1802,,,introduced
+OTU1803,,,endemic
+OTU1805,Lobopterella dimidiatipes,introduced,introduced
+OTU1806,Meteorus laphygmae,introduced,introduced
+OTU1807,,,endemic
+OTU1808,,,introduced
+OTU1809,,,endemic
+OTU1811,,,endemic
+OTU1812,,,endemic
+OTU1813,,,endemic
+OTU1814,,,endemic
+OTU1815,,,endemic
+OTU1816,,,introduced
+OTU1819,,,endemic
+OTU1820,,,endemic
+OTU1821,Tetragnatha acuta,endemic,endemic
+OTU1822,Clastoptera sp.,introduced,introduced
+OTU1823,,,endemic
+OTU1824,,,endemic
+OTU1825,Tetragnatha stelarobusta,endemic,endemic
+OTU1826,,,endemic
+OTU1827,,,endemic
+OTU1830,Hyposmocoma sp.,endemic,endemic
+OTU1831,Tetragnatha acuta,endemic,endemic
+OTU1833,Tetragnatha waikamoi,endemic,endemic
+OTU1835,,,endemic
+OTU1836,,,endemic
+OTU1837,,,introduced
+OTU1838,,,introduced
+OTU1839,,,introduced
+OTU1840,Nesophrosyne sp.,endemic,endemic
+OTU1843,,,introduced
+OTU1845,,,endemic
+OTU1846,,,endemic
+OTU1848,,,endemic
+OTU1849,,,endemic
+OTU1851,,,endemic
+OTU1852,Siphanta acuta,introduced,introduced
+OTU1853,,,endemic
+OTU1854,,,endemic
+OTU1855,,,introduced
+OTU1856,,,endemic
+OTU1857,Tetragnatha hawaiensis,endemic,endemic
+OTU1858,,,endemic
+OTU1859,,,endemic
+OTU1860,,,endemic
+OTU1862,,,endemic
+OTU1863,,,introduced
+OTU1864,,,endemic
+OTU1865,,,endemic
+OTU1866,Hyposmocoma sp.,endemic,endemic
+OTU1867,,,endemic
+OTU1868,,,endemic
+OTU1869,,,endemic
+OTU1870,,,endemic
+OTU1871,,,endemic
+OTU1872,,,endemic
+OTU1873,,,endemic
+OTU1874,,,endemic
+OTU1875,,,endemic
+OTU1876,,,endemic
+OTU1877,,,endemic
+OTU1878,,,endemic
+OTU1879,,,endemic
+OTU1880,,,endemic
+OTU1882,,,endemic
+OTU1883,,,endemic
+OTU1885,,,endemic
+OTU1886,,,endemic
+OTU1887,,,endemic
+OTU1888,,,endemic
+OTU1889,,,endemic
+OTU1891,,,endemic
+OTU1892,,,endemic
+OTU1893,Pariaconus dorsostriatus,endemic,endemic
+OTU1894,,,introduced
+OTU1895,,,endemic
+OTU1896,,,introduced
+OTU1897,Pariaconus minutus,endemic,endemic
+OTU1898,,,endemic
+OTU1899,,,introduced
+OTU1900,,,endemic
+OTU1901,,,endemic
+OTU1902,,,endemic
+OTU1903,,,introduced
+OTU1904,,,endemic
+OTU1905,,,endemic
+OTU1906,Siphanta acuta,introduced,introduced
+OTU1907,,,endemic
+OTU1908,,,introduced
+OTU1909,,,introduced
+OTU1910,,,endemic
+OTU1911,,,endemic
+OTU1912,,,endemic
+OTU1913,Trioza sp.,endemic,endemic
+OTU1914,,,endemic
+OTU1915,,,endemic
+OTU1916,,,endemic
+OTU1917,Tetragnatha perkinsi,endemic,endemic
+OTU1918,,,endemic
+OTU1922,,,endemic
+OTU1926,,,endemic
+OTU1927,,,endemic
+OTU1929,,,endemic
+OTU1930,,,endemic
+OTU1931,,,endemic
+OTU1932,Nesophrosyne furculata,endemic,endemic
+OTU1933,,,endemic
+OTU1934,,,introduced
+OTU1935,,,endemic
+OTU1937,Tetragnatha filiciphilia,endemic,endemic
+OTU1938,,,endemic
+OTU1939,,,introduced
+OTU1940,,,endemic
+OTU1941,,,endemic
+OTU1943,,,endemic
+OTU1944,,,endemic
+OTU1945,,,endemic
+OTU1946,Cheiracanthium sp.,introduced,introduced
+OTU1947,,,endemic
+OTU1949,,,endemic
+OTU1952,,,endemic
+OTU1953,,,endemic
+OTU1954,,,endemic
+OTU1957,,,endemic
+OTU1958,,,endemic
+OTU1959,Siphanta acuta,introduced,introduced
+OTU1960,,,introduced
+OTU1962,,,endemic
+OTU1963,,,introduced
+OTU1964,,,endemic
+OTU1965,Hydrellia tritici,introduced,introduced
+OTU1966,,,endemic
+OTU1967,,,introduced
+OTU1969,,,endemic
+OTU1971,,,endemic
+OTU1972,,,endemic
+OTU1973,,,endemic
+OTU1975,,,endemic
+OTU1976,Poecilosomella punctipennis,introduced,introduced
+OTU1977,,,introduced
+OTU1978,,,endemic
+OTU1980,,,endemic
+OTU1981,,,endemic
+OTU1982,,,endemic
+OTU1983,,,endemic
+OTU1984,,,endemic
+OTU1985,,,endemic
+OTU1986,,,endemic
+OTU1987,,,endemic
+OTU1988,Drosophila conformis,endemic,endemic
+OTU1989,Pariaconus minutus,endemic,endemic
+OTU1990,,,endemic
+OTU1991,,,endemic
+OTU1993,,,endemic
+OTU1995,,,endemic
+OTU1996,,,introduced
+OTU1997,,,endemic
+OTU1998,Pariaconus mauiensis,endemic,endemic
+OTU1999,Mecaphesa discreta,endemic,endemic
+OTU2000,Homidia socia,introduced,introduced
+OTU2001,,,endemic
+OTU2003,Taylorilygus apicalis,introduced,introduced
+OTU2004,,,endemic
+OTU2006,,,endemic
+OTU2008,,,endemic
+OTU2010,,,endemic
+OTU2011,,,endemic
+OTU2012,,,endemic
+OTU2013,,,endemic
+OTU2014,,,endemic
+OTU2015,,,endemic
+OTU2016,Cyclosa simplicauda,endemic,endemic
+OTU2018,,,endemic
+OTU2019,,,endemic
+OTU2021,,,introduced
+OTU2022,Tetragnatha Redstar,endemic,endemic
+OTU2023,,,introduced
+OTU2024,,,endemic
+OTU2025,,,endemic
+OTU2027,,,endemic
+OTU2028,,,introduced
+OTU2030,,,introduced
+OTU2031,,,endemic
+OTU2032,Drosophila sordidapex,endemic,endemic
+OTU2034,,,endemic
+OTU2035,,,endemic
+OTU2037,,,endemic
+OTU2038,,,endemic
+OTU2039,,,endemic
+OTU2040,,,endemic
+OTU2041,Proernus stigmaticus,endemic,endemic
+OTU2042,Pariaconus hawaiiensis,endemic,endemic
+OTU2044,,,endemic
+OTU2045,,,endemic
+OTU2046,,,endemic
+OTU2047,,,endemic
+OTU2048,,,introduced
+OTU2049,,,endemic
+OTU2050,,,endemic
+OTU2051,,,endemic
+OTU2052,,,endemic
+OTU2053,,,endemic
+OTU2054,,,endemic
+OTU2055,,,endemic
+OTU2056,,,endemic
+OTU2057,,,endemic
+OTU2058,Nesophrosyne myrsines,endemic,endemic
+OTU2061,,,endemic
+OTU2062,,,endemic
+OTU2064,,,endemic
+OTU2067,,,endemic
+OTU2068,,,endemic
+OTU2069,,,endemic
+OTU2070,Tetragnatha acuta,endemic,endemic
+OTU2071,Nesophrosyne furculata,endemic,endemic
+OTU2072,,,introduced
+OTU2073,Trioza sp.,endemic,endemic
+OTU2075,,,endemic
+OTU2076,,,endemic
+OTU2077,Pariaconus wyvernus,endemic,endemic
+OTU2078,Cartodere nodifer,introduced,introduced
+OTU2079,,,endemic
+OTU2080,,,introduced
+OTU2081,,,endemic
+OTU2082,,,endemic
+OTU2086,,,endemic
+OTU2087,,,endemic
+OTU2088,,,endemic
+OTU2089,,,endemic
+OTU2090,,,endemic
+OTU2093,Pariaconus pele,endemic,endemic
+OTU2094,,,endemic
+OTU2095,Pariaconus pyramidalis,endemic,endemic
+OTU2096,,,endemic
+OTU2097,,,endemic
+OTU2098,Pariaconus hawaiiensis,endemic,endemic
+OTU2099,,,endemic
+OTU2100,Pariaconus hawaiiensis,endemic,endemic
+OTU2101,,,endemic
+OTU2102,,,endemic
+OTU2103,,,endemic
+OTU2104,Sierola sp.,endemic,endemic
+OTU2105,Nesophrosyne sp.,endemic,endemic
+OTU2106,,,endemic
+OTU2107,,,endemic
+OTU2108,,,introduced
+OTU2110,,,endemic
+OTU2112,,,endemic
+OTU2113,,,endemic
+OTU2114,,,endemic
+OTU2115,,,introduced
+OTU2117,,,endemic
+OTU2118,,,endemic
+OTU2119,,,endemic
+OTU2120,,,endemic
+OTU2121,,,endemic
+OTU2122,,,endemic
+OTU2123,Tetragnatha obscura,endemic,endemic
+OTU2124,,,endemic
+OTU2125,,,endemic
+OTU2126,,,endemic
+OTU2127,,,introduced
+OTU2128,,,endemic
+OTU2129,,,introduced
+OTU2131,Schrankia howarthi,endemic,endemic
+OTU2133,,,endemic
+OTU2134,,,endemic
+OTU2135,Pariaconus pele,endemic,endemic
+OTU2138,,,endemic
+OTU2139,,,endemic
+OTU2140,,,endemic
+OTU2141,,,introduced
+OTU2142,,,endemic
+OTU2143,,,endemic
+OTU2144,,,endemic
+OTU2145,,,endemic
+OTU2146,Aedes japonicus,introduced,introduced
+OTU2148,,,endemic
+OTU2150,,,endemic
+OTU2151,,,endemic
+OTU2152,,,endemic
+OTU2154,,,endemic
+OTU2156,,,endemic
+OTU2157,,,endemic
+OTU2158,,,endemic
+OTU2159,Aphis aurantii,introduced,introduced
+OTU2160,,,endemic
+OTU2161,,,endemic
+OTU2162,,,introduced
+OTU2163,,,endemic
+OTU2165,,,endemic
+OTU2167,,,endemic
+OTU2168,,,endemic
+OTU2169,,,endemic
+OTU2170,,,endemic
+OTU2171,,,endemic
+OTU2172,,,endemic
+OTU2173,,,introduced
+OTU2174,Tetragnatha restricta,endemic,endemic
+OTU2175,,,endemic
+OTU2177,,,endemic
+OTU2178,,,endemic
+OTU2179,,,endemic
+OTU2181,,,endemic
+OTU2183,,,endemic
+OTU2184,,,endemic
+OTU2186,,,endemic
+OTU2187,,,endemic
+OTU2188,,,endemic
+OTU2191,,,introduced
+OTU2192,,,endemic
+OTU2193,,,endemic
+OTU2194,,,endemic
+OTU2196,,,introduced
+OTU2197,,,endemic
+OTU2198,,,endemic
+OTU2199,Pariaconus pele,endemic,endemic
+OTU2200,,,endemic
+OTU2201,,,endemic
+OTU2203,Propsocus pulchripennis,introduced,introduced
+OTU2204,,,endemic
+OTU2205,,,endemic
+OTU2206,,,endemic
+OTU2207,,,endemic
+OTU2208,,,endemic
+OTU2210,,,endemic
+OTU2211,Xyleborus mauiensis,endemic,endemic
+OTU2212,,,endemic
+OTU2213,,,introduced
+OTU2214,,,endemic
+OTU2218,,,introduced
+OTU2219,,,endemic
+OTU2220,,,endemic
+OTU2221,,,endemic
+OTU2222,,,endemic
+OTU2223,,,endemic
+OTU2224,,,endemic
+OTU2225,,,endemic
+OTU2226,Mecaphesa facunda,endemic,endemic
+OTU2227,,,introduced
+OTU2229,,,endemic
+OTU2230,,,introduced
+OTU2231,,,endemic
+OTU2232,,,endemic
+OTU2233,,,endemic
+OTU2234,,,endemic
+OTU2235,,,endemic
+OTU2239,,,endemic
+OTU2240,,,endemic
+OTU2241,,,endemic
+OTU2242,,,introduced
+OTU2243,,,endemic
+OTU2244,,,endemic
+OTU2245,,,endemic
+OTU2247,,,introduced
+OTU2248,,,endemic
+OTU2249,,,endemic
+OTU2250,,,endemic
+OTU2251,,,endemic
+OTU2252,,,introduced
+OTU2253,,,endemic
+OTU2254,,,endemic
+OTU2255,,,introduced
+OTU2256,,,introduced
+OTU2257,,,endemic
+OTU2258,,,endemic
+OTU2259,Tetragnatha acuta,endemic,endemic
+OTU2260,Bradysia nitidicollis,introduced,introduced
+OTU2261,,,endemic
+OTU2262,,,endemic
+OTU2263,Havaika sp.,endemic,endemic
+OTU2264,,,endemic
+OTU2265,,,endemic
+OTU2267,,,introduced
+OTU2268,,,endemic
+OTU2270,,,endemic
+OTU2271,,,introduced
+OTU2272,,,endemic
+OTU2273,,,endemic
+OTU2275,,,endemic
+OTU2276,,,endemic
+OTU2277,,,endemic
+OTU2278,Cylindroiulus latestriatus,introduced,introduced
+OTU2280,,,endemic
+OTU2281,,,introduced
+OTU2282,,,introduced
+OTU2283,,,endemic
+OTU2284,,,endemic
+OTU2285,,,introduced
+OTU2286,,,endemic
+OTU2287,,,introduced
+OTU2289,,,endemic
+OTU2290,Trioza sp.,endemic,endemic
+OTU2293,Havaika sp.,endemic,endemic
+OTU2294,,,endemic
+OTU2295,,,endemic
+OTU2296,,,endemic
+OTU2298,,,endemic
+OTU2299,,,endemic
+OTU2300,,,endemic
+OTU2302,,,endemic
+OTU2303,,,endemic
+OTU2306,,,endemic
+OTU2308,,,endemic
+OTU2310,Halmus chalybeus,introduced,introduced
+OTU2311,,,endemic
+OTU2312,,,endemic
+OTU2313,,,endemic
+OTU2314,Ctenosciara hawaiiensis,endemic,endemic
+OTU2316,,,endemic
+OTU2317,,,endemic
+OTU2318,,,endemic
+OTU2319,Tetragnatha acuta,endemic,endemic
+OTU2320,Tetragnatha kamakou,endemic,endemic
+OTU2321,,,endemic
+OTU2322,Pariaconus pele,endemic,endemic
+OTU2323,,,endemic
+OTU2324,,,introduced
+OTU2325,,,endemic
+OTU2326,,,endemic
+OTU2328,,,endemic
+OTU2329,,,endemic
+OTU2330,,,introduced
+OTU2331,Tetragnatha mohihi,endemic,endemic
+OTU2332,,,endemic
+OTU2333,,,introduced
+OTU2334,Tetragnatha Redstar,endemic,endemic
+OTU2335,,,endemic
+OTU2336,,,endemic
+OTU2337,,,endemic
+OTU2338,,,endemic
+OTU2339,,,endemic
+OTU2340,,,introduced
+OTU2341,,,endemic
+OTU2342,,,endemic
+OTU2343,,,introduced
+OTU2345,Tetragnatha filiciphilia,endemic,endemic
+OTU2346,,,endemic
+OTU2347,,,endemic
+OTU2348,Nesophrosyne sp.,endemic,endemic
+OTU2350,,,endemic
+OTU2352,,,introduced
+OTU2358,,,endemic
+OTU2360,,,introduced
+OTU2361,,,endemic
+OTU2362,,,endemic
+OTU2363,,,endemic
+OTU2364,,,endemic
+OTU2365,,,endemic
+OTU2366,,,introduced
+OTU2367,,,introduced
+OTU2368,,,endemic
+OTU2369,,,introduced
+OTU2370,,,endemic
+OTU2371,,,introduced
+OTU2372,,,endemic
+OTU2373,,,endemic
+OTU2374,,,endemic
+OTU2375,,,endemic
+OTU2377,Havaika sp.,endemic,endemic
+OTU2379,,,endemic
+OTU2380,,,introduced
+OTU2381,,,endemic
+OTU2382,,,endemic
+OTU2383,,,introduced
+OTU2385,,,introduced
+OTU2386,,,introduced
+OTU2389,,,introduced
+OTU2391,,,endemic
+OTU2393,,,introduced
+OTU2394,,,endemic
+OTU2395,,,endemic
+OTU2396,,,endemic
+OTU2398,,,endemic
+OTU2399,,,endemic
+OTU2400,,,endemic
+OTU2401,,,endemic
+OTU2403,Pariaconus pele,endemic,endemic
+OTU2404,,,endemic
+OTU2405,,,endemic
+OTU2406,,,introduced
+OTU2407,,,introduced
+OTU2408,,,endemic
+OTU2409,,,endemic
+OTU2410,,,endemic
+OTU2412,Tetragnatha acuta,endemic,endemic
+OTU2413,,,endemic
+OTU2414,,,endemic
+OTU2416,Pariaconus hawaiiensis,endemic,endemic
+OTU2417,,,endemic
+OTU2419,Tetragnatha acuta,endemic,endemic
+OTU2420,,,endemic
+OTU2421,,,endemic
+OTU2422,,,endemic
+OTU2424,Hyposmocoma sp.,endemic,endemic
+OTU2426,,,endemic
+OTU2428,Aphidius colemani,introduced,introduced
+OTU2429,,,endemic
+OTU2430,,,endemic
+OTU2431,,,endemic
+OTU2432,,,endemic
+OTU2433,,,endemic
+OTU2434,,,endemic
+OTU2435,,,endemic
+OTU2436,,,endemic
+OTU2437,,,introduced
+OTU2438,,,endemic
+OTU2439,Pterogramma brevivenosum,endemic,endemic
+OTU2440,,,endemic
+OTU2441,,,endemic
+OTU2442,,,endemic
+OTU2443,,,endemic
+OTU2444,,,endemic
+OTU2445,,,endemic
+OTU2447,Micromus angustipennis,endemic,endemic
+OTU2448,,,introduced
+OTU2450,Dyscritomyia fasciata,endemic,endemic
+OTU2451,,,endemic
+OTU2452,,,endemic
+OTU2453,Pariaconus hawaiiensis,endemic,endemic
+OTU2454,,,introduced
+OTU2455,,,endemic
+OTU2456,,,introduced
+OTU2457,,,endemic
+OTU2458,,,introduced
+OTU2459,,,endemic
+OTU2460,,,endemic
+OTU2461,Aphidius platensis,introduced,introduced
+OTU2462,,,endemic
+OTU2463,,,endemic
+OTU2464,,,introduced
+OTU2465,,,endemic
+OTU2467,,,endemic
+OTU2468,,,introduced
+OTU2469,,,endemic
+OTU2470,Pariaconus pele,endemic,endemic
+OTU2472,Tetragnatha waikamoi,endemic,endemic
+OTU2473,,,endemic
+OTU2474,,,endemic
+OTU2476,,,endemic
+OTU2478,,,endemic
+OTU2479,,,endemic
+OTU2480,,,introduced
+OTU2481,,,introduced
+OTU2483,Orsonwelles macbeth,endemic,endemic
+OTU2485,,,endemic
+OTU2486,,,introduced
+OTU2487,,,endemic
+OTU2488,,,endemic
+OTU2489,Willowsia japonica,introduced,introduced
+OTU2491,,,endemic
+OTU2492,,,endemic
+OTU2493,,,endemic
+OTU2494,,,endemic
+OTU2495,Porcellio scaber,introduced,introduced
+OTU2496,,,endemic
+OTU2499,,,endemic
+OTU2500,,,introduced
+OTU2501,,,endemic
+OTU2502,,,endemic
+OTU2503,,,endemic
+OTU2504,,,endemic
+OTU2506,,,endemic
+OTU2507,Drosophila ancyla,endemic,endemic
+OTU2509,,,endemic
+OTU2511,,,endemic
+OTU2512,,,endemic
+OTU2513,Tetragnatha hawaiensis,endemic,endemic
+OTU2514,,,introduced
+OTU2515,,,endemic
+OTU2516,,,endemic
+OTU2518,,,endemic
+OTU2521,Proernus stigmaticus,endemic,endemic
+OTU2524,,,endemic
+OTU2525,,,introduced
+OTU2526,,,introduced
+OTU2527,,,introduced
+OTU2529,,,introduced
+OTU2530,,,endemic
+OTU2531,,,endemic
+OTU2532,,,endemic
+OTU2533,,,endemic
+OTU2535,,,endemic
+OTU2536,Ariamnes melekalikimaka,endemic,endemic
+OTU2540,,,endemic
+OTU2541,,,endemic
+OTU2543,,,introduced
+OTU2544,,,endemic
+OTU2545,,,introduced
+OTU2546,,,introduced
+OTU2547,,,endemic
+OTU2548,,,endemic
+OTU2550,,,endemic
+OTU2551,,,endemic
+OTU2552,,,endemic
+OTU2554,,,endemic
+OTU2555,,,endemic
+OTU2556,Drosophila ancyla,endemic,endemic
+OTU2559,,,endemic
+OTU2560,,,introduced
+OTU2561,,,introduced
+OTU2562,,,introduced
+OTU2563,,,endemic
+OTU2564,,,endemic
+OTU2565,,,endemic
+OTU2566,,,endemic
+OTU2568,,,endemic
+OTU2569,,,introduced
+OTU2570,,,introduced
+OTU2571,,,endemic
+OTU2572,,,endemic
+OTU2574,,,endemic
+OTU2575,,,endemic
+OTU2576,,,endemic
+OTU2577,,,endemic
+OTU2578,,,endemic
+OTU2581,,,endemic
+OTU2582,,,endemic
+OTU2583,,,introduced
+OTU2584,,,endemic
+OTU2585,,,endemic
+OTU2586,,,endemic
+OTU2587,,,introduced
+OTU2589,,,endemic
+OTU2590,,,introduced
+OTU2591,,,endemic
+OTU2594,,,endemic
+OTU2595,,,introduced
+OTU2596,,,introduced
+OTU2598,Tetragnatha GoldenDome,endemic,endemic
+OTU2600,,,endemic
+OTU2601,Pagiopalus nigriventris,endemic,endemic
+OTU2602,,,endemic
+OTU2603,,,endemic
+OTU2604,,,endemic
+OTU2605,,,introduced
+OTU2607,,,endemic
+OTU2608,,,introduced
+OTU2609,,,endemic
+OTU2611,,,endemic
+OTU2614,,,endemic
+OTU2615,Tetragnatha kamakou,endemic,endemic
+OTU2616,,,introduced
+OTU2617,,,endemic
+OTU2619,Hyposmocoma sp.,endemic,endemic
+OTU2620,,,endemic
+OTU2621,,,endemic
+OTU2625,,,endemic
+OTU2626,,,endemic
+OTU2628,,,endemic
+OTU2630,,,endemic
+OTU2631,Tetragnatha Waves,endemic,endemic
+OTU2632,Pariaconus pele,endemic,endemic
+OTU2635,,,endemic
+OTU2636,Tomocerus minor,introduced,introduced
+OTU2637,,,endemic
+OTU2638,,,endemic
+OTU2639,,,endemic
+OTU2640,,,endemic
+OTU2641,,,endemic
+OTU2643,,,endemic
+OTU2644,,,endemic
+OTU2645,,,endemic
+OTU2648,,,introduced
+OTU2649,,,endemic
+OTU2651,,,endemic
+OTU2653,,,endemic
+OTU2654,,,endemic
+OTU2655,Mecaphesa discreta,endemic,endemic
+OTU2656,,,endemic
+OTU2657,,,endemic
+OTU2658,,,endemic
+OTU2659,,,introduced
+OTU2660,,,endemic
+OTU2661,,,endemic
+OTU2662,,,endemic
+OTU2663,,,endemic
+OTU2664,,,introduced
+OTU2665,Tomocerus minor,introduced,introduced
+OTU2666,,,endemic
+OTU2667,,,endemic
+OTU2668,Ariamnes sp.,endemic,endemic
+OTU2669,Tetragnatha perkinsi,endemic,endemic
+OTU2670,,,endemic
+OTU2671,Mecaphesa kanakana,endemic,endemic
+OTU2675,,,endemic
+OTU2678,,,endemic
+OTU2679,,,endemic
+OTU2680,,,endemic
+OTU2682,,,endemic
+OTU2683,,,introduced
+OTU2684,,,endemic
+OTU2687,,,introduced
+OTU2692,,,introduced
+OTU2693,,,endemic
+OTU2694,Tetragnatha mohihi,endemic,endemic
+OTU2696,,,endemic
+OTU2697,Nesophrosyne myrsines,endemic,endemic
+OTU2698,,,endemic
+OTU2699,,,endemic
+OTU2701,Operophtera sp.,introduced,introduced
+OTU2702,Mecaphesa nigrofrenata,endemic,endemic
+OTU2705,,,endemic
+OTU2706,,,introduced
+OTU2707,Havaika sp.,endemic,endemic
+OTU2708,,,introduced
+OTU2709,,,endemic
+OTU2710,,,endemic
+OTU2711,,,introduced
+OTU2712,,,endemic
+OTU2713,,,endemic
+OTU2714,,,introduced
+OTU2715,,,endemic
+OTU2716,,,endemic
+OTU2718,,,endemic
+OTU2721,Tetragnatha kamakou,endemic,endemic
+OTU2722,,,endemic
+OTU2723,,,endemic
+OTU2724,,,endemic
+OTU2725,Argyrodes argentatus,introduced,introduced
+OTU2726,,,introduced
+OTU2727,,,introduced
+OTU2728,Cyclosa cf.,endemic,endemic
+OTU2729,,,endemic
+OTU2730,,,endemic
+OTU2732,,,introduced
+OTU2733,,,endemic
+OTU2735,Pariaconus mauiensis,endemic,endemic
+OTU2736,,,endemic
+OTU2737,,,endemic
+OTU2738,Tetragnatha waikamoi,endemic,endemic
+OTU2739,Tomocerus minor,introduced,introduced
+OTU2740,,,introduced
+OTU2741,,,endemic
+OTU2742,Siphanta acuta,introduced,introduced
+OTU2744,,,introduced
+OTU2745,,,introduced
+OTU2747,,,endemic
+OTU2748,Havaika sp.,endemic,endemic
+OTU2749,Hyposmocoma sp.,endemic,endemic
+OTU2751,,,endemic
+OTU2752,,,endemic
+OTU2753,Thelacantha brevispina,introduced,introduced
+OTU2755,Pariaconus pele,endemic,endemic
+OTU2756,,,endemic
+OTU2757,,,endemic
+OTU2758,,,endemic
+OTU2759,,,endemic
+OTU2760,,,endemic
+OTU2761,,,introduced
+OTU2762,Tetragnatha perkinsi,endemic,endemic
+OTU2763,,,endemic
+OTU2764,Pariaconus pele,endemic,endemic
+OTU2766,,,endemic
+OTU2767,,,endemic
+OTU2768,,,introduced
+OTU2770,,,introduced
+OTU2771,,,introduced
+OTU2773,,,endemic
+OTU2774,,,introduced
+OTU2775,,,endemic
+OTU2777,Nesticella mogera,introduced,introduced
+OTU2779,,,endemic
+OTU2780,,,endemic
+OTU2781,,,endemic
+OTU2782,,,endemic
+OTU2783,,,endemic
+OTU2784,,,endemic
+OTU2786,,,endemic
+OTU2787,,,introduced
+OTU2788,,,endemic
+OTU2789,,,introduced
+OTU2792,,,endemic
+OTU2793,,,endemic
+OTU2797,,,endemic
+OTU2799,,,endemic
+OTU2800,,,endemic
+OTU2803,,,endemic
+OTU2804,,,endemic
+OTU2805,,,endemic
+OTU2807,,,introduced
+OTU2808,,,introduced
+OTU2809,,,endemic
+OTU2810,Porcellio scaber,introduced,introduced
+OTU2811,,,introduced
+OTU2812,,,endemic
+OTU2813,,,endemic
+OTU2815,,,endemic
+OTU2817,,,endemic
+OTU2818,,,endemic
+OTU2820,,,introduced
+OTU2821,,,endemic
+OTU2824,,,endemic
+OTU2826,Trioza sp.,endemic,endemic
+OTU2827,,,introduced
+OTU2828,,,endemic
+OTU2829,Argiope trifasciata,introduced,introduced
+OTU2830,,,endemic
+OTU2831,,,endemic
+OTU2833,,,introduced
+OTU2835,,,endemic
+OTU2838,,,endemic
+OTU2841,,,endemic
+OTU2842,,,endemic
+OTU2845,,,introduced
+OTU2847,,,endemic
+OTU2849,Nesophrosyne sp.,endemic,endemic
+OTU2850,,,introduced
+OTU2851,,,introduced
+OTU2855,,,endemic
+OTU2856,,,introduced
+OTU2857,Bradysia sp.,,introduced
+OTU2858,,,endemic
+OTU2860,,,endemic
+OTU2861,,,endemic
+OTU2862,,,introduced
+OTU2866,,,endemic
+OTU2867,,,endemic
+OTU2868,,,introduced
+OTU2870,,,introduced
+OTU2871,,,endemic
+OTU2872,Tetragnatha albida,endemic,endemic
+OTU2873,,,introduced
+OTU2875,,,endemic
+OTU2876,,,endemic
+OTU2877,,,introduced
+OTU2880,,,introduced
+OTU2882,,,endemic
+OTU2883,,,endemic
+OTU2884,,,endemic
+OTU2889,,,endemic
+OTU2890,Proernus stigmaticus,endemic,endemic
+OTU2891,,,endemic
+OTU2892,,,introduced
+OTU2896,,,introduced
+OTU2899,,,endemic
+OTU2901,,,endemic
+OTU2903,,,endemic
+OTU2904,,,endemic
+OTU2905,Mecaphesa facunda,endemic,endemic
+OTU2906,,,endemic
+OTU2907,,,endemic
+OTU2909,,,introduced
+OTU2911,,,endemic
+OTU2912,,,endemic
+OTU2914,,,endemic
+OTU2915,,,endemic
+OTU2916,,,endemic
+OTU2917,,,endemic
+OTU2919,,,endemic
+OTU2924,,,endemic
+OTU2925,,,introduced
+OTU2926,Cryptamorpha desjardinsii,introduced,introduced
+OTU2927,Mecaphesa juncta,endemic,endemic
+OTU2928,,,introduced
+OTU2930,,,endemic
+OTU2931,,,endemic
+OTU2935,,,endemic
+OTU2937,,,endemic
+OTU2938,,,endemic
+OTU2939,,,endemic
+OTU2940,,,endemic
+OTU2941,Schrankia altivolans,endemic,endemic
+OTU2942,,,endemic
+OTU2943,,,endemic
+OTU2944,Mecaphesa kanakana,endemic,endemic
+OTU2945,,,endemic
+OTU2946,,,endemic
+OTU2947,,,endemic
+OTU2950,,,endemic
+OTU2952,,,endemic
+OTU2953,Tetragnatha anuenue,endemic,endemic
+OTU2954,,,endemic
+OTU2956,,,endemic
+OTU2957,Pagiopalus nigriventris,endemic,endemic
+OTU2958,,,endemic
+OTU2960,,,endemic
+OTU2962,,,endemic
+OTU2963,,,endemic
+OTU2964,,,introduced
+OTU2966,Drosophila pectinitarsus,endemic,endemic
+OTU2967,,,endemic
+OTU2968,,,endemic
+OTU2969,,,endemic
+OTU2970,,,endemic
+OTU2971,Scoloderus cordatus,introduced,introduced
+OTU2973,,,endemic
+OTU2977,,,endemic
+OTU2978,,,endemic
+OTU2979,,,endemic
+OTU2980,,,endemic
+OTU2982,,,endemic
+OTU2983,,,endemic
+OTU2984,,,endemic
+OTU2985,,,introduced
+OTU2988,,,endemic
+OTU2989,,,endemic
+OTU2992,,,endemic
+OTU2993,,,endemic
+OTU2994,Deltocephalus sp.,introduced,introduced
+OTU2995,,,endemic
+OTU2996,,,endemic
+OTU2997,,,endemic
+OTU2998,,,introduced
+OTU2999,,,endemic
+OTU3001,,,endemic
+OTU3003,,,endemic
+OTU3005,,,endemic
+OTU3006,,,endemic
+OTU3008,,,introduced
+OTU3010,,,endemic
+OTU3011,,,endemic
+OTU3013,,,introduced
+OTU3014,,,endemic
+OTU3016,,,endemic
+OTU3018,,,introduced
+OTU3019,,,endemic
+OTU3020,Tetragnatha quasimodo,endemic,endemic
+OTU3027,,,endemic
+OTU3028,Tetragnatha acuta,endemic,endemic
+OTU3031,,,endemic
+OTU3032,,,endemic
+OTU3034,,,endemic
+OTU3036,,,endemic
+OTU3037,,,endemic
+OTU3038,,,introduced
+OTU3039,,,introduced
+OTU3040,,,endemic
+OTU3042,,,endemic
+OTU3043,,,introduced
+OTU3045,,,endemic
+OTU3049,,,introduced
+OTU3051,Trioza sp.,endemic,endemic
+OTU3052,,,endemic
+OTU3054,,,endemic
+OTU3055,,,endemic
+OTU3057,,,endemic
+OTU3060,,,endemic
+OTU3062,,,endemic
+OTU3064,,,endemic
+OTU3065,Ariamnes waikula,endemic,endemic
+OTU3066,,,introduced
+OTU3067,,,endemic
+OTU3069,,,endemic
+OTU3070,,,endemic
+OTU3071,,,endemic
+OTU3072,,,endemic
+OTU3073,,,endemic
+OTU3074,,,endemic
+OTU3075,,,endemic
+OTU3078,Homidia laha,introduced,introduced
+OTU3079,,,introduced
+OTU3080,,,endemic
+OTU3082,Tetragnatha kauaiensis,endemic,endemic
+OTU3084,,,endemic
+OTU3086,,,introduced
+OTU3089,,,introduced
+OTU3091,,,endemic
+OTU3092,,,endemic
+OTU3093,,,introduced
+OTU3094,,,endemic
+OTU3095,,,endemic
+OTU3098,,,endemic
+OTU3099,,,introduced
+OTU3103,,,endemic
+OTU3104,,,endemic
+OTU3106,,,endemic
+OTU3107,,,endemic
+OTU3108,,,endemic
+OTU3109,Cyclosa cf.,endemic,endemic
+OTU3110,,,endemic
+OTU3111,,,introduced
+OTU3112,,,endemic
+OTU3114,,,introduced
+OTU3116,,,endemic
+OTU3117,,,endemic
+OTU3119,,,introduced
+OTU3120,,,endemic
+OTU3121,,,endemic
+OTU3122,,,endemic
+OTU3123,,,endemic
+OTU3124,Trioza sp.,endemic,endemic
+OTU3125,,,endemic
+OTU3126,,,endemic
+OTU3127,,,endemic
+OTU3128,,,endemic
+OTU3129,,,endemic
+OTU3130,,,endemic
+OTU3131,,,endemic
+OTU3134,,,endemic
+OTU3136,,,endemic
+OTU3138,,,endemic
+OTU3140,,,introduced
+OTU3141,,,introduced
+OTU3142,Thyrocopa alterna,endemic,endemic
+OTU3143,,,endemic
+OTU3144,Thyrocopa usitata,endemic,endemic
+OTU3145,,,endemic
+OTU3148,,,endemic
+OTU3149,,,endemic
+OTU3150,,,endemic
+OTU3151,,,endemic
+OTU3152,,,endemic
+OTU3154,,,introduced
+OTU3156,,,introduced
+OTU3157,,,introduced
+OTU3158,,,endemic
+OTU3159,,,endemic
+OTU3160,,,introduced
+OTU3161,Illinoia sp.,introduced,introduced
+OTU3162,,,endemic
+OTU3163,Halmus chalybeus,introduced,introduced
+OTU3164,,,endemic
+OTU3167,Cyclosa Tree,endemic,endemic
+OTU3169,,,endemic
+OTU3170,,,endemic
+OTU3171,Asynonychus cervinus,introduced,introduced
+OTU3173,,,endemic
+OTU3175,,,endemic
+OTU3176,,,endemic
+OTU3177,,,introduced
+OTU3179,,,endemic
+OTU3180,Meteorus ictericus,introduced,introduced
+OTU3184,,,endemic
+OTU3185,,,endemic
+OTU3186,Cryptamorpha desjardinsii,introduced,introduced
+OTU3187,,,endemic
+OTU3188,,,endemic
+OTU3189,,,endemic
+OTU3190,,,endemic
+OTU3191,,,endemic
+OTU3196,,,endemic
+OTU3197,,,endemic
+OTU3198,,,endemic
+OTU3199,,,introduced
+OTU3200,,,endemic
+OTU3201,,,introduced
+OTU3202,Mecyclothorax chalcosus,endemic,endemic
+OTU3203,,,endemic
+OTU3204,,,endemic
+OTU3205,Dicyrtomina sp.,introduced,introduced
+OTU3206,,,endemic
+OTU3207,,,endemic
+OTU3208,,,introduced
+OTU3209,,,endemic
+OTU3210,,,endemic
+OTU3213,,,endemic
+OTU3214,,,endemic
+OTU3217,,,endemic
+OTU3218,,,endemic
+OTU3220,,,endemic
+OTU3226,,,endemic
+OTU3227,Nesophrosyne sp.,endemic,endemic
+OTU3228,Mestolobes olali,endemic,endemic
+OTU3229,,,endemic
+OTU3230,,,endemic
+OTU3232,,,endemic
+OTU3233,,,endemic
+OTU3234,,,endemic
+OTU3235,Tetragnatha GoldenDome,endemic,endemic
+OTU3237,,,introduced
+OTU3238,Mecaphesa kanakana,endemic,endemic
+OTU3240,,,endemic
+OTU3241,,,introduced
+OTU3244,,,introduced
+OTU3245,,,endemic
+OTU3246,Tetragnatha perkinsi,endemic,endemic
+OTU3247,,,introduced
+OTU3248,Pariaconus mauiensis,endemic,endemic
+OTU3249,,,endemic
+OTU3250,,,endemic
+OTU3251,,,endemic
+OTU3252,,,endemic
+OTU3254,Eupithecia orichloris,endemic,endemic
+OTU3256,,,endemic
+OTU3259,,,endemic
+OTU3261,,,endemic
+OTU3262,,,introduced
+OTU3265,,,endemic
+OTU3268,,,endemic
+OTU3269,,,endemic
+OTU3272,,,endemic
+OTU3274,Tomocerus minor,introduced,introduced
+OTU3275,Thienemanniella sp.,introduced,introduced
+OTU3278,,,endemic
+OTU3281,,,endemic
+OTU3283,,,endemic
+OTU3286,,,introduced
+OTU3290,Pagiopalus nigriventris,endemic,endemic
+OTU3291,,,endemic
+OTU3292,Drosophila percnosoma,endemic,endemic
+OTU3294,Hypothenemus hampei,introduced,introduced
+OTU3295,Willowsia japonica,introduced,introduced
+OTU3297,,,introduced
+OTU3298,,,endemic
+OTU3299,,,endemic
+OTU3300,,,endemic
+OTU3302,,,endemic
+OTU3303,,,endemic
+OTU3304,,,endemic
+OTU3305,,,introduced
+OTU3306,Cyclosa cf.,endemic,endemic
+OTU3308,,,introduced
+OTU3311,,,endemic
+OTU3312,,,endemic
+OTU3313,,,endemic
+OTU3316,Entomobrya atrocincta,introduced,introduced
+OTU3318,,,endemic
+OTU3321,,,introduced
+OTU3322,,,introduced
+OTU3323,,,endemic
+OTU3324,,,endemic
+OTU3325,,,introduced
+OTU3328,,,endemic
+OTU3329,,,endemic
+OTU3331,,,endemic
+OTU3332,,,endemic
+OTU3337,,,endemic
+OTU3338,Havaika sp.,endemic,endemic
+OTU3339,,,endemic
+OTU3341,,,endemic
+OTU3342,,,endemic
+OTU3344,,,endemic
+OTU3345,,,endemic
+OTU3347,,,endemic
+OTU3349,,,introduced
+OTU3351,,,endemic
+OTU3352,,,endemic
+OTU3353,,,endemic
+OTU3354,,,endemic
+OTU3355,,,endemic
+OTU3356,,,introduced
+OTU3357,Banza kauaiensis,endemic,endemic
+OTU3358,,,endemic
+OTU3360,,,endemic
+OTU3364,,,endemic
+OTU3365,,,endemic
+OTU3367,,,endemic
+OTU3368,Ariamnes sp.,endemic,endemic
+OTU3373,,,introduced
+OTU3375,,,endemic
+OTU3376,,,endemic
+OTU3378,,,endemic
+OTU3379,,,introduced
+OTU3381,,,endemic
+OTU3383,,,introduced
+OTU3387,,,endemic
+OTU3389,,,endemic
+OTU3391,,,endemic
+OTU3392,,,introduced
+OTU3393,,,endemic
+OTU3395,,,introduced
+OTU3396,Clambus simsoni,introduced,introduced
+OTU3397,,,endemic
+OTU3399,,,endemic
+OTU3400,,,endemic
+OTU3401,,,introduced
+OTU3402,Drosophila percnosoma,endemic,endemic
+OTU3403,,,endemic
+OTU3409,,,endemic
+OTU3411,,,endemic
+OTU3412,,,endemic
+OTU3413,,,endemic
+OTU3414,Hyposmocoma sp.,endemic,endemic
+OTU3415,,,endemic
+OTU3416,,,endemic
+OTU3417,,,endemic
+OTU3420,,,endemic
+OTU3421,,,introduced
+OTU3423,,,endemic
+OTU3424,,,endemic
+OTU3425,,,endemic
+OTU3427,,,endemic
+OTU3428,,,endemic
+OTU3430,Nesophrosyne sp.,endemic,endemic
+OTU3432,,,endemic
+OTU3433,,,endemic
+OTU3434,,,endemic
+OTU3436,,,endemic
+OTU3437,,,endemic
+OTU3438,,,endemic
+OTU3439,,,endemic
+OTU3440,,,endemic
+OTU3441,,,endemic
+OTU3442,,,introduced
+OTU3443,Tetragnatha anuenue,endemic,endemic
+OTU3444,,,introduced
+OTU3446,,,endemic
+OTU3448,,,introduced
+OTU3451,,,endemic
+OTU3452,,,endemic
+OTU3453,,,endemic
+OTU3454,,,introduced
+OTU3456,,,endemic
+OTU3460,,,endemic
+OTU3462,,,endemic
+OTU3463,,,endemic
+OTU3464,,,endemic
+OTU3466,,,endemic
+OTU3467,,,endemic
+OTU3468,,,endemic
+OTU3469,,,endemic
+OTU3471,,,endemic
+OTU3472,Hyposoter exiguae,introduced,introduced
+OTU3473,,,endemic
+OTU3474,Havaika sp.,endemic,endemic
+OTU3476,,,endemic
+OTU3477,,,endemic
+OTU3478,,,introduced
+OTU3479,,,endemic
+OTU3480,,,endemic
+OTU3481,,,endemic
+OTU3484,,,endemic
+OTU3488,,,introduced
+OTU3489,,,endemic
+OTU3490,,,introduced
+OTU3492,,,endemic
+OTU3493,,,endemic
+OTU3494,,,introduced
+OTU3495,Cyclosa Tree,endemic,endemic
+OTU3498,,,endemic
+OTU3499,,,endemic
+OTU3500,Nesophrosyne myrsines,endemic,endemic
+OTU3501,,,endemic
+OTU3502,,,introduced
+OTU3503,,,introduced
+OTU3505,,,endemic
+OTU3506,,,introduced
+OTU3508,,,endemic
+OTU3509,,,endemic
+OTU3514,Nesophrosyne sp.,endemic,endemic
+OTU3516,,,introduced
+OTU3518,,,endemic
+OTU3519,,,endemic
+OTU3521,,,endemic
+OTU3524,,,endemic
+OTU3526,,,introduced
+OTU3528,,,endemic
+OTU3532,Pariaconus hawaiiensis,endemic,endemic
+OTU3534,,,endemic
+OTU3535,,,endemic
+OTU3537,,,endemic
+OTU3538,,,endemic
+OTU3539,,,endemic
+OTU3540,,,endemic
+OTU3541,,,endemic
+OTU3542,,,introduced
+OTU3544,,,endemic
+OTU3546,,,introduced
+OTU3547,,,introduced
+OTU3548,Nesophrosyne sp.,endemic,endemic
+OTU3550,,,endemic
+OTU3551,,,endemic
+OTU3552,,,endemic
+OTU3553,,,introduced
+OTU3554,,,endemic
+OTU3555,,,endemic
+OTU3557,,,introduced
+OTU3559,,,endemic
+OTU3560,,,introduced
+OTU3562,,,endemic
+OTU3563,,,endemic
+OTU3564,,,introduced
+OTU3565,,,endemic
+OTU3566,,,introduced
+OTU3567,,,endemic
+OTU3568,,,introduced
+OTU3569,,,endemic
+OTU3571,,,endemic
+OTU3572,,,introduced
+OTU3573,,,endemic
+OTU3574,,,endemic
+OTU3577,,,endemic
+OTU3578,,,endemic
+OTU3579,,,endemic
+OTU3580,,,endemic
+OTU3581,Sierola sp.,endemic,endemic
+OTU3582,,,endemic
+OTU3583,,,endemic
+OTU3585,,,endemic
+OTU3588,,,introduced
+OTU3589,,,endemic
+OTU3590,,,endemic
+OTU3591,,,endemic
+OTU3592,,,introduced
+OTU3593,,,introduced
+OTU3594,,,endemic
+OTU3595,,,endemic
+OTU3596,,,endemic
+OTU3597,,,endemic
+OTU3599,,,endemic
+OTU3601,,,introduced
+OTU3602,,,introduced
+OTU3604,,,endemic
+OTU3606,,,endemic
+OTU3609,,,endemic
+OTU3610,,,introduced
+OTU3612,,,endemic
+OTU3613,Cyclosa simplicauda,endemic,endemic
+OTU3615,,,introduced
+OTU3619,Havaika sp.,endemic,endemic
+OTU3620,Saldula oahuensis,endemic,endemic
+OTU3622,,,endemic
+OTU3624,,,endemic
+OTU3625,,,endemic
+OTU3630,,,introduced
+OTU3631,,,endemic
+OTU3632,,,introduced
+OTU3635,,,endemic
+OTU3636,Siphanta acuta,introduced,introduced
+OTU3638,,,endemic
+OTU3639,,,introduced
+OTU3644,,,endemic
+OTU3646,,,endemic
+OTU3648,,,endemic
+OTU3649,,,introduced
+OTU3651,,,endemic
+OTU3652,,,endemic
+OTU3653,,,introduced
+OTU3655,,,endemic
+OTU3656,,,endemic
+OTU3657,Sierola sp.,endemic,endemic
+OTU3658,,,introduced
+OTU3660,,,introduced
+OTU3661,,,endemic
+OTU3662,,,endemic
+OTU3665,,,endemic
+OTU3666,,,endemic
+OTU3668,Nesophrosyne sp.,endemic,endemic
+OTU3671,Tetragnatha obscura,endemic,endemic
+OTU3672,Entomobrya atrocincta,introduced,introduced
+OTU3673,,,endemic
+OTU3674,,,endemic
+OTU3676,,,endemic
+OTU3677,,,endemic
+OTU3678,,,introduced
+OTU3679,,,introduced
+OTU3680,,,introduced
+OTU3681,,,endemic
+OTU3682,,,endemic
+OTU3683,,,introduced
+OTU3684,,,endemic
+OTU3685,Nesophrosyne myrsines,endemic,endemic
+OTU3686,,,endemic
+OTU3688,,,endemic
+OTU3689,Parasteatoda tepidariorum,introduced,introduced
+OTU3690,,,endemic
+OTU3692,Nesophrosyne sp.,endemic,endemic
+OTU3693,,,introduced
+OTU3694,,,endemic
+OTU3695,Pterogramma brevivenosum,endemic,endemic
+OTU3696,,,endemic
+OTU3697,,,endemic
+OTU3702,,,endemic
+OTU3704,,,endemic
+OTU3705,,,endemic
+OTU3708,Argiope trifasciata,introduced,introduced
+OTU3709,,,endemic
+OTU3711,,,introduced
+OTU3712,,,endemic
+OTU3714,,,endemic
+OTU3715,,,introduced
+OTU3716,,,endemic
+OTU3719,,,endemic
+OTU3720,,,endemic
+OTU3721,,,endemic
+OTU3722,,,endemic
+OTU3723,,,introduced
+OTU3724,,,endemic
+OTU3725,,,endemic
+OTU3726,,,endemic
+OTU3727,,,introduced
+OTU3729,,,endemic
+OTU3730,,,endemic
+OTU3731,,,endemic
+OTU3734,,,endemic
+OTU3735,Ganaspis brasiliensis,introduced,introduced
+OTU3736,,,endemic
+OTU3738,,,endemic
+OTU3740,,,endemic
+OTU3741,,,endemic
+OTU3742,,,endemic
+OTU3744,,,endemic
+OTU3746,,,introduced
+OTU3748,,,endemic
+OTU3752,,,endemic
+OTU3753,,,endemic
+OTU3754,Hemerobius pacificus,introduced,introduced
+OTU3757,,,endemic
+OTU3759,,,endemic
+OTU3761,,,endemic
+OTU3762,,,endemic
+OTU3764,,,endemic
+OTU3768,,,endemic
+OTU3769,,,endemic
+OTU3770,,,endemic
+OTU3771,,,endemic
+OTU3775,,,introduced
+OTU3776,,,endemic
+OTU3778,,,endemic
+OTU3779,,,endemic
+OTU3780,,,endemic
+OTU3781,Trioza sp.,endemic,endemic
+OTU3782,,,introduced
+OTU3783,,,introduced
+OTU3784,,,endemic
+OTU3785,,,introduced
+OTU3787,,,endemic
+OTU3789,,,introduced
+OTU3793,,,endemic
+OTU3795,,,introduced
+OTU3797,,,endemic
+OTU3798,,,endemic
+OTU3801,,,endemic
+OTU3802,,,endemic
+OTU3803,Nesophrosyne sp.,endemic,endemic
+OTU3804,,,endemic
+OTU3805,,,endemic
+OTU3807,,,endemic
+OTU3808,,,introduced
+OTU3809,,,endemic
+OTU3810,,,endemic
+OTU3811,,,introduced
+OTU3813,,,endemic
+OTU3814,,,endemic
+OTU3817,Havaika sp.,endemic,endemic
+OTU3819,,,endemic
+OTU3820,,,endemic
+OTU3821,Mecaphesa facunda,endemic,endemic
+OTU3822,,,endemic
+OTU3823,Havaika sp.,endemic,endemic
+OTU3824,,,endemic
+OTU3825,,,endemic
+OTU3826,,,endemic
+OTU3827,,,endemic
+OTU3828,,,endemic
+OTU3829,Tetragnatha quasimodo,endemic,endemic
+OTU3830,,,endemic
+OTU3831,,,endemic
+OTU3833,,,endemic
+OTU3835,,,introduced
+OTU3836,,,endemic
+OTU3837,,,introduced
+OTU3839,,,endemic
+OTU3840,,,introduced
+OTU3843,,,endemic
+OTU3844,Trioza sp.,endemic,endemic
+OTU3846,,,introduced
+OTU3847,,,endemic
+OTU3848,,,endemic
+OTU3850,,,introduced
+OTU3852,,,endemic
+OTU3853,Pariaconus mauiensis,endemic,endemic
+OTU3854,,,introduced
+OTU3855,,,endemic
+OTU3861,,,endemic
+OTU3862,,,endemic
+OTU3864,,,endemic
+OTU3866,,,endemic
+OTU3867,Xyleborus kauaiensis,endemic,endemic
+OTU3868,,,endemic
+OTU3873,,,endemic
+OTU3875,,,endemic
+OTU3876,Bradysia radicum,introduced,introduced
+OTU3877,,,endemic
+OTU3878,Ectopsocus californicus,introduced,introduced
+OTU3879,,,introduced
+OTU3881,,,endemic
+OTU3886,,,introduced
+OTU3887,,,endemic
+OTU3888,,,endemic
+OTU3890,,,endemic
+OTU3891,Tetragnatha quasimodo,endemic,endemic
+OTU3894,Thelacantha brevispina,introduced,introduced
+OTU3895,,,introduced
+OTU3896,,,endemic
+OTU3899,Nesophrosyne furculata,endemic,endemic
+OTU3900,,,endemic
+OTU3901,,,endemic
+OTU3902,,,endemic
+OTU3903,,,endemic
+OTU3904,,,endemic
+OTU3907,,,endemic
+OTU3908,,,endemic
+OTU3909,,,endemic
+OTU3910,,,endemic
+OTU3912,,,endemic
+OTU3914,,,endemic
+OTU3915,,,endemic
+OTU3917,,,introduced
+OTU3918,,,introduced
+OTU3919,,,endemic
+OTU3923,Cyclosa simplicauda,endemic,endemic
+OTU3924,,,introduced
+OTU3925,,,endemic
+OTU3927,,,endemic
+OTU3932,,,introduced
+OTU3935,,,endemic
+OTU3936,,,introduced
+OTU3939,,,endemic
+OTU3942,Sierola sp.,endemic,endemic
+OTU3943,,,endemic
+OTU3944,,,introduced
+OTU3946,Cyclosa Tree,endemic,endemic
+OTU3949,,,endemic
+OTU3951,Tetragnatha perkinsi,endemic,endemic
+OTU3952,,,endemic
+OTU3955,,,introduced
+OTU3956,,,endemic
+OTU3957,,,introduced
+OTU3958,,,endemic
+OTU3959,,,endemic
+OTU3961,,,introduced
+OTU3962,,,endemic
+OTU3963,,,endemic
+OTU3964,,,endemic
+OTU3966,,,endemic
+OTU3968,,,endemic
+OTU3972,,,endemic
+OTU3973,,,introduced
+OTU3975,,,introduced
+OTU3976,,,endemic
+OTU3977,,,endemic
+OTU3978,Ariamnes sp.,endemic,endemic
+OTU3982,,,endemic
+OTU3983,,,endemic
+OTU3984,,,introduced
+OTU3985,,,endemic
+OTU3987,,,introduced
+OTU3988,,,endemic
+OTU3989,,,introduced
+OTU3990,,,endemic
+OTU3991,,,introduced
+OTU3992,,,endemic
+OTU3993,Schrankia howarthi,endemic,endemic
+OTU3994,,,endemic
+OTU3995,,,endemic
+OTU3997,,,endemic
+OTU3999,,,introduced
+OTU4001,,,introduced
+OTU4003,,,endemic
+OTU4004,,,endemic
+OTU4005,,,endemic
+OTU4006,,,endemic
+OTU4007,,,endemic
+OTU4009,,,endemic
+OTU4011,,,introduced
+OTU4013,Hyposmocoma sp.,endemic,endemic
+OTU4014,,,endemic
+OTU4018,,,introduced
+OTU4019,,,endemic
+OTU4020,,,endemic
+OTU4022,,,endemic
+OTU4023,,,endemic
+OTU4024,,,endemic
+OTU4025,,,endemic
+OTU4027,Argyrodes argentatus,introduced,introduced
+OTU4030,,,introduced
+OTU4034,,,endemic
+OTU4037,,,endemic
+OTU4041,,,endemic
+OTU4042,,,endemic
+OTU4044,,,endemic
+OTU4045,,,endemic
+OTU4046,,,endemic
+OTU4047,,,endemic
+OTU4051,,,endemic
+OTU4054,,,endemic
+OTU4059,,,endemic
+OTU4060,,,introduced
+OTU4061,,,endemic
+OTU4065,,,endemic
+OTU4066,,,introduced
+OTU4067,,,endemic
+OTU4068,,,introduced
+OTU4069,,,endemic
+OTU4070,,,endemic
+OTU4071,,,endemic
+OTU4073,,,introduced
+OTU4074,,,endemic
+OTU4075,,,endemic
+OTU4076,,,endemic
+OTU4077,,,endemic
+OTU4078,,,endemic
+OTU4081,,,endemic
+OTU4083,,,endemic
+OTU4084,,,introduced
+OTU4086,,,endemic
+OTU4087,,,introduced
+OTU4088,,,endemic
+OTU4089,,,introduced
+OTU4090,,,endemic
+OTU4091,,,endemic
+OTU4092,,,introduced
+OTU4094,,,introduced
+OTU4095,Pristomerus sp.,,introduced
+OTU4096,,,endemic
+OTU4102,,,introduced
+OTU4104,,,endemic
+OTU4105,,,endemic
+OTU4106,,,introduced
+OTU4108,,,introduced
+OTU4110,,,endemic
+OTU4111,Macrosiphum euphorbiae,introduced,introduced
+OTU4114,,,endemic
+OTU4115,,,endemic
+OTU4116,,,endemic
+OTU4117,,,introduced
+OTU4118,,,introduced
+OTU4119,,,endemic
+OTU4120,,,endemic
+OTU4121,,,introduced
+OTU4122,,,endemic
+OTU4124,,,endemic
+OTU4125,,,endemic
+OTU4129,,,endemic
+OTU4130,,,endemic
+OTU4131,,,introduced
+OTU4136,,,introduced
+OTU4137,,,endemic
+OTU4138,,,endemic
+OTU4141,Pariaconus pele,endemic,endemic
+OTU4142,,,introduced
+OTU4143,,,endemic
+OTU4144,,,endemic
+OTU4152,,,endemic
+OTU4154,,,endemic
+OTU4157,,,endemic
+OTU4158,Mecaphesa anguliventris,endemic,endemic
+OTU4160,,,endemic
+OTU4161,,,introduced
+OTU4163,,,endemic
+OTU4164,,,introduced
+OTU4167,,,endemic
+OTU4168,,,introduced
+OTU4170,,,endemic
+OTU4171,,,introduced
+OTU4172,,,endemic
+OTU4173,,,introduced
+OTU4176,,,endemic
+OTU4180,,,endemic
+OTU4181,,,introduced
+OTU4183,,,endemic
+OTU4186,Pariaconus mauiensis,endemic,endemic
+OTU4187,,,endemic
+OTU4189,,,introduced
+OTU4190,,,endemic
+OTU4193,,,endemic
+OTU4194,,,introduced
+OTU4195,,,endemic
+OTU4196,,,endemic
+OTU4197,,,endemic
+OTU4200,,,endemic
+OTU4201,,,endemic
+OTU4202,Argiope trifasciata,introduced,introduced
+OTU4203,,,endemic
+OTU4205,,,introduced
+OTU4206,Havaika sp.,endemic,endemic
+OTU4208,,,endemic
+OTU4209,,,introduced
+OTU4210,,,endemic
+OTU4212,,,introduced
+OTU4214,,,introduced
+OTU4215,,,endemic
+OTU4216,,,endemic
+OTU4217,,,endemic
+OTU4220,,,introduced
+OTU4221,,,endemic
+OTU4222,Cryptamorpha desjardinsii,introduced,introduced
+OTU4223,Hyposmocoma hooilo,endemic,endemic
+OTU4224,,,endemic
+OTU4226,,,endemic
+OTU4229,,,endemic
+OTU4230,,,endemic
+OTU4231,,,endemic
+OTU4233,,,endemic
+OTU4235,,,endemic
+OTU4236,,,endemic
+OTU4237,,,endemic
+OTU4238,,,endemic
+OTU4244,,,endemic
+OTU4246,,,endemic
+OTU4253,,,endemic
+OTU4254,,,endemic
+OTU4257,,,endemic
+OTU4260,,,endemic
+OTU4264,,,introduced
+OTU4265,,,endemic
+OTU4266,,,introduced
+OTU4267,,,endemic
+OTU4269,,,endemic
+OTU4271,,,endemic
+OTU4272,Drosophila cnecopleura,endemic,endemic
+OTU4273,Pariaconus pele,endemic,endemic
+OTU4274,,,introduced
+OTU4275,,,endemic
+OTU4277,,,endemic
+OTU4280,,,introduced
+OTU4282,,,introduced
+OTU4284,,,endemic
+OTU4290,,,endemic
+OTU4295,,,introduced
+OTU4297,,,endemic
+OTU4300,,,endemic
+OTU4301,Havaika sp.,endemic,endemic
+OTU4302,,,endemic
+OTU4303,,,introduced
+OTU4307,Theridion grallator,endemic,endemic
+OTU4308,,,introduced
+OTU4309,,,endemic
+OTU4310,,,endemic
+OTU4312,,,endemic
+OTU4313,,,endemic
+OTU4315,,,introduced
+OTU4318,,,endemic
+OTU4319,,,endemic
+OTU4320,,,endemic
+OTU4321,,,endemic
+OTU4322,,,endemic
+OTU4326,,,introduced
+OTU4330,,,endemic
+OTU4334,,,endemic
+OTU4335,,,endemic
+OTU4339,,,endemic
+OTU4341,,,endemic
+OTU4342,,,introduced
+OTU4344,,,introduced
+OTU4346,,,endemic
+OTU4348,,,endemic
+OTU4352,,,endemic
+OTU4355,,,endemic
+OTU4357,,,endemic
+OTU4358,,,endemic
+OTU4359,,,endemic
+OTU4360,,,endemic
+OTU4361,Mecaphesa nigrofrenata,endemic,endemic
+OTU4363,Ctenosciara hawaiiensis,endemic,endemic
+OTU4364,Tetragnatha quasimodo,endemic,endemic
+OTU4368,Argiope trifasciata,introduced,introduced
+OTU4372,Sierola sp.,endemic,endemic
+OTU4373,,,endemic
+OTU4378,,,introduced
+OTU4381,,,endemic
+OTU4382,,,endemic
+OTU4383,Nesophrosyne pluvialis,endemic,endemic
+OTU4384,,,endemic
+OTU4385,,,introduced
+OTU4386,Havaika sp.,endemic,endemic
+OTU4390,,,introduced
+OTU4391,,,endemic
+OTU4392,,,endemic
+OTU4393,,,endemic
+OTU4394,,,introduced
+OTU4395,,,introduced
+OTU4396,,,endemic
+OTU4397,,,endemic
+OTU4398,,,endemic
+OTU4401,,,endemic
+OTU4403,,,introduced
+OTU4404,,,endemic
+OTU4406,,,introduced
+OTU4408,Drosophila neutralis,endemic,endemic
+OTU4409,Mecaphesa kanakana,endemic,endemic
+OTU4411,,,endemic
+OTU4417,,,introduced
+OTU4419,,,endemic
+OTU4420,,,endemic
+OTU4425,,,endemic
+OTU4427,Dysdera crocata,introduced,introduced
+OTU4428,,,introduced
+OTU4429,,,introduced
+OTU4431,Heteropsylla sp.,introduced,introduced
+OTU4432,,,introduced
+OTU4434,,,introduced
+OTU4435,,,introduced
+OTU4437,,,endemic
+OTU4441,,,endemic
+OTU4445,,,endemic
+OTU4449,,,endemic
+OTU4450,,,endemic
+OTU4452,,,endemic
+OTU4456,,,introduced
+OTU4457,,,endemic
+OTU4458,,,endemic
+OTU4459,,,endemic
+OTU4461,Nesophrosyne sp.,endemic,endemic
+OTU4462,,,endemic
+OTU4463,,,endemic
+OTU4465,,,endemic
+OTU4467,,,endemic
+OTU4468,,,introduced
+OTU4471,Nesophrosyne sp.,endemic,endemic
+OTU4473,,,introduced
+OTU4475,,,endemic
+OTU4476,,,endemic
+OTU4480,,,endemic
+OTU4482,Pariaconus dorsostriatus,endemic,endemic
+OTU4485,,,introduced
+OTU4487,,,introduced
+OTU4489,,,endemic
+OTU4490,,,endemic
+OTU4493,,,endemic
+OTU4494,,,endemic
+OTU4496,,,endemic
+OTU4497,Tetragnatha acuta,endemic,endemic
+OTU4498,,,endemic
+OTU4499,,,endemic
+OTU4502,,,introduced
+OTU4504,,,endemic
+OTU4506,,,endemic
+OTU4508,Tetragnatha restricta,endemic,endemic
+OTU4510,,,endemic
+OTU4511,,,introduced
+OTU4512,,,introduced
+OTU4513,Hyles calida,endemic,endemic
+OTU4514,,,endemic
+OTU4518,,,endemic
+OTU4519,Hyposmocoma sp.,endemic,endemic
+OTU4521,Havaika sp.,endemic,endemic
+OTU4522,,,endemic
+OTU4523,,,endemic
+OTU4524,,,endemic
+OTU4526,,,endemic
+OTU4527,,,endemic
+OTU4529,,,introduced
+OTU4530,,,introduced
+OTU4532,,,introduced
+OTU4534,,,endemic
+OTU4535,Philodoria basalis,endemic,endemic
+OTU4536,,,endemic
+OTU4537,Trioza sp.,endemic,endemic
+OTU4538,,,introduced
+OTU4541,Theridion grallator,endemic,endemic
+OTU4542,,,endemic
+OTU4544,,,endemic
+OTU4545,,,endemic
+OTU4546,,,endemic
+OTU4552,,,endemic
+OTU4554,Lysiphlebus testaceipes,introduced,introduced
+OTU4556,,,introduced
+OTU4558,Tetragnatha stelarobusta,endemic,endemic
+OTU4559,,,endemic
+OTU4560,,,endemic
+OTU4561,,,endemic
+OTU4563,Havaika sp.,endemic,endemic
+OTU4568,Drosophila diamphidiopoda,endemic,endemic
+OTU4569,,,endemic
+OTU4573,,,introduced
+OTU4575,,,endemic
+OTU4576,,,endemic
+OTU4577,,,introduced
+OTU4578,,,introduced
+OTU4579,Pariaconus hawaiiensis,endemic,endemic
+OTU4580,,,endemic
+OTU4581,,,endemic
+OTU4584,,,introduced
+OTU4587,,,endemic
+OTU4590,,,endemic
+OTU4593,,,endemic
+OTU4597,,,endemic
+OTU4598,,,introduced
+OTU4600,,,introduced
+OTU4601,,,introduced
+OTU4602,Mecaphesa kanakana,endemic,endemic
+OTU4603,,,endemic
+OTU4604,,,introduced
+OTU4605,,,endemic
+OTU4607,,,endemic
+OTU4608,,,endemic
+OTU4609,,,endemic
+OTU4614,,,endemic
+OTU4615,,,endemic
+OTU4617,,,endemic
+OTU4618,,,endemic
+OTU4619,,,introduced
+OTU4622,,,endemic
+OTU4624,,,endemic
+OTU4625,,,introduced
+OTU4626,,,introduced
+OTU4627,,,endemic
+OTU4628,,,endemic
+OTU4631,,,endemic
+OTU4633,,,introduced
+OTU4636,Tenuiphantes tenuis,introduced,introduced
+OTU4637,,,endemic
+OTU4638,,,endemic
+OTU4642,,,endemic
+OTU4643,,,endemic
+OTU4644,,,endemic
+OTU4645,,,endemic
+OTU4646,,,endemic
+OTU4648,,,endemic
+OTU4649,,,endemic
+OTU4651,,,introduced
+OTU4653,Proernus stigmaticus,endemic,endemic
+OTU4654,,,endemic
+OTU4655,,,introduced
+OTU4656,,,introduced
+OTU4658,,,endemic
+OTU4666,Blackburnia constricta,endemic,endemic
+OTU4667,,,endemic
+OTU4668,,,endemic
+OTU4669,,,endemic
+OTU4670,,,endemic
+OTU4671,,,endemic
+OTU4672,,,endemic
+OTU4674,,,endemic
+OTU4676,,,endemic
+OTU4677,,,endemic
+OTU4679,,,introduced
+OTU4682,,,endemic
+OTU4686,,,introduced
+OTU4693,Porcellio scaber,introduced,introduced
+OTU4695,,,endemic
+OTU4696,,,endemic
+OTU4705,,,introduced
+OTU4708,,,endemic
+OTU4712,,,endemic
+OTU4713,,,endemic
+OTU4715,,,endemic
+OTU4716,,,endemic
+OTU4717,Mecyclothorax sp.,endemic,endemic
+OTU4718,,,endemic
+OTU4719,,,introduced
+OTU4720,,,endemic
+OTU4722,,,endemic
+OTU4724,,,endemic
+OTU4725,,,endemic
+OTU4728,,,endemic
+OTU4735,,,introduced
+OTU4737,,,endemic
+OTU4739,,,endemic
+OTU4743,Aphidius colemani,introduced,introduced
+OTU4748,,,endemic
+OTU4752,,,introduced
+OTU4754,,,endemic
+OTU4760,,,introduced
+OTU4761,,,endemic
+OTU4762,Paratriphleps laeviuscula,introduced,introduced
+OTU4763,,,introduced
+OTU4766,,,endemic
+OTU4767,,,endemic
+OTU4769,Sophonia orientalis,endemic,endemic
+OTU4770,Nesophrosyne furculata,endemic,endemic
+OTU4774,,,endemic
+OTU4775,,,introduced
+OTU4781,,,endemic
+OTU4782,Sericoderus lateralis,introduced,introduced
+OTU4783,,,endemic
+OTU4784,Cyclosa cf.,endemic,endemic
+OTU4786,Ariamnes waikula,endemic,endemic
+OTU4787,Nesophrosyne angulifera,endemic,endemic
+OTU4788,Neomyzus circumflexus,introduced,introduced
+OTU4789,,,endemic
+OTU4790,,,introduced
+OTU4797,,,endemic
+OTU4802,,,endemic
+OTU4805,,,introduced
+OTU4806,,,endemic
+OTU4807,,,endemic
+OTU4812,,,introduced
+OTU4814,,,endemic
+OTU4817,,,endemic
+OTU4818,,,endemic
+OTU4819,,,endemic
+OTU4820,,,endemic
+OTU4821,,,introduced
+OTU4823,,,endemic
+OTU4824,,,endemic
+OTU4826,,,endemic
+OTU4827,,,endemic
+OTU4828,,,introduced
+OTU4830,,,endemic
+OTU4831,,,endemic
+OTU4832,,,endemic
+OTU4833,,,endemic
+OTU4835,,,endemic
+OTU4837,,,endemic
+OTU4838,,,endemic
+OTU4839,,,endemic
+OTU4840,Pariaconus pele,endemic,endemic
+OTU4841,Pariaconus dorsostriatus,endemic,endemic
+OTU4842,Havaika sp.,endemic,endemic
+OTU4843,,,endemic
+OTU4845,,,endemic
+OTU4846,,,endemic
+OTU4848,,,endemic
+OTU4849,,,endemic
+OTU4858,,,endemic
+OTU4865,,,introduced
+OTU4872,,,introduced
+OTU4873,,,endemic
+OTU4874,,,endemic
+OTU4877,Hyposmocoma sp.,endemic,endemic
+OTU4878,,,introduced
+OTU4882,,,endemic
+OTU4885,Havaika sp.,endemic,endemic
+OTU4888,,,introduced
+OTU4891,,,endemic
+OTU4892,,,endemic
+OTU4898,,,endemic
+OTU4901,,,endemic
+OTU4905,,,introduced
+OTU4907,,,endemic
+OTU4909,,,introduced
+OTU4915,,,endemic
+OTU4917,,,endemic
+OTU4919,,,endemic
+OTU4924,,,endemic
+OTU4925,Araecerus sp.,,introduced
+OTU4927,,,endemic
+OTU4930,,,endemic
+OTU4932,,,endemic
+OTU4937,,,endemic
+OTU4943,,,endemic
+OTU4944,,,endemic
+OTU4946,,,endemic
+OTU4951,,,endemic
+OTU4953,,,introduced
+OTU4957,,,endemic
+OTU4963,Philodoria succedanea,endemic,endemic
+OTU4965,,,endemic
+OTU4970,,,endemic
+OTU4971,Havaika sp.,endemic,endemic
+OTU4973,,,introduced
+OTU4976,,,endemic
+OTU4977,,,endemic
+OTU4978,,,endemic
+OTU4981,,,endemic
+OTU4983,,,endemic
+OTU4984,Xyleborinus saxesenii,introduced,introduced
+OTU4986,,,introduced
+OTU4988,,,introduced
+OTU4991,,,endemic
+OTU5000,,,endemic
+OTU5004,,,endemic
+OTU5006,,,endemic
+OTU5008,,,endemic
+OTU5010,,,endemic
+OTU5011,,,endemic
+OTU5014,Toxomerus marginatus,introduced,introduced
+OTU5017,,,introduced
+OTU5018,,,endemic
+OTU5022,Ctenosciara hawaiiensis,endemic,endemic
+OTU5024,Centromerus sp.,introduced,introduced
+OTU5026,,,endemic
+OTU5027,,,endemic
+OTU5028,,,endemic
+OTU5031,,,endemic
+OTU5035,,,endemic
+OTU5039,,,introduced
+OTU5040,,,introduced
+OTU5043,,,endemic
+OTU5044,,,endemic
+OTU5046,,,endemic
+OTU5047,,,endemic
+OTU5049,,,endemic
+OTU5056,,,endemic
+OTU5057,,,endemic
+OTU5058,,,endemic
+OTU5060,,,endemic
+OTU5062,,,introduced
+OTU5063,,,introduced
+OTU5065,Meteorus laphygmae,introduced,introduced
+OTU5066,,,endemic
+OTU5069,,,endemic
+OTU5070,,,introduced
+OTU5072,,,endemic
+OTU5075,Pariaconus pele,endemic,endemic
+OTU5078,Tetragnatha waikamoi,endemic,endemic
+OTU5081,,,endemic
+OTU5082,,,introduced
+OTU5085,,,introduced
+OTU5087,,,endemic
+OTU5088,,,endemic
+OTU5090,,,introduced
+OTU5093,,,introduced
+OTU5097,,,endemic
+OTU5098,,,endemic
+OTU5099,,,introduced
+OTU5103,,,endemic
+OTU5104,,,introduced
+OTU5108,,,endemic
+OTU5109,,,endemic
+OTU5110,,,endemic
+OTU5111,,,introduced
+OTU5114,,,endemic
+OTU5116,,,endemic
+OTU5118,,,endemic
+OTU5120,,,endemic
+OTU5125,,,introduced
+OTU5129,,,endemic
+OTU5130,,,endemic
+OTU5131,,,introduced
+OTU5132,,,endemic
+OTU5133,,,endemic
+OTU5134,,,introduced
+OTU5141,,,endemic
+OTU5145,,,introduced
+OTU5148,,,endemic
+OTU5150,,,endemic
+OTU5154,,,introduced
+OTU5155,Hyposoter exiguae,introduced,introduced
+OTU5157,Cavariella aegopodii,introduced,introduced
+OTU5158,,,endemic
+OTU5161,,,endemic
+OTU5162,,,endemic
+OTU5165,,,endemic
+OTU5168,,,endemic
+OTU5170,,,endemic
+OTU5181,,,endemic
+OTU5182,,,introduced
+OTU5183,,,introduced
+OTU5185,,,endemic
+OTU5191,,,endemic
+OTU5192,,,introduced
+OTU5193,,,endemic
+OTU5194,,,endemic
+OTU5198,,,endemic
+OTU5207,,,endemic
+OTU5216,,,endemic
+OTU5222,,,endemic
+OTU5225,,,endemic
+OTU5226,Thyrocopa alterna,endemic,endemic
+OTU5231,,,endemic
+OTU5235,,,endemic
+OTU5237,Platynothrus peltifer,introduced,introduced
+OTU5239,,,endemic
+OTU5240,,,introduced
+OTU5241,,,endemic
+OTU5247,,,introduced
+OTU5248,,,endemic
+OTU5249,,,endemic
+OTU5255,,,endemic
+OTU5257,,,endemic
+OTU5258,,,endemic
+OTU5261,,,endemic
+OTU5262,,,endemic
+OTU5266,,,introduced
+OTU5267,,,introduced
+OTU5269,,,endemic
+OTU5270,,,endemic
+OTU5271,,,endemic
+OTU5277,,,introduced
+OTU5279,,,endemic
+OTU5286,,,endemic
+OTU5295,,,endemic
+OTU5298,,,endemic
+OTU5300,,,endemic
+OTU5302,,,endemic
+OTU5303,,,endemic
+OTU5307,,,endemic
+OTU5308,Thyrocopa subahenea,endemic,endemic
