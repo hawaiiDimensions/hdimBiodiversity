@@ -27,7 +27,8 @@ hdimSites <- SpatialPointsDataFrame(coords = loc,
 # get precip data
 
 # url for rainfall atlas raw data
-rainURL <- 'http://rainfall.geography.hawaii.edu/assets/files/GISLayers/StateASCIIGrids_mm.zip'
+rainURL <- paste0('http://rainfall.geography.hawaii.edu/assets/files/',
+                  'GISLayers/StateASCIIGrids_mm.zip')
 
 # make local folder to store
 rainDir <- 'data/precip'
@@ -52,6 +53,22 @@ sum(!is.na(values(precipRast)))
 # ----
 # read in elevation data
 
+# function to help load DEM data
+getDEM <- function(x) {
+    elevDir <- 'data/elev'
+    baseURL <- 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/'
+    elevFile <- file.path(elevDir, paste0(x, '.zip'))
+
+    download.file(paste0(baseURL, x, '.zip'),
+                  destfile = elevFile)
+    unzip(elevFile, exdir = elevDir)
+
+}
+getDEM('bigisland')
+
+foo <- raster('data/elev/hawaii.bil')
+proj4string(foo) <- CRS('+proj=utm +zone=5 +datum=NAD83 +units=m +no_defs')
+
 
 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/bigisland.zip'
 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/kahoolawe.zip'
@@ -61,3 +78,4 @@ sum(!is.na(values(precipRast)))
 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/molokai.zip'
 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/niihau.zip'
 'http://gis.ess.washington.edu/data/raster/tenmeter/hawaii/oahu.zip'
+
