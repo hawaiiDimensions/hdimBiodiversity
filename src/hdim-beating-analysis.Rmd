@@ -51,16 +51,16 @@ details at https://cme.h-its.org/exelixis/web/software/PTP/index.html
 ```{r, message=FALSE}
 # read in csv with ptp results
 
-araneae <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_araneae.csv")
-blatt <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_blatt.csv")
-coleoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_coleoptera.csv")
-collembola <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_collembola.csv")
-diptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_diptera.csv")
-hemiptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_hemiptera.csv")
-lepidoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_lepidoptera.csv")
-nonspider <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_nonspider.csv")
-orthoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_orthoptera.csv")
-psocoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_psocoptera.csv")
+araneae <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_araneae.csv")
+blatt <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_blatt.csv")
+coleoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_coleoptera.csv")
+collembola <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_collembola.csv")
+diptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_diptera.csv")
+hemiptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_hemiptera.csv")
+lepidoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_lepidoptera.csv")
+nonspider <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_nonspider.csv")
+orthoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_orthoptera.csv")
+psocoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_psocoptera.csv")
 
 species <- rbind(araneae,
       blatt,
