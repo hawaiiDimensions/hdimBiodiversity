@@ -29,9 +29,6 @@ library(ggtree)
 library(treeio)
 library(tidytree)
 
-# to produce simulations of rank abundance distributions
-library(meteR)
-
 # color palettes
 library(colorspace)
 library(RColorBrewer)
@@ -47,6 +44,45 @@ predict <- read_csv("data/niclassify-predictions_replacedfalseendemics.csv")
 tree <- read.tree("data/postcutoff.tre")
 
 # Note I read in ptp results as "species" file -- reading in each file by order and joining them together
+```
+
+# read in data from species delimitation using ptp; 
+details at https://cme.h-its.org/exelixis/web/software/PTP/index.html
+```{r, message=FALSE}
+# read in csv with ptp results
+
+araneae <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_araneae.csv")
+blatt <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_blatt.csv")
+coleoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_coleoptera.csv")
+collembola <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_collembola.csv")
+diptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_diptera.csv")
+hemiptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_hemiptera.csv")
+lepidoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_lepidoptera.csv")
+nonspider <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_nonspider.csv")
+orthoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_orthoptera.csv")
+psocoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/ptp_psocoptera.csv")
+
+species <- rbind(araneae,
+      blatt,
+      coleoptera,
+      collembola,
+      diptera,
+      hemiptera,
+      lepidoptera,
+      nonspider,
+      orthoptera,
+      psocoptera)
+
+rm(araneae,
+      blatt,
+      coleoptera,
+      collembola,
+      diptera,
+      hemiptera,
+      lepidoptera,
+      nonspider,
+      orthoptera,
+      psocoptera)
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -82,7 +118,8 @@ endemic <- wo_beating %>%
 volColor <- c("#543005", "#BF812D", "bisque4", "#80CDC1", "#35978F", "#01665E", "#003C30") 
 
 ```
-
+#########skip to line 264#########
+####### This was another method of detecting species that I tried which is based on bootstrapping samples. It is kind of a pain bc of the lack of samples in some sites/orders don't allow for bootstrapping.############
 ## Calculate richness at each site for every order using the package 'rich' https://cran.r-project.org/web/packages/rich/vignettes/rich_introduction.pdf -- The function rich computes the species richness on the basis of bootstrap estimation.
  
  [1] flow1973     treePlanting escape       kaiholenaYng thurston     olaa        
@@ -224,6 +261,7 @@ richResults %>%
 
 ```
 
+##############This is where the richness from zotus that I used in the chapter begins#################
 # Plot the simple richness (number of zOTUs) at each site
 
 ```{r}
@@ -551,7 +589,7 @@ nri$flowAge <- as.numeric(nti$flowAge)
 
 ```
 
-Plot observed mean nearest taxon distance and compare with null communities
+# Plot observed mean nearest taxon distance and compare with null communities
 ```{r}
 # plot mean nearest taxon/neighbor distance
 nti %>% 
@@ -655,6 +693,7 @@ nti <- nti %>%
   mutate(volcano = factor(volcano, unique(volcano)))
 nti
 ```
+
 # regress genetic diversity by substrate age
 
 ```{r}
