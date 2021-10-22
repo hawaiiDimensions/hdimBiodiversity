@@ -50,10 +50,39 @@ tree <- read.tree("data/postcutoff.tre")
 details at https://cme.h-its.org/exelixis/web/software/PTP/index.html
 ```{r, message=FALSE}
 # read in csv with ptp results
-ptpDir <- "data/by_order"
-ptpFiles <- list.files(ptpDir, pattern = ".csv")
-species <- lapply(file.path(ptpDir, ptpFiles), read_csv)
-species <- do.call(rbind, species)
+
+araneae <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_araneae.csv")
+blatt <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_blatt.csv")
+coleoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_coleoptera.csv")
+collembola <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_collembola.csv")
+diptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_diptera.csv")
+hemiptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_hemiptera.csv")
+lepidoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_lepidoptera.csv")
+nonspider <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_nonspider.csv")
+orthoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_orthoptera.csv")
+psocoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_psocoptera.csv")
+
+species <- rbind(araneae,
+      blatt,
+      coleoptera,
+      collembola,
+      diptera,
+      hemiptera,
+      lepidoptera,
+      nonspider,
+      orthoptera,
+      psocoptera)
+
+rm(araneae,
+      blatt,
+      coleoptera,
+      collembola,
+      diptera,
+      hemiptera,
+      lepidoptera,
+      nonspider,
+      orthoptera,
+      psocoptera)
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -1152,7 +1181,7 @@ uniquePlant %>%
                                    vjust = 1)) +
   ylab("Number of plant genera sampled") +
   xlab("Community in order of increasing substrate age")
-ggsave("figures/AFTER-NICLASSIFY/Plants_number.png", width = 6, height = 4, units = "in")
+#ggsave("figures/AFTER-NICLASSIFY/Plants_number.png", width = 6, height = 4, units = "in")
 
 #write_csv(uniquePlant, "figures/AFTER-NICLASSIFY/plantsSmpl.csv")
 
@@ -1162,3 +1191,129 @@ wo_beating <-  wo_beating %>%
 #write_csv(wo_beating, "data/github/hdimbeat_abund.geo.csv")
 ```
 
+# calculate spearmans coorelation coef
+```{r}
+# cor.test(x, y, method="spearman")
+# x, y numeric vectors with same length
+# check for correlation bw num zotus, num plants, log flow age, mntd, inv simp
+
+# number of zotus per plot
+num.zotus.plot <- endemic %>%
+  group_by(sitePlot, site, flowAge, volcano) %>% 
+  summarise(n_otu = n_distinct(otu))
+num.zotus.plot
+
+# number of plants per plot
+uniquePlant.plot <- endemic %>%
+  group_by(sitePlot, site, flowAge, volcano) %>%
+  summarise(n_plant_sampled = n_distinct(smplUnit)) 
+uniquePlant.plot
+
+# corr of plants and zotus
+cor.test(uniquePlant.plot$n_plant_sampled, num.zotus.plot$n_otu, method = "spearman")
+# rho = 0.6193716 < .7
+
+plot(uniquePlant.plot$n_plant_sampled, num.zotus.plot$n_otu)
+
+# corr of log sub age and zotus
+cor.test(log(num.zotus.plot$flowAge), num.zotus.plot$n_otu, method = "spearman")
+# 0.6872662 < .7
+
+plot(log(num.zotus.plot$flowAge), num.zotus.plot$n_otu)
+
+# corr of log sub age and plants
+cor.test(log(uniquePlant.plot$flowAge), 
+         uniquePlant.plot$n_plant_sampled, 
+         method = "spearman")
+# 0.6479429 < .7
+
+plot(log(uniquePlant.plot$flowAge), 
+         uniquePlant.plot$n_plant_sampled)
+```
+
+# plot inv simpson and num zotus at plot level with time
+
+```{r}
+############# calculate inverse Simpson at plot level ##########
+# first need matrix at plot level
+PlotAbun <- endemic %>% 
+    select(otu, abundance, site, sitePlot, smplUnit) %>%
+    group_by(sitePlot, otu) 
+
+PlotAbunMatrx <- PlotAbun %>% 
+    summarise(abundance = sum(abundance)) %>%
+    ungroup() %>%
+    pivot_wider(names_from = otu, values_from = abundance)
+PlotAbunMatrx <- PlotAbunMatrx %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+PlotAbunMatrx <- PlotAbunMatrx %>%
+  select(-sitePlot)
+PlotAbunMatrx <- as.matrix(as.data.frame(PlotAbunMatrx))
+
+# Calculate inverse simpson based on abun of each otu at each site
+invSimpPlot <- diversity(PlotAbunMatrx, "inv")
+
+# check plot data in same order
+# levels(PlotAbun$sitePlot) == levels(plotDF$sitePlot)
+
+# Join to plot data objects from previous code block
+plotDF <- num.zotus.plot %>%
+  left_join(uniquePlant.plot)
+
+SimpPlot <- cbind(plotDF, invSimpPlot)
+colnames(SimpPlot)[7] <- "invSimp"
+SimpPlot
+
+SimpPlot %>%
+  pivot_longer(cols = c("n_otu",
+                        "n_plant_sampled",
+                        "invSimp"), 
+               names_to = "richness") %>%
+  ggplot(aes(x = log(flowAge), y = value, fill = richness)) +
+  geom_point(pch = 21) +
+  facet_wrap(~richness, scales = "free") +
+  theme(legend.position = "none")
+
+ggsave("data/github/invSimp_otu_plnt_time_jitter.png", width = 6, height = 4, units = "in")  
+
+# corr of log sub age and inv simp
+cor.test(log(SimpPlot$flowAge), 
+         SimpPlot$invSimp, 
+         method = "spearman")
+# 0.6856335  < .7
+
+plot(log(SimpPlot$flowAge), 
+         SimpPlot$invSimp)
+```
+
+# Species accumulation curves to det which orders have > 80% and should be included in SEMS
+# Doing this for endemic taxa only since these are the focus of our biodiversity over time study
+```{r, message = FALSE, warning = FALSE}
+# first create a matrix of plots (rows) by zotus (columns) matrix
+# need to create one for each order so write a function to filter by order and use lapply
+
+unique(endemic$orderGrp)
+
+orderCoverage <- function(o){
+orderMtrx <- endemic %>%
+  select(orderGrp, sitePlot, otu, abundance) %>% # select features (makes it easier to see what you are working with)
+  filter(orderGrp == o) %>% # filter by order
+  group_by(sitePlot, otu) %>%
+  summarise(abundance = sum(abundance)) %>% # sum abundances for each otu that were sampled on various plants
+  pivot_wider(names_from = otu, values_from = abundance)
+orderMtrx
+
+# convert to matrix format
+orderMtrx <- orderMtrx %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+orderMtrx <- orderMtrx[,-1]
+orderMtrx <- as.matrix(as.data.frame(orderMtrx))
+
+# Function specaccum (vegan package) finds species accumulation curves or the number of species for a certain number of sampled sites or individuals.
+plot(specaccum(orderMtrx, method = "random"), main = o)
+
+}
+
+#orderCoverage("Orthoptera")
+lapply(unique(endemic$orderGrp), orderCoverage)
+```
