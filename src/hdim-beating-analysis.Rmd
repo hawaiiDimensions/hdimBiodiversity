@@ -36,6 +36,9 @@ library(RColorBrewer)
 # set relative file location
 library(here)
 
+# for estimating covereage
+library(iNEXT)
+
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -1292,5 +1295,40 @@ plot(specaccum(orderMtrx, method = "random"), main = o)
 #orderCoverage("Orthoptera")
 
 lapply(unique(endemic$orderGrp), orderCoverage)
+
+```
+
+# use iNEXT to evaluate coverage 
+```{r, message = FALSE}
+# convert to species by sites
+inextCoverage <- function(o){
+orderMtrx <- endemic %>%
+  select(orderGrp, site, otu, abundance) %>% # select features (makes it easier to see what you are working with)
+  filter(orderGrp == o) %>% # filter by order
+  group_by(site, otu) %>%
+  summarise(abundance = sum(abundance)) %>% # sum abundances for each otu that were sampled on various plants
+  pivot_wider(names_from = site, values_from = abundance)
+orderMtrx
+
+# convert to dataframe format
+orderMtrx <- orderMtrx %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+orderMtrx <- as.data.frame(orderMtrx)
+orderMtrx <- column_to_rownames(orderMtrx, "otu")
+
+# create iNEXT object
+otuSite <- iNEXT(orderMtrx, q = 0, datatype = "abundance")
+
+# use ggiNEXT to plot
+ggiNEXT(otuSite, type = 1, se = TRUE, facet.var = "none",
+   color.var = "site", grey = FALSE)
+
+# estimate coverage
+cbind(o, (estimateD(orderMtrx, datatype="abundance", base="coverage", level=0.80, conf=0.95)))
+}
+
+#inextCoverage("Orthoptera")
+lapply(unique(endemic$orderGrp), inextCoverage)
+
 
 ```
