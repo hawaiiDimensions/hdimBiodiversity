@@ -33,56 +33,31 @@ library(tidytree)
 library(colorspace)
 library(RColorBrewer)
 
+# set relative file location
+library(here)
+
 ```
 
 ```{r, message=FALSE, warning=FALSE}
 # read in beating data and niclassify results
-beating <- read_csv("data/beatingRedone.csv")
-predict <- read_csv("data/niclassify-predictions_replacedfalseendemics.csv")
+beating <- read_csv(here("data/beatingRedone.csv"))
+predict <- read_csv(here("data/niclassify-predictions_replacedfalseendemics.csv"))
 
 # read in phylogeny
-tree <- read.tree("data/postcutoff.tre")
+tree <- read.tree(here("data/postcutoff.tre"))
 
 # Note I read in ptp results as "species" file -- reading in each file by order and joining them together
 ```
 
 # read in data from species delimitation using ptp; 
 details at https://cme.h-its.org/exelixis/web/software/PTP/index.html
-```{r, message=FALSE}
+
 # read in csv with ptp results
-
-araneae <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_araneae.csv")
-blatt <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_blatt.csv")
-coleoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_coleoptera.csv")
-collembola <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_collembola.csv")
-diptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_diptera.csv")
-hemiptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_hemiptera.csv")
-lepidoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_lepidoptera.csv")
-nonspider <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_nonspider.csv")
-orthoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_orthoptera.csv")
-psocoptera <- read_csv("figures/AFTER-NICLASSIFY/TrimmedSitesPhylogenies/ptp_csv_files/by_order/ptp_psocoptera.csv")
-
-species <- rbind(araneae,
-      blatt,
-      coleoptera,
-      collembola,
-      diptera,
-      hemiptera,
-      lepidoptera,
-      nonspider,
-      orthoptera,
-      psocoptera)
-
-rm(araneae,
-      blatt,
-      coleoptera,
-      collembola,
-      diptera,
-      hemiptera,
-      lepidoptera,
-      nonspider,
-      orthoptera,
-      psocoptera)
+```{r, message=FALSE}
+ptpDir <- here("data/by_order")
+ptpFiles <- list.files(ptpDir, pattern = ".csv")
+species <- lapply(file.path(ptpDir, ptpFiles), read_csv)
+species <- do.call(rbind, species)
 ```
 
 ```{r, message=FALSE, warning=FALSE}
@@ -1315,5 +1290,7 @@ plot(specaccum(orderMtrx, method = "random"), main = o)
 }
 
 #orderCoverage("Orthoptera")
+
 lapply(unique(endemic$orderGrp), orderCoverage)
+
 ```
