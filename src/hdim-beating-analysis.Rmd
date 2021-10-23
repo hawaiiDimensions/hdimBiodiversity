@@ -67,7 +67,9 @@ species <- do.call(rbind, species)
 beating <- beating %>%
   left_join(predict) %>% 
   left_join(species) 
- # select(-species_name)
+
+beating <- beating %>% 
+  unite("delim_spp", c(orderGrp, delim), sep = "_", remove = FALSE)
 
 wo_beating <- beating %>%
     filter(!site == "kohalaYng" & 
@@ -1324,7 +1326,7 @@ ggiNEXT(otuSite, type = 1, se = TRUE, facet.var = "none",
    color.var = "site", grey = FALSE)
 
 # estimate coverage
-cbind(o, (estimateD(orderMtrx, datatype="abundance", base="coverage", level=0.80, conf=0.95)))
+#cbind(o, (estimateD(orderMtrx, datatype="abundance", base="coverage", level=0.80, conf=0.95)))
 }
 
 #inextCoverage("Orthoptera")
