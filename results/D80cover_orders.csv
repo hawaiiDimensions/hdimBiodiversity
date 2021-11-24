@@ -1,0 +1,40 @@
+site,m,method,order,SC,qD,qD.LCL,qD.UCL
+Orthoptera,16,interpolated,0,0.801,6.076,6.049,6.103
+Orthoptera,16,interpolated,1,0.801,4.429,4.403,4.455
+Orthoptera,16,interpolated,2,0.801,3.509,3.493,3.526
+Diptera,91,interpolated,0,0.8,30.983,30.811,31.155
+Diptera,91,interpolated,1,0.8,16.179,16.004,16.353
+Diptera,91,interpolated,2,0.8,9.139,9.022,9.257
+Hemiptera,167,interpolated,0,0.8,60.28,60.078,60.482
+Hemiptera,167,interpolated,1,0.8,33.415,33.236,33.595
+Hemiptera,167,interpolated,2,0.8,17.994,17.855,18.133
+Coleoptera,40,interpolated,0,0.801,16.156,16.043,16.268
+Coleoptera,40,interpolated,1,0.801,11.847,11.741,11.952
+Coleoptera,40,interpolated,2,0.801,9.007,8.909,9.105
+Araneae,90,interpolated,0,0.801,32.461,32.344,32.577
+Araneae,90,interpolated,1,0.801,18.071,17.939,18.204
+Araneae,90,interpolated,2,0.801,9.771,9.667,9.874
+Collembola,13,interpolated,0,0.802,5.606,5.573,5.639
+Collembola,13,interpolated,1,0.802,4.422,4.396,4.448
+Collembola,13,interpolated,2,0.802,3.617,3.593,3.641
+Psocoptera,32,interpolated,0,0.799,11.049,10.997,11.101
+Psocoptera,32,interpolated,1,0.799,6.583,6.533,6.634
+Psocoptera,32,interpolated,2,0.799,4.506,4.476,4.537
+Neuroptera,10,interpolated,0,0.8,4.621,4.549,4.694
+Neuroptera,10,interpolated,1,0.8,3.758,3.674,3.842
+Neuroptera,10,interpolated,2,0.8,3.124,3.044,3.204
+non-spider Arachnida,47,interpolated,0,0.799,18.641,18.521,18.762
+non-spider Arachnida,47,interpolated,1,0.799,11.391,11.258,11.524
+non-spider Arachnida,47,interpolated,2,0.799,6.572,6.451,6.694
+Lepidoptera,127,interpolated,0,0.8,52.062,51.663,52.461
+Lepidoptera,127,interpolated,1,0.8,37.802,37.385,38.22
+Lepidoptera,127,interpolated,2,0.8,27.427,26.939,27.916
+Hymenoptera,51,interpolated,0,0.799,21.932,21.492,22.372
+Hymenoptera,51,interpolated,1,0.799,16.393,15.852,16.934
+Hymenoptera,51,interpolated,2,0.799,12.142,11.534,12.75
+Malacostraca,1,interpolated,0,0.833,1,1,1
+Malacostraca,1,interpolated,1,0.833,1,1,1
+Malacostraca,1,interpolated,2,0.833,1,1,1
+Myriapoda,3,interpolated,0,0.796,1.857,1.829,1.885
+Myriapoda,3,interpolated,1,0.796,1.697,1.67,1.724
+Myriapoda,3,interpolated,2,0.796,1.562,1.538,1.586
