@@ -1,0 +1,297 @@
+---
+title: "Inverse-Simpson"
+author: "Natalie Graham"
+date: "2022-12-21"
+output: html_document
+---
+```{r, message=FALSE, warning=FALSE}
+# data management
+library(tidyverse)
+library(readr)
+library(ggplot2); theme_set(theme_bw())
+library(here) # set relative file location
+
+# to calculate beta diversity
+library("vegan")
+
+# color palettes
+library(colorspace)
+library(RColorBrewer)
+
+# to run linear mixed effects model
+library(lme4)
+library(lmerTest)
+library(performance) # R2 
+library(sjPlot) # Corr matrix
+
+```
+
+```{r, message=FALSE, warning=FALSE}
+# read in beating data and niclassify results
+beating <- read_csv(here("data/beatingRedone.csv"))
+predict <- read_csv(here("data/niclassify-predictions_replacedfalseendemics.csv"))
+
+# read in phylogeny
+tree <- read.tree(here("data/postcutoff.tre"))
+
+```
+
+# read in data from species delimitation using ptp; 
+details at https://cme.h-its.org/exelixis/web/software/PTP/index.html
+
+# read in csv with ptp results
+```{r, message=FALSE}
+ptpDir <- here("data/by_order")
+ptpFiles <- list.files(ptpDir, pattern = ".csv")
+species <- lapply(file.path(ptpDir, ptpFiles), read_csv)
+species <- do.call(rbind, species)
+```
+
+# join data files together
+```{r, message=FALSE, warning=FALSE}
+beating <- beating %>%
+  left_join(predict) %>% 
+  left_join(species) 
+
+beating <- beating %>% 
+  unite("delim_spp", c(orderGrp, delim), sep = "_", remove = FALSE)
+
+wo_beating <- beating %>%
+    filter(!site == "kohalaYng" & 
+         !site == "LSAG" &
+         !site == "hippnet") %>%
+    # filter out the plots with more than one sd from mean of sampling time
+  filter(!sitePlot == "flow1973_110" & 
+         !sitePlot == "flow1973_107" &
+         !sitePlot == "kohalaOld_05a" &
+         !sitePlot == "waikamoi_06" &
+         !sitePlot == "kamakou_15" &
+         !sitePlot == "kokee_21a") %>%
+  arrange(flowAge) %>%
+  mutate(volcano = factor(volcano, unique(volcano))) %>%
+  mutate(site = factor(site, unique(site))) %>%
+  mutate(sitePlot = factor(sitePlot, unique(sitePlot)))
+
+# filter the non-native taxa
+endemic <- wo_beating %>%
+  filter(predict == "endemic")
+```
+
+# Hypothesis 1 - Species richness increases with community age
+[ x ] Prepare data for plot level correlations - *not including order as random effect*
+```{r}
+
+# First summarise data for number of OTUs per plot and number of species per plot
+plotlevel <- endemic %>%
+  group_by(volcano, site, flowAge, sitePlot) %>%
+  summarise(`Num. OTU` = n_distinct(otu),
+         `Num. Species` = n_distinct(delim_spp),
+         `Num. Plants` = n_distinct(plant)) 
+
+# Next summarise data for inverse simpson calculation at plot level
+# First make a matrix at plot level (columns = 2737 OTUs, rows = 50 sampling plots) with read abundances
+
+plotAbun <- endemic %>% 
+  group_by(sitePlot, otu) %>%
+  summarise(abundance = sum(abundance)) %>%
+  ungroup() %>%
+  pivot_wider(names_from = otu, values_from = abundance) 
+
+plotAbunMatrx <- plotAbun %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+plotAbunMatrx <- plotAbunMatrx %>%
+  select(-sitePlot)
+plotAbunMatrx <- as.matrix(as.data.frame(plotAbunMatrx))
+
+# Calculate inverse simpson based on raw abun of each otu at each site
+invSimpPlot <- diversity(plotAbunMatrx, "inv")
+
+invSimpValues <- as.data.frame(cbind(sitePlot = as.character(plotAbun$sitePlot), invSimpPlot))
+
+invSimpValues$invSimpPlot <- as.numeric(invSimpValues$invSimpPlot)
+
+# add back in site info
+plotlevel <- plotlevel %>%
+  left_join(invSimpValues) %>%
+  rename(`Inv. Simp.` = invSimpPlot)
+
+# Turn raw number of reads into relative abundance by dividing each value by
+# sample total abundance
+comm <- decostand(plotAbunMatrx, method = "total")
+
+# Calculate inverse simpson based on the relative abun of each otu at each site
+invSimpREl <- diversity(comm, "inv")
+
+# No change in inv simp values
+invSimpREl == invSimpPlot
+```
+
+[x ] Plot pattern of spp, otu, inv simp, plant by time -- don't include order *Fig. 2 Panel A*
+```{r, message=FALSE}
+# drop the 50 levels so ggpairs will run a corr matrix
+plotlevel2 <- plotlevel %>%
+  ungroup() %>%
+  mutate(`Ln Flow Age` = log(flowAge)) %>%
+  select(-c(flowAge, volcano, site, sitePlot)) 
+
+
+plotlevel2 %>%
+  pivot_longer(cols = 
+                 c("Num. OTU", 
+                   "Num. Species", 
+                   "Num. Plants", 
+                   "Inv. Simp."), 
+               names_to= "Richness") %>%
+  mutate(Richness = factor(Richness, 
+                           levels=c("Num. OTU",
+                                    "Num. Species",
+                                    "Inv. Simp.",
+                                    "Num. Plants"))) %>%
+  ggplot(aes(x = `Ln Flow Age`, y = value, color = Richness)) +
+  geom_point(cex = 3) +
+  facet_wrap(~Richness, 
+             scale = "free", ncol = 2) +
+  scale_color_manual(values = c("#d7191c","#fdae61","#a6d96a","#1a9641")) +
+  ylab("")+
+  theme(legend.title= element_blank(),
+        legend.position = "") +
+  xlab("Ln Substrate Age (yrs)")
+
+#ggsave("Richness_ms/figures/diversity-time5.jpg", width = 3, height = 3.5, units = "in")
+    
+```
+
+[ x] Show the correlation for these richness measures and time, w/o order as a random effect
+
+```{r, message=FALSE}
+# correlation matrix
+ggpairs(plotlevel2)
+```
+
+# SEM to consider effect of plant diversity increasing relative to ln substrate age increasing on the dependant variable OTU richness 
+[ ] SEM for OTU richness
+[ ] SEM for Inv. Simp.
+- Question for Jun - We test SEM with df that includes the smaller orders but we exclude those smaller orders for our mixed effect model bc they don't have enough coverage, does this make sense in the context of the SEM being agnostic to order but the multivariate analysis taking it into consideration? I think so but good to have another's opinion
+
+```{r}
+plotlevel
+```
+
+# Hypothesis 1 (continued) - Species richness increases with community age
+[x] Prepare data for linear mixed effects model *now with arthropod order as a random effect* 
+[x] Calculate inv simp at order level for the orders that are large enough
+```{r, message=FALSE}
+
+# first need matrix at plot level with arthropod included
+plotAbun <- endemic %>% 
+  group_by(sitePlot, otu, orderGrp) %>% #ordergroup
+  summarise(abundance = sum(abundance)) %>%
+  ungroup() %>%
+  pivot_wider(names_from = otu, values_from = abundance) %>%
+  unite("orderPlot", c(sitePlot, orderGrp), remove = TRUE)
+
+plotAbunMatrx <- plotAbun %>%
+  mutate_if(is.numeric, replace_na, replace = 0)
+plotAbunMatrx <- plotAbunMatrx %>%
+  select(-orderPlot)
+plotAbunMatrx <- as.matrix(as.data.frame(plotAbunMatrx))
+
+# Calculate inverse simpson based on abun of each otu at each plot
+invSimpPlotOrder <- diversity(plotAbunMatrx, "inv")
+
+# Bind data from inv simp calculatoion to the dataframe with abundance
+invSimpPlotOrder <- as.data.frame(cbind(orderPlot = plotAbun$orderPlot, invSimpPlotOrder))
+
+invSimpPlotOrder$invSimpPlotOrder <- as.numeric(invSimpPlotOrder$invSimpPlotOrder)
+
+# make df with richness summary and site info
+#sitePlotinfo <- endemic %>%
+  #select(volcano, site, sitePlot, flowAge) %>% distinct()
+
+# make df with richness summary and site info
+richotuplot <- endemic %>%
+  group_by(orderGrp, site, sitePlot, flowAge, volcano) %>% 
+   summarise(n_species = n_distinct(delim_spp),
+             n_otu = n_distinct(otu)) 
+
+invSimpPlotOrder <- invSimpPlotOrder %>%
+  separate(orderPlot, c("site", "sitePlot", "orderGrp"), sep = "_") %>%
+  unite("sitePlot", c(site, sitePlot), remove = TRUE) %>%
+  left_join(richotuplot) 
+invSimpPlotOrder
+```
+
+Plot the relationship of community age to species richness (no. otus & no. spp) and diversity (inv simpson)
+```{r}
+invSimpPlotOrder %>%
+  pivot_longer(cols = c(n_otu, n_species, invSimpPlotOrder), names_to = "richness") %>%
+  ggplot(aes(x = log(flowAge), y = value, group = richness)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ poly(x, 2), size = 1, se = TRUE, aes(colour = richness)) +
+  facet_wrap(~orderGrp, scale = "free")
+
+```
+
+[x] Remove the arthropod orders that are undersampled by vegetation beat sampling in the understory. 
+- Cutoff is < 100 OTUs - based on the spec accum curves 
+[x] Add in summary of plants
+```{r}
+
+invSimpPlotOrder %>%
+  group_by(orderGrp) %>%
+  summarise(nOTU = sum(n_otu)) %>%
+  arrange(nOTU)
+
+# summarise the number of plants that were sampled within each plot, per order group
+uniquePlant <- wo_beating %>%
+  group_by(volcano, site, flowAge, sitePlot) %>% 
+  summarise(n_plant_sampled = n_distinct(plant)) %>%
+  arrange(desc(n_plant_sampled))
+
+Ocorr <- invSimpPlotOrder %>%
+  left_join(uniquePlant) %>% # join the number of plants
+  # subset by orders with more than 100 OTUS
+  filter(!orderGrp == "Hymenoptera" & 
+         !orderGrp == "Myriapoda" &
+         !orderGrp == "Neuroptera" &
+         !orderGrp == "Malacostraca") %>%
+  mutate(`ln FlowAge` = log(flowAge)) %>%
+  rename(`Num. OTU` = n_otu,
+         `Num. Species` = n_species,
+         `Inver. Simp.` = invSimpPlotOrder,
+         `Num. Plants` = n_plant_sampled) 
+
+Ocorr # this is now the object for mixed effect model
+```
+
+[x ] Mk correlation matrix for each arthropod order
+```{r, message=FALSE}
+
+# define a function to plot for each order
+pairsFunc <- function(ordernm, title){
+Ocorr <- Ocorr %>%
+  select(-c("sitePlot", 
+            "flowAge",
+            "site",
+            "volcano"
+            )) %>%
+  filter(orderGrp == ordernm) %>%
+  select(-orderGrp)
+ggpairs(Ocorr) +
+  ggtitle(paste0(ordernm))
+}
+
+# vector of order names to pass to function
+ordernm=unique(invSimpPlotOrder_lgr$orderGrp)
+# use list apply to store each of the plots in a list
+listplots <- lapply(ordernm, pairsFunc, title)
+names(listplots) = ordernm # name each
+
+# iterate over the list of plots and save each by name
+for(i in 1:length(ordernm)){
+  ggsave(plot = listplots[[i]], 
+         file = paste(names(listplots)[i],".jpg",sep=""))
+}
+
+```
+
